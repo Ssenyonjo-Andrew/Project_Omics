@@ -1,0 +1,15 @@
+{
+  "cnn": {
+    "val_macro_f1": 1.0,
+    "passes_gate": true
+  },
+  "bilstm": {
+    "val_macro_f1": 1.0,
+    "passes_gate": true
+  },
+  "_excluded": {
+    "model": "DNABERT-2",
+    "reason": "Custom ALiBi implementation in the DNABERT-2 remote code is incompatible with PyTorch 2.14 on CPU. Tested with low_cpu_mem_usage=False, eager attention, pinned config, and a manual patch to bert_layers.py; the constructor still fails with 'Cannot copy out of meta tensor'.",
+    "impact": "Cross-architecture comparison uses CNN and BiLSTM. Eight attributions per sequence (2 models x 4 methods) replace the planned twelve."
+  }
+}
