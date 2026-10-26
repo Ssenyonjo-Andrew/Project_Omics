@@ -1,0 +1,21 @@
+accession,sequence_file_path,virus_name,family,genus,species,cluster_id,split
+U87411,data/processed/sequences.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,C13,test
+U88536,data/processed/sequences.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,C12,test
+M93130,data/processed/sequences.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,C14,test
+AF326573,data/processed/sequences.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,C15,test
+X03700,data/processed/sequences.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,C10,val
+AY632535,data/processed/sequences.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,C11,train
+KY766069,data/processed/sequences.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,C9,train
+KJ776791,data/processed/sequences.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,C9,train
+KX377337,data/processed/sequences.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,C9,train
+AF086833,data/processed/sequences.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,C6,test
+DQ217792,data/processed/sequences.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,C5,train
+DQ447649,data/processed/sequences.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,C4,train
+AF017149,data/processed/sequences.fasta,Hendra virus,Paramyxoviridae,Henipavirus,Henipavirus hendraense,C8,train
+AF212302,data/processed/sequences.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,C7,train
+J04324,data/processed/sequences.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,C16,train
+JX869059,data/processed/sequences.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,C0,val
+AY274119,data/processed/sequences.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,C2,train
+AY613950,data/processed/sequences.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,C2,train
+MN908947,data/processed/sequences.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,C1,train
+KY352407,data/processed/sequences.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,C3,train

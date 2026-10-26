@@ -1,0 +1,21 @@
+accession,virus_name,family,genus,species
+U87411,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei
+U88536,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei
+M93130,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei
+AF326573,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei
+X03700,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi
+AY632535,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense
+KY766069,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense
+KJ776791,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense
+KX377337,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense
+AF086833,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense
+DQ217792,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense
+DQ447649,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense
+AF017149,Hendra virus,Paramyxoviridae,Henipavirus,Henipavirus hendraense
+AF212302,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense
+J04324,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense
+JX869059,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli
+AY274119,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum
+AY613950,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum
+MN908947,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum
+KY352407,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum
