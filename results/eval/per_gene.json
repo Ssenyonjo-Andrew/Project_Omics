@@ -1,0 +1,156 @@
+{
+  "top_frac": 0.1,
+  "bin_bp": 100,
+  "summary": {
+    "Flaviviridae": {
+      "POLY": {
+        "n_seq": 15,
+        "gene_bins_total": 1544,
+        "top_bins_in_gene": 163,
+        "expected": 157.35639283508337,
+        "observed_expected_ratio": 1.0358651279635738,
+        "hypergeom_p": 0.012733814451205909
+      }
+    },
+    "Filoviridae": {
+      "NP": {
+        "n_seq": 10,
+        "gene_bins_total": 230,
+        "top_bins_in_gene": 12,
+        "expected": 23.024109014675055,
+        "observed_expected_ratio": 0.5211928067379922,
+        "hypergeom_p": 0.9981335444344662
+      },
+      "VP35": {
+        "n_seq": 10,
+        "gene_bins_total": 111,
+        "top_bins_in_gene": 11,
+        "expected": 11.111635220125786,
+        "observed_expected_ratio": 0.9899533040894298,
+        "hypergeom_p": 0.5641465949152388
+      },
+      "VP40": {
+        "n_seq": 9,
+        "gene_bins_total": 99,
+        "top_bins_in_gene": 10,
+        "expected": 9.929032258064517,
+        "observed_expected_ratio": 1.0071474983755684,
+        "hypergeom_p": 0.5426932065541479
+      },
+      "GP": {
+        "n_seq": 10,
+        "gene_bins_total": 211,
+        "top_bins_in_gene": 13,
+        "expected": 21.122117400419288,
+        "observed_expected_ratio": 0.6154685987940746,
+        "hypergeom_p": 0.9863072439970718
+      },
+      "VP30": {
+        "n_seq": 10,
+        "gene_bins_total": 96,
+        "top_bins_in_gene": 7,
+        "expected": 9.61006289308176,
+        "observed_expected_ratio": 0.7284031413612566,
+        "hypergeom_p": 0.8636097155501019
+      },
+      "VP24": {
+        "n_seq": 10,
+        "gene_bins_total": 83,
+        "top_bins_in_gene": 13,
+        "expected": 8.308700209643606,
+        "observed_expected_ratio": 1.5646249921150572,
+        "hypergeom_p": 0.06469782553335639
+      },
+      "L": {
+        "n_seq": 10,
+        "gene_bins_total": 676,
+        "top_bins_in_gene": 76,
+        "expected": 67.67085953878407,
+        "observed_expected_ratio": 1.1230831190557327,
+        "hypergeom_p": 0.10648186334873994
+      },
+      "SGP": {
+        "n_seq": 3,
+        "gene_bins_total": 36,
+        "top_bins_in_gene": 1,
+        "expected": 3.5876288659793816,
+        "observed_expected_ratio": 0.278735632183908,
+        "hypergeom_p": 0.9798480693858688
+      }
+    },
+    "Coronaviridae": {
+      "S": {
+        "n_seq": 14,
+        "gene_bins_total": 587,
+        "top_bins_in_gene": 49,
+        "expected": 58.44950213371266,
+        "observed_expected_ratio": 0.8383304940374786,
+        "hypergeom_p": 0.9328140645304112
+      },
+      "ORF3": {
+        "n_seq": 15,
+        "gene_bins_total": 60,
+        "top_bins_in_gene": 13,
+        "expected": 5.9734513274336285,
+        "observed_expected_ratio": 2.176296296296296,
+        "hypergeom_p": 0.005165452445462408
+      },
+      "ORF4A": {
+        "n_seq": 14,
+        "gene_bins_total": 57,
+        "top_bins_in_gene": 8,
+        "expected": 5.674330410049775,
+        "observed_expected_ratio": 1.4098579782790308,
+        "hypergeom_p": 0.20195280459067727
+      },
+      "ORF4B": {
+        "n_seq": 14,
+        "gene_bins_total": 125,
+        "top_bins_in_gene": 24,
+        "expected": 12.44370703958284,
+        "observed_expected_ratio": 1.9286857142857141,
+        "hypergeom_p": 0.001068458640583715
+      },
+      "ORF5": {
+        "n_seq": 15,
+        "gene_bins_total": 119,
+        "top_bins_in_gene": 8,
+        "expected": 11.847345132743364,
+        "observed_expected_ratio": 0.6752567693744164,
+        "hypergeom_p": 0.9178816342808742
+      },
+      "E": {
+        "n_seq": 14,
+        "gene_bins_total": 55,
+        "top_bins_in_gene": 10,
+        "expected": 5.476529160739687,
+        "observed_expected_ratio": 1.825974025974026,
+        "hypergeom_p": 0.0422562928405437
+      },
+      "M": {
+        "n_seq": 14,
+        "gene_bins_total": 109,
+        "top_bins_in_gene": 16,
+        "expected": 10.85348506401138,
+        "observed_expected_ratio": 1.474180865006553,
+        "hypergeom_p": 0.07145854470311404
+      },
+      "N": {
+        "n_seq": 14,
+        "gene_bins_total": 191,
+        "top_bins_in_gene": 2,
+        "expected": 19.01849217638691,
+        "observed_expected_ratio": 0.10516080777860884,
+        "hypergeom_p": 0.9999999716628576
+      },
+      "ORF8B": {
+        "n_seq": 8,
+        "gene_bins_total": 36,
+        "top_bins_in_gene": 0,
+        "expected": 3.580605055946954,
+        "observed_expected_ratio": 0.0,
+        "hypergeom_p": 1.0
+      }
+    }
+  }
+}

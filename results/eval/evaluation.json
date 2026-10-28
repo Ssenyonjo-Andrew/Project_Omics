@@ -1765,377 +1765,386 @@
       "PX480322.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480447.1": {
         "family": "Flaviviridae",
         "n_bins": 107,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 102,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0490196078431373,
+        "hypergeom_p": 0.7834897330851025
       },
       "PX480435.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PZ770406.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480433.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PZ770298.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PZ770300.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PZ770277.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480342.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480361.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480343.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480424.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480432.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 21.6,
-        "hypergeom_p": 0.046296296296296294
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480334.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "PX480391.1": {
         "family": "Flaviviridae",
         "n_bins": 108,
-        "n_annotated_bins": 1,
+        "n_annotated_bins": 103,
         "top_k": 5,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 1.0485436893203883,
+        "hypergeom_p": 0.7853403796579603
       },
       "OQ892302.1": {
         "family": "Filoviridae",
         "n_bins": 188,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 152,
         "top_k": 9,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.984126984126984,
-        "hypergeom_p": 0.29470965538837096
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9619883040935673,
+        "hypergeom_p": 0.7637964052419421
       },
       "MK088515.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 152,
         "top_k": 9,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9722222222222222,
+        "hypergeom_p": 0.7411123784575274
       },
       "OQ348598.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 151,
         "top_k": 9,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 8,
+        "observed_expected_ratio": 1.1184694628403236,
+        "hypergeom_p": 0.4153402210175231
+      },
+      "OQ892316.1": {
+        "family": "Filoviridae",
+        "n_bins": 188,
+        "n_annotated_bins": 152,
+        "top_k": 9,
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9619883040935673,
+        "hypergeom_p": 0.7637964052419421
       },
       "MF102255.1": {
         "family": "Filoviridae",
         "n_bins": 189,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 151,
         "top_k": 9,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9735099337748344,
+        "hypergeom_p": 0.7382747447538421
       },
       "MK731990.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 152,
         "top_k": 9,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 3.015873015873016,
-        "hypergeom_p": 0.2920041051083092
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9722222222222222,
+        "hypergeom_p": 0.7411123784575274
       },
       "MH464888.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 152,
         "top_k": 9,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 3.015873015873016,
-        "hypergeom_p": 0.2920041051083092
+        "top_k_annotated": 7,
+        "observed_expected_ratio": 0.9722222222222222,
+        "hypergeom_p": 0.7411123784575274
       },
       "MK731985.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 153,
         "top_k": 9,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 5,
+        "observed_expected_ratio": 0.6899055918663762,
+        "hypergeom_p": 0.984933281649163
       },
       "OQ784121.1": {
         "family": "Filoviridae",
         "n_bins": 203,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 164,
         "top_k": 10,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 8,
+        "observed_expected_ratio": 0.9902439024390244,
+        "hypergeom_p": 0.7035744045341799
       },
       "MG572230.1": {
         "family": "Filoviridae",
         "n_bins": 190,
-        "n_annotated_bins": 7,
+        "n_annotated_bins": 151,
         "top_k": 9,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 6,
+        "observed_expected_ratio": 0.8388520971302428,
+        "hypergeom_p": 0.91231627857987
       },
       "NC_019843.3": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "OP906306.1": {
         "family": "Coronaviridae",
         "n_bins": 301,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 296,
         "top_k": 15,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.2296296296296294,
-        "hypergeom_p": 0.37278303359124093
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168918918918919,
+        "hypergeom_p": 0.7730954637585293
       },
       "MN654981.1": {
         "family": "Coronaviridae",
         "n_bins": 301,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.2296296296296294,
-        "hypergeom_p": 0.37278303359124093
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0134680134680134,
+        "hypergeom_p": 0.8142175628946213
       },
       "MN654999.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "MW545527.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 296,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0202702702702702,
+        "hypergeom_p": 0.7346966824460195
       },
       "MW086534.1": {
         "family": "Coronaviridae",
         "n_bins": 299,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 296,
         "top_k": 14,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.1357142857142857,
-        "hypergeom_p": 0.38559530231610223
+        "top_k_annotated": 14,
+        "observed_expected_ratio": 1.010135135135135,
+        "hypergeom_p": 0.8655770517457124
       },
       "MN654993.1": {
         "family": "Coronaviridae",
         "n_bins": 300,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0101010101010102,
+        "hypergeom_p": 0.8569212812282553
       },
       "MN655016.1": {
         "family": "Coronaviridae",
         "n_bins": 300,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 296,
         "top_k": 15,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.2222222222222223,
-        "hypergeom_p": 0.3737969512373898
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0135135135135136,
+        "hypergeom_p": 0.8136424286409697
       },
       "OR987487.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "MT226605.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 2,
-        "observed_expected_ratio": 4.026666666666666,
-        "hypergeom_p": 0.08231903275779769
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "OR987493.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "MN655014.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.237037037037037,
-        "hypergeom_p": 0.3717744780327914
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "OK094451.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 296,
         "top_k": 15,
-        "top_k_annotated": 1,
-        "observed_expected_ratio": 2.013333333333333,
-        "hypergeom_p": 0.40393619417445736
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0202702702702702,
+        "hypergeom_p": 0.7346966824460195
       },
       "OR987494.1": {
         "family": "Coronaviridae",
         "n_bins": 302,
-        "n_annotated_bins": 10,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 0,
-        "observed_expected_ratio": 0.0,
-        "hypergeom_p": 1.0
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0168350168350169,
+        "hypergeom_p": 0.773776293214425
       },
       "MN655007.1": {
         "family": "Coronaviridae",
         "n_bins": 301,
-        "n_annotated_bins": 9,
+        "n_annotated_bins": 297,
         "top_k": 15,
-        "top_k_annotated": 2,
-        "observed_expected_ratio": 4.459259259259259,
-        "hypergeom_p": 0.0681992549395053
+        "top_k_annotated": 15,
+        "observed_expected_ratio": 1.0134680134680134,
+        "hypergeom_p": 0.8142175628946213
       }
     }
   },
   "plausibility_summary_by_family": {
     "Flaviviridae": {
       "n": 15,
-      "median_oe": 0.0,
-      "mean_oe": 1.4400000000000002,
-      "min_oe": 0.0,
-      "max_oe": 21.6
+      "median_oe": 1.0485436893203883,
+      "mean_oe": 1.0485754172219048,
+      "min_oe": 1.0485436893203883,
+      "max_oe": 1.0490196078431373
     },
     "Filoviridae": {
-      "n": 9,
-      "median_oe": 0.0,
-      "mean_oe": 1.001763668430335,
-      "min_oe": 0.0,
-      "max_oe": 3.015873015873016
+      "n": 10,
+      "median_oe": 0.9722222222222222,
+      "mean_oe": 0.9451624262904602,
+      "min_oe": 0.6899055918663762,
+      "max_oe": 1.1184694628403236
     },
     "Coronaviridae": {
       "n": 15,
-      "median_oe": 2.013333333333333,
-      "mean_oe": 1.4368994708994707,
-      "min_oe": 0.0,
-      "max_oe": 4.459259259259259
+      "median_oe": 1.0168350168350169,
+      "mean_oe": 1.0157308823975493,
+      "min_oe": 1.0101010101010102,
+      "max_oe": 1.0202702702702702
     }
   },
   "config": {
