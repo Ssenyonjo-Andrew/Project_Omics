@@ -1,0 +1,784 @@
+accession,sequence_file_path,virus_name,family,genus,species,year,month,day,date_source,split
+PX492105.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,1974.0,1.0,1.0,collection_date,train
+U88535.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,1997.0,1.0,1.0,release_date,train
+U88536.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,1997.0,1.0,1.0,release_date,train
+U88537.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,1997.0,1.0,1.0,release_date,train
+QB138978.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,1.0,1.0,collection_date,train
+PX480333.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,1.0,3.0,collection_date,train
+PX480332.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,1.0,12.0,collection_date,train
+PX480334.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,1.0,23.0,collection_date,train
+PX480335.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,1.0,28.0,collection_date,train
+PX480437.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,2.0,6.0,collection_date,train
+PX480336.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,2.0,8.0,collection_date,train
+PX480438.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,2.0,17.0,collection_date,train
+PX480439.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,5.0,7.0,collection_date,train
+PX480338.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,5.0,13.0,collection_date,train
+PX480440.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,6.0,7.0,collection_date,train
+PX480344.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,6.0,23.0,collection_date,train
+PX480339.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,7.0,1.0,collection_date,train
+PX480340.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,7.0,19.0,collection_date,train
+PX480343.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,7.0,26.0,collection_date,train
+PX480342.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,7.0,28.0,collection_date,train
+PX480345.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,8.0,17.0,collection_date,train
+PX480346.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,8.0,18.0,collection_date,train
+PX480347.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,10.0,2.0,collection_date,train
+PX480348.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2017.0,12.0,28.0,collection_date,train
+PX480349.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,1.0,2.0,collection_date,train
+PX480354.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,4.0,1.0,collection_date,train
+PX480355.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,4.0,24.0,collection_date,train
+PX480358.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,6.0,8.0,collection_date,train
+PX480359.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,6.0,22.0,collection_date,train
+PX480366.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,6.0,25.0,collection_date,train
+PX480361.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,7.0,19.0,collection_date,train
+PX480364.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,8.0,4.0,collection_date,train
+PX480368.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,8.0,19.0,collection_date,train
+PX480370.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,9.0,1.0,collection_date,train
+PX480375.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,9.0,16.0,collection_date,train
+PX480379.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,9.0,17.0,collection_date,train
+PX480380.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,9.0,22.0,collection_date,train
+PX480382.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,10.0,21.0,collection_date,train
+PX480384.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,11.0,5.0,collection_date,train
+PX480386.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,11.0,11.0,collection_date,train
+PX480387.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,11.0,15.0,collection_date,train
+PX480388.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,11.0,21.0,collection_date,train
+PX480391.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2018.0,12.0,18.0,collection_date,train
+PX480394.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,1.0,4.0,collection_date,train
+PX480395.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,1.0,4.0,collection_date,train
+PX480392.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,1.0,8.0,collection_date,train
+PX480400.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,1.0,29.0,collection_date,train
+PX480402.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,4.0,17.0,collection_date,train
+PX480401.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,4.0,26.0,collection_date,train
+PX480444.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,7.0,2.0,collection_date,train
+PX480407.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,7.0,10.0,collection_date,train
+PX480412.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,7.0,11.0,collection_date,train
+PX480413.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,7.0,28.0,collection_date,train
+PX480418.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,8.0,1.0,collection_date,train
+PX480424.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,8.0,6.0,collection_date,train
+PX480422.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,8.0,18.0,collection_date,train
+PX480429.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,8.0,22.0,collection_date,train
+PX480431.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,9.0,8.0,collection_date,train
+PX480322.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,9.0,22.0,collection_date,train
+PX480323.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,10.0,2.0,collection_date,train
+PX480432.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,10.0,23.0,collection_date,train
+PX480327.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2019.0,11.0,18.0,collection_date,train
+PX480433.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,1.0,18.0,collection_date,val
+PX480434.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,1.0,22.0,collection_date,val
+PX480435.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,3.0,1.0,collection_date,val
+QB132103.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,3.0,1.0,collection_date,val
+QB132118.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,4.0,1.0,collection_date,val
+PX480447.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2020.0,7.0,28.0,collection_date,val
+PX480436.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2021.0,1.0,18.0,collection_date,val
+PX480331.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2021.0,7.0,17.0,collection_date,val
+PZ049732.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2023.0,10.0,1.0,collection_date,test
+PZ770275.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,26.0,collection_date,test
+PZ770277.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,26.0,collection_date,test
+PZ770278.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,26.0,collection_date,test
+PZ770407.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,26.0,collection_date,test
+PZ770283.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,28.0,collection_date,test
+PZ770284.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,28.0,collection_date,test
+PZ770285.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,29.0,collection_date,test
+PZ770289.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,29.0,collection_date,test
+PZ770290.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,29.0,collection_date,test
+PZ770298.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,29.0,collection_date,test
+PZ770300.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,10.0,30.0,collection_date,test
+PZ770406.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,11.0,7.0,collection_date,test
+PZ770405.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,11.0,19.0,collection_date,test
+PZ770301.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,11.0,22.0,collection_date,test
+QB138970.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2024.0,12.0,13.0,collection_date,test
+QB074409.1,data/raw/expanded/dengue.fasta,Dengue virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus denguei,2026.0,1.0,1.0,release_date,test
+MH121166.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1976.0,1.0,1.0,collection_date,train
+MH121168.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1976.0,1.0,1.0,collection_date,train
+MT583339.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1976.0,1.0,1.0,collection_date,train
+MT583340.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1976.0,1.0,1.0,collection_date,train
+MH121164.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,1.0,1.0,collection_date,train
+MH121165.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,1.0,1.0,collection_date,train
+MK028855.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,1.0,1.0,collection_date,train
+MT583341.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,1.0,1.0,collection_date,train
+MT583342.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,1.0,1.0,collection_date,train
+MG572235.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1995.0,5.0,4.0,collection_date,train
+NC_002549.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,1999.0,1.0,1.0,release_date,train
+MG572230.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,3.0,20.0,collection_date,train
+MH425138.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,8.0,9.0,collection_date,train
+KY558987.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,9.0,1.0,collection_date,train
+OQ892307.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,10.0,15.0,collection_date,train
+OQ892306.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,10.0,17.0,collection_date,train
+KY558986.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,11.0,1.0,collection_date,train
+MG948589.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,11.0,9.0,collection_date,train
+OQ892316.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,11.0,10.0,collection_date,train
+MG948590.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,11.0,11.0,collection_date,train
+OQ892295.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,11.0,30.0,collection_date,train
+OQ892299.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,12.0,10.0,collection_date,train
+OQ892302.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,12.0,10.0,collection_date,train
+OQ892310.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2014.0,12.0,10.0,collection_date,train
+KY471125.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,1.0,1.0,collection_date,train
+MF599507.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,3.0,25.0,collection_date,train
+MF599522.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,3.0,30.0,collection_date,train
+MF102255.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,4.0,1.0,collection_date,train
+MF599508.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,4.0,6.0,collection_date,train
+MF599509.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,4.0,11.0,collection_date,train
+MF599510.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,4.0,21.0,collection_date,train
+MF599511.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,4.0,21.0,collection_date,train
+MF599504.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,5.0,4.0,collection_date,train
+MF599514.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,5.0,20.0,collection_date,train
+MF599516.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,5.0,26.0,collection_date,train
+MF599518.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,5.0,26.0,collection_date,train
+KY744596.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2015.0,11.0,22.0,collection_date,train
+MH613311.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2017.0,5.0,1.0,collection_date,train
+MK088515.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2017.0,5.0,1.0,collection_date,train
+MH481611.2,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2017.0,5.0,7.0,collection_date,train
+MH464888.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,1.0,1.0,release_date,train
+MH733479.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,5.0,15.0,collection_date,train
+MH733480.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,5.0,15.0,collection_date,train
+MH733481.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,5.0,17.0,collection_date,train
+MH733483.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,5.0,18.0,collection_date,train
+MH733491.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,6.0,6.0,collection_date,train
+MK731987.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,11.0,collection_date,train
+MK007333.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,12.0,collection_date,train
+MK007336.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,13.0,collection_date,train
+MK731985.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,13.0,collection_date,train
+MK007339.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,14.0,collection_date,train
+MK731990.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,17.0,collection_date,train
+MK731992.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2018.0,8.0,20.0,collection_date,train
+MN416402.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2019.0,1.0,1.0,release_date,train
+OQ348598.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2019.0,7.0,2.0,collection_date,train
+MT800930.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2019.0,12.0,24.0,collection_date,train
+MK672824.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2020.0,1.0,1.0,release_date,train
+MK672825.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2020.0,1.0,1.0,release_date,train
+OQ348596.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2020.0,6.0,26.0,collection_date,train
+OQ348597.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2020.0,6.0,26.0,collection_date,train
+MZ605320.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,1.0,1.0,collection_date,train
+OZ556691.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,2.0,11.0,collection_date,train
+OZ556693.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,2.0,18.0,collection_date,train
+OZ556706.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,2.0,21.0,collection_date,train
+OZ556700.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,2.0,22.0,collection_date,train
+OZ556702.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,3.0,1.0,collection_date,train
+OZ556703.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,3.0,1.0,collection_date,train
+OZ556698.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,10.0,10.0,collection_date,train
+OZ556680.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,10.0,16.0,collection_date,train
+OZ556683.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,10.0,16.0,collection_date,train
+OZ556696.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,10.0,16.0,collection_date,train
+OZ556697.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2021.0,10.0,22.0,collection_date,train
+OZ556707.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2022.0,4.0,20.0,collection_date,test
+OZ556695.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2022.0,4.0,25.0,collection_date,test
+OZ556692.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2022.0,5.0,4.0,collection_date,test
+OZ556699.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2022.0,6.0,4.0,collection_date,test
+OZ556672.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2022.0,8.0,15.0,collection_date,test
+OQ784117.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2023.0,1.0,1.0,release_date,test
+OQ784118.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2023.0,1.0,1.0,release_date,test
+OQ784119.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2023.0,1.0,1.0,release_date,test
+OQ784120.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2023.0,1.0,1.0,release_date,test
+OQ784121.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2023.0,1.0,1.0,release_date,test
+OZ276552.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2025.0,1.0,1.0,collection_date,test
+OZ538128.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2025.0,8.0,29.0,collection_date,test
+OZ538089.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2025.0,9.0,1.0,collection_date,test
+OZ538111.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2025.0,9.0,1.0,collection_date,test
+OZ538127.1,data/raw/expanded/ebola.fasta,Ebola virus,Filoviridae,Orthoebolavirus,Orthoebolavirus zairense,2025.0,9.0,1.0,collection_date,test
+OL774861.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,1977.0,1.0,1.0,collection_date,train
+OM140826.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,1989.0,1.0,1.0,collection_date,train
+OM140827.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,1989.0,1.0,1.0,collection_date,train
+NC_004296.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,1993.0,1.0,1.0,release_date,train
+NC_004297.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,1998.0,1.0,1.0,release_date,train
+OM140830.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2000.0,1.0,1.0,collection_date,train
+OM140831.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2000.0,1.0,1.0,collection_date,train
+OL774856.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2003.0,1.0,1.0,collection_date,train
+OL774857.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2003.0,1.0,1.0,collection_date,train
+AY628200.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628201.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628202.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628203.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628204.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628205.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628206.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628207.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+AY628208.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2004.0,1.0,1.0,release_date,train
+OM140828.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2007.0,1.0,1.0,collection_date,train
+OM140829.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2007.0,1.0,1.0,collection_date,train
+OL774858.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,1.0,1.0,collection_date,train
+OL774859.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,1.0,1.0,collection_date,train
+OL774862.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,2.0,1.0,collection_date,train
+OL774863.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,2.0,1.0,collection_date,train
+KF478762.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,6.0,1.0,collection_date,train
+KF478765.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2009.0,6.0,1.0,collection_date,train
+HQ688672.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2011.0,1.0,1.0,release_date,train
+HQ688673.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2011.0,1.0,1.0,release_date,train
+HQ688674.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2011.0,1.0,1.0,release_date,train
+HQ688675.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2011.0,1.0,1.0,release_date,train
+MN275172.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+MN275173.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+PP826286.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+PP826287.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+PP826288.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+PP826289.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,1.0,1.0,collection_date,train
+KF478761.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,3.0,1.0,collection_date,train
+KF478766.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,3.0,1.0,collection_date,train
+KF478760.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2012.0,3.0,3.0,collection_date,train
+MT193284.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2014.0,10.0,23.0,collection_date,train
+MT193288.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,1.0,21.0,collection_date,train
+MT193278.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,1.0,29.0,collection_date,train
+MT193283.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,1.0,30.0,collection_date,train
+MT193279.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,2.0,7.0,collection_date,train
+MT193277.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,2.0,23.0,collection_date,train
+KU961971.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,2.0,26.0,collection_date,train
+KU961972.2,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,2.0,26.0,collection_date,train
+MT193280.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,3.0,5.0,collection_date,train
+MT193281.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,3.0,13.0,collection_date,train
+MT193282.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2016.0,4.0,10.0,collection_date,train
+OM791225.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,4.0,17.0,collection_date,train
+OM791226.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,4.0,17.0,collection_date,train
+OM791229.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,5.0,29.0,collection_date,train
+OM791230.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,5.0,29.0,collection_date,train
+OM791231.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,5.0,30.0,collection_date,train
+OM791232.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,5.0,30.0,collection_date,train
+OM735990.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,7.0,13.0,collection_date,train
+OM735991.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,7.0,13.0,collection_date,train
+OM735988.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,8.0,2.0,collection_date,train
+OM735989.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,8.0,2.0,collection_date,train
+OM735986.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,7.0,collection_date,train
+OM735987.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,7.0,collection_date,train
+OM735980.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,8.0,collection_date,train
+OM735981.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,8.0,collection_date,train
+OM735982.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,8.0,collection_date,train
+OM735984.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,8.0,collection_date,train
+OM735985.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,9.0,8.0,collection_date,train
+OM735976.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,3.0,collection_date,train
+OM735977.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,3.0,collection_date,train
+OM735978.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,3.0,collection_date,train
+OM735979.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,3.0,collection_date,train
+OM735974.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,11.0,collection_date,train
+OM735975.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,11.0,collection_date,train
+OM735970.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,27.0,collection_date,train
+OM735971.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,27.0,collection_date,train
+OM735972.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,27.0,collection_date,train
+OM735973.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,10.0,27.0,collection_date,train
+OM735968.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,11.0,6.0,collection_date,train
+OM735969.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2019.0,11.0,6.0,collection_date,train
+OM791219.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2020.0,2.0,5.0,collection_date,test
+OM791220.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2020.0,2.0,5.0,collection_date,test
+OM791222.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2020.0,2.0,18.0,collection_date,test
+PZ239819.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2022.0,5.0,4.0,collection_date,test
+PZ239820.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2024.0,1.0,15.0,collection_date,test
+PZ239821.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2024.0,1.0,15.0,collection_date,test
+PZ239822.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2024.0,1.0,15.0,collection_date,test
+PZ239823.1,data/raw/expanded/lassa.fasta,Lassa virus,Arenaviridae,Mammarenavirus,Mammarenavirus lassaense,2024.0,1.0,15.0,collection_date,test
+EF446132.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1967.0,1.0,1.0,collection_date,train
+GQ433352.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1967.0,1.0,1.0,collection_date,train
+PX278686.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1980.0,1.0,1.0,collection_date,train
+DQ447649.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+EF446131.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+EU500826.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+EU500827.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+EU500828.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+NC_024781.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,1.0,1.0,collection_date,train
+KU179482.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1987.0,8.0,19.0,collection_date,train
+NC_001608.4,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1994.0,1.0,1.0,release_date,train
+JX458825.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,1.0,1.0,collection_date,train
+JX458826.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,1.0,1.0,collection_date,train
+JX458830.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,1.0,1.0,collection_date,train
+JX458833.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,1.0,1.0,collection_date,train
+JX458851.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,1.0,1.0,collection_date,train
+DQ447650.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,5.0,1.0,collection_date,train
+DQ447651.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,5.0,1.0,collection_date,train
+DQ447652.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,1999.0,5.0,1.0,collection_date,train
+JX458831.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458834.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458836.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458838.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458839.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458840.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458842.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458845.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+JX458847.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2000.0,1.0,1.0,collection_date,train
+AY358025.2,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2003.0,1.0,1.0,release_date,train
+AY430365.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2004.0,1.0,1.0,release_date,train
+AY430366.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2004.0,1.0,1.0,release_date,train
+PX278685.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2004.0,1.0,1.0,collection_date,train
+DQ217792.2,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,1.0,1.0,release_date,train
+KU978782.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,1.0,1.0,collection_date,train
+KY047763.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,1.0,1.0,collection_date,train
+MT586762.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,1.0,1.0,collection_date,train
+DQ447653.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,3.0,1.0,collection_date,train
+KR063674.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,3.0,13.0,collection_date,train
+DQ447656.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,4.0,1.0,collection_date,train
+DQ447658.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,4.0,1.0,collection_date,train
+DQ447659.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,4.0,1.0,collection_date,train
+DQ447660.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2005.0,5.0,1.0,collection_date,train
+FJ750953.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750954.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750955.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750957.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750958.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750959.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+KU059750.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2007.0,1.0,1.0,collection_date,train
+FJ750956.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2008.0,1.0,1.0,collection_date,train
+JN408064.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2008.0,1.0,1.0,collection_date,train
+JX458852.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2008.0,1.0,1.0,collection_date,train
+JX458853.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2008.0,1.0,1.0,collection_date,train
+JX458854.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2009.0,1.0,1.0,collection_date,train
+JX458855.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2009.0,1.0,1.0,collection_date,train
+JX458856.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2009.0,1.0,1.0,collection_date,train
+JX458857.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2009.0,1.0,1.0,collection_date,train
+JX458858.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2009.0,1.0,1.0,collection_date,train
+KC545387.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2012.0,1.0,1.0,collection_date,train
+KC545388.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2012.0,1.0,1.0,collection_date,train
+KY047764.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2013.0,1.0,1.0,collection_date,train
+KP985768.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2014.0,1.0,1.0,collection_date,val
+KM261523.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2014.0,1.0,15.0,collection_date,val
+KP117259.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2015.0,1.0,1.0,release_date,val
+KP117260.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2015.0,1.0,1.0,release_date,val
+KP117261.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2015.0,1.0,1.0,release_date,val
+MN258361.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2017.0,6.0,12.0,collection_date,val
+MF939097.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2017.0,7.0,1.0,collection_date,val
+MN187403.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2018.0,1.0,1.0,collection_date,val
+MN187404.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2018.0,1.0,1.0,collection_date,val
+MN187405.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2018.0,1.0,1.0,collection_date,val
+MN187406.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2018.0,1.0,1.0,collection_date,val
+MK271062.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2019.0,1.0,1.0,release_date,test
+OL702894.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2021.0,8.0,9.0,collection_date,test
+OQ672471.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2022.0,6.0,26.0,collection_date,test
+PV700539.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2023.0,3.0,1.0,collection_date,test
+PV700540.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2023.0,3.0,1.0,collection_date,test
+PV700541.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2023.0,3.0,1.0,collection_date,test
+PV700537.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,1.0,1.0,collection_date,test
+PV700538.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,1.0,1.0,collection_date,test
+OZ570390.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,17.0,collection_date,test
+OZ570521.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,17.0,collection_date,test
+OZ570458.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,18.0,collection_date,test
+OZ570395.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,19.0,collection_date,test
+OZ570517.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,19.0,collection_date,test
+OZ570453.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,21.0,collection_date,test
+OZ570499.1,data/raw/expanded/marburg.fasta,Marburg virus,Filoviridae,Orthomarburgvirus,Orthomarburgvirus marburgense,2025.0,11.0,25.0,collection_date,test
+NC_019843.3,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2012.0,6.0,13.0,collection_date,train
+NC_038294.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2012.0,9.0,11.0,collection_date,train
+OP906306.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2013.0,1.0,1.0,collection_date,train
+MW545527.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,1.0,1.0,collection_date,train
+MW545528.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,1.0,1.0,collection_date,train
+OP654179.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,1.0,1.0,collection_date,train
+OP654178.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,1.0,6.0,collection_date,train
+OP712623.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,1.0,6.0,collection_date,train
+MT387202.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,5.0,20.0,collection_date,train
+ON325306.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,8.0,15.0,collection_date,train
+MN654973.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,11.0,1.0,collection_date,train
+MN654991.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,11.0,1.0,collection_date,train
+MN655016.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,11.0,1.0,collection_date,train
+MN654971.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2015.0,12.0,1.0,collection_date,train
+PV000776.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,1.0,1.0,collection_date,train
+MN654996.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,4.0,1.0,collection_date,train
+MW086528.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086529.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086531.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086534.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086535.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086538.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MW086539.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,5.0,1.0,collection_date,train
+MN654972.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,6.0,1.0,collection_date,train
+MN654978.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,6.0,1.0,collection_date,train
+MN655011.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,6.0,1.0,collection_date,train
+MN654970.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,7.0,1.0,collection_date,train
+OP712624.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,9.0,7.0,collection_date,train
+OP712625.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2016.0,9.0,7.0,collection_date,train
+MN654989.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,1.0,1.0,collection_date,train
+MN758610.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,1.0,1.0,collection_date,train
+MN758611.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,1.0,1.0,collection_date,train
+MT226601.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,2.0,1.0,collection_date,train
+MT226602.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,2.0,1.0,collection_date,train
+MT226605.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,2.0,1.0,collection_date,train
+MT226607.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,2.0,1.0,collection_date,train
+MN654994.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,4.0,1.0,collection_date,train
+MN654998.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,5.0,1.0,collection_date,train
+MN655003.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,5.0,1.0,collection_date,train
+OP866282.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,10.0,11.0,collection_date,train
+MN654999.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,12.0,1.0,collection_date,train
+OP866278.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,12.0,7.0,collection_date,train
+OP866279.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,12.0,27.0,collection_date,train
+OP866280.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2017.0,12.0,27.0,collection_date,train
+MN654995.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2018.0,3.0,7.0,collection_date,train
+MN655006.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2018.0,3.0,7.0,collection_date,train
+MN655001.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2018.0,4.0,2.0,collection_date,train
+MN723544.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2018.0,8.0,30.0,collection_date,train
+MN507638.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,1.0,1.0,release_date,train
+PP086048.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,1.0,1.0,collection_date,train
+OR987487.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,1.0,23.0,collection_date,train
+OR987489.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,1.0,27.0,collection_date,train
+OR987491.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,7.0,collection_date,train
+OR987492.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,10.0,collection_date,train
+OR987493.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,12.0,collection_date,train
+OR987494.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,14.0,collection_date,train
+OR987495.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,14.0,collection_date,train
+OR987496.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,2.0,15.0,collection_date,train
+OL622036.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,4.0,3.0,collection_date,train
+OK094449.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,4.0,30.0,collection_date,train
+OK094450.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,4.0,30.0,collection_date,train
+OK094453.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,4.0,30.0,collection_date,train
+OP866287.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,10.0,29.0,collection_date,train
+OP866292.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2019.0,11.0,21.0,collection_date,train
+MN654976.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN654981.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN654988.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN654990.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN654993.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN655004.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN655007.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN655013.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+MN655014.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,release_date,val
+ON325307.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,1.0,1.0,collection_date,val
+MZ268405.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,3.0,19.0,collection_date,val
+ON378807.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2020.0,9.0,21.0,collection_date,val
+MT361640.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2021.0,1.0,1.0,release_date,test
+PQ538787.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2021.0,1.0,1.0,collection_date,test
+PQ538788.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2021.0,1.0,1.0,collection_date,test
+PQ538789.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2021.0,1.0,1.0,collection_date,test
+OK094446.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2022.0,1.0,1.0,release_date,test
+OK094447.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2022.0,1.0,1.0,release_date,test
+OK094451.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2022.0,1.0,1.0,release_date,test
+OK094454.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2022.0,1.0,1.0,release_date,test
+OQ297692.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2022.0,8.0,1.0,collection_date,test
+PX660034.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2025.0,11.0,28.0,collection_date,test
+PZ439299.1,data/raw/expanded/mers.fasta,MERS-CoV,Coronaviridae,Betacoronavirus,Betacoronavirus cameli,2025.0,12.0,15.0,collection_date,test
+PQ463988.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1998.0,1.0,1.0,collection_date,train
+MK673561.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,1.0,1.0,collection_date,train
+MK673562.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,1.0,1.0,collection_date,train
+MK673558.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,3.0,25.0,collection_date,train
+MK673559.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,3.0,25.0,collection_date,train
+MK673560.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,3.0,26.0,collection_date,train
+MK673563.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,1999.0,4.0,3.0,collection_date,train
+AF212302.2,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2000.0,1.0,1.0,release_date,train
+NC_002728.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2000.0,1.0,1.0,release_date,train
+AY029767.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2001.0,1.0,1.0,release_date,train
+AY029768.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2001.0,1.0,1.0,release_date,train
+MK801755.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2003.0,1.0,1.0,collection_date,train
+AJ564621.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,1.0,1.0,release_date,train
+AJ564622.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,1.0,1.0,release_date,train
+AJ564623.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,1.0,1.0,release_date,train
+AY988601.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,1.0,1.0,collection_date,train
+MK673564.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,1.0,22.0,collection_date,train
+MK673565.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,2.0,9.0,collection_date,train
+MK673566.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,3.0,29.0,collection_date,train
+MK673567.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2004.0,4.0,19.0,collection_date,train
+AJ627196.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2005.0,1.0,1.0,release_date,train
+FJ513078.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2007.0,1.0,1.0,collection_date,train
+JN808857.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2008.0,1.0,1.0,collection_date,train
+JN808863.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2008.0,1.0,1.0,collection_date,train
+MK673568.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2008.0,2.0,28.0,collection_date,train
+MK673576.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,1.0,1.0,collection_date,train
+MK673571.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,1.0,collection_date,train
+MK673573.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,2.0,collection_date,train
+MK673577.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,2.0,collection_date,train
+MK673574.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,3.0,collection_date,train
+MK673575.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,10.0,collection_date,train
+MK673570.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,2.0,11.0,collection_date,train
+MK673578.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2011.0,3.0,8.0,collection_date,train
+MK673579.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2012.0,1.0,20.0,collection_date,train
+MK673580.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2012.0,1.0,20.0,collection_date,train
+MK673581.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2012.0,1.0,21.0,collection_date,train
+MK673582.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2012.0,4.0,5.0,collection_date,train
+MK575070.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,1.0,6.0,collection_date,train
+MK673583.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,1.0,22.0,collection_date,train
+MK575060.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575063.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575064.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575065.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575066.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575067.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575068.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK575069.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2013.0,4.0,11.0,collection_date,train
+MK673592.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2014.0,1.0,20.0,collection_date,train
+MK673591.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2014.0,2.0,4.0,collection_date,train
+MK673589.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2014.0,2.0,6.0,collection_date,train
+MK673590.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2014.0,2.0,7.0,collection_date,train
+MK673584.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2015.0,1.0,5.0,collection_date,train
+MK673587.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2015.0,1.0,19.0,collection_date,train
+MK673585.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2015.0,3.0,18.0,collection_date,train
+MK673586.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2015.0,3.0,21.0,collection_date,train
+PP981664.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2017.0,2.0,16.0,collection_date,train
+PP981665.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2017.0,2.0,22.0,collection_date,train
+MW535746.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2017.0,5.0,21.0,collection_date,train
+MH396625.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2018.0,5.0,17.0,collection_date,train
+MH523640.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2018.0,5.0,17.0,collection_date,train
+MH523642.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2018.0,5.0,17.0,collection_date,train
+MH523641.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2018.0,5.0,21.0,collection_date,train
+PP981667.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2019.0,2.0,20.0,collection_date,val
+MN549409.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2019.0,6.0,10.0,collection_date,val
+PP981668.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2020.0,1.0,4.0,collection_date,val
+PP981669.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2020.0,1.0,5.0,collection_date,val
+PP981670.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2020.0,1.0,20.0,collection_date,val
+PP981671.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2020.0,1.0,20.0,collection_date,val
+PP981673.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2022.0,3.0,14.0,collection_date,val
+PP981674.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2022.0,3.0,16.0,collection_date,val
+PP981675.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2022.0,3.0,24.0,collection_date,val
+PP981676.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,3.0,collection_date,test
+PP981677.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,15.0,collection_date,test
+PP981678.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,19.0,collection_date,test
+PP981679.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,19.0,collection_date,test
+PQ368168.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,22.0,collection_date,test
+PP981681.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,1.0,28.0,collection_date,test
+PQ368169.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,2.0,1.0,collection_date,test
+OR820506.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,8.0,29.0,collection_date,test
+OR820508.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2023.0,9.0,11.0,collection_date,test
+PV132706.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2024.0,1.0,30.0,collection_date,test
+PV132707.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2024.0,3.0,17.0,collection_date,test
+PV892943.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2025.0,1.0,1.0,release_date,test
+PX130164.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2025.0,1.0,28.0,collection_date,test
+PX130165.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2025.0,2.0,20.0,collection_date,test
+PX130166.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2025.0,2.0,25.0,collection_date,test
+PV640869.1,data/raw/expanded/nipah.fasta,Nipah virus,Paramyxoviridae,Henipavirus,Henipavirus nipahense,2025.0,5.0,1.0,collection_date,test
+MZ285906.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1927.0,1.0,1.0,collection_date,train
+OR119828.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1974.0,1.0,1.0,collection_date,train
+NC_002031.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1986.0,1.0,1.0,release_date,train
+X03700.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1986.0,1.0,1.0,release_date,train
+U17066.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1995.0,1.0,1.0,release_date,train
+U17067.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1995.0,1.0,1.0,release_date,train
+U21055.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1995.0,1.0,1.0,release_date,train
+U21056.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1995.0,1.0,1.0,release_date,train
+U54798.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1996.0,1.0,1.0,release_date,train
+PQ181571.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,1998.0,3.0,13.0,collection_date,train
+OR882684.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2003.0,1.0,1.0,collection_date,train
+PX660174.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2014.0,1.0,13.0,collection_date,train
+PX766932.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2015.0,3.0,4.0,collection_date,train
+OM938988.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2016.0,1.0,1.0,collection_date,train
+MW034590.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2016.0,11.0,1.0,collection_date,train
+MN643088.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2017.0,4.0,19.0,collection_date,train
+OP508715.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2017.0,9.0,3.0,collection_date,train
+MN643089.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2017.0,10.0,19.0,collection_date,train
+MW960207.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,1.0,collection_date,train
+MZ604845.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,1.0,collection_date,train
+MZ604866.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,1.0,collection_date,train
+MZ604876.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,1.0,collection_date,train
+OM938989.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,1.0,collection_date,train
+MN506287.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,24.0,collection_date,train
+MN506288.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,24.0,collection_date,train
+MN506289.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,26.0,collection_date,train
+MN506291.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,1.0,26.0,collection_date,train
+MN643091.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,2.0,7.0,collection_date,train
+MN643084.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2018.0,2.0,25.0,collection_date,train
+MZ604846.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604850.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604854.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604855.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604857.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604860.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604867.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604869.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MZ604874.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,1.0,collection_date,train
+MW308135.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,1.0,20.0,collection_date,train
+MN708489.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2019.0,2.0,7.0,collection_date,train
+MT107250.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,1.0,1.0,release_date,train
+ON245434.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,2.0,1.0,collection_date,train
+PX766927.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,3.0,12.0,collection_date,train
+MT505351.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,5.0,19.0,collection_date,train
+MT505352.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,5.0,19.0,collection_date,train
+ON245435.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,11.0,1.0,collection_date,train
+ON323052.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,12.0,14.0,collection_date,train
+ON323054.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,12.0,14.0,collection_date,train
+ON402371.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2020.0,12.0,14.0,collection_date,train
+PX766924.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2021.0,3.0,16.0,collection_date,train
+OP796361.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,1.0,1.0,release_date,train
+PX766920.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,2.0,16.0,collection_date,train
+PX766921.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,2.0,16.0,collection_date,train
+PX766929.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,2.0,16.0,collection_date,train
+PX766933.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,2.0,16.0,collection_date,train
+PX660173.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,3.0,16.0,collection_date,train
+PX766926.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,20.0,collection_date,train
+PX766925.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,25.0,collection_date,train
+PX766922.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,26.0,collection_date,train
+PX766931.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,28.0,collection_date,train
+PX766928.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,29.0,collection_date,train
+PX766930.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2022.0,7.0,29.0,collection_date,train
+OR882688.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2023.0,1.0,1.0,release_date,val
+OQ675592.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2023.0,2.0,24.0,collection_date,val
+PP477075.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2023.0,4.0,11.0,collection_date,val
+OR052147.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2023.0,4.0,28.0,collection_date,val
+PX648516.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2023.0,11.0,4.0,collection_date,val
+PQ602526.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,9.0,18.0,collection_date,val
+PX379990.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PX379991.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PX379992.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PX379993.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PX379994.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PX379995.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,10.0,1.0,collection_date,val
+PQ879116.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,12.0,26.0,collection_date,val
+PQ879117.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,12.0,26.0,collection_date,val
+PQ879118.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2024.0,12.0,26.0,collection_date,val
+PV563869.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,1.0,8.0,collection_date,test
+PV563870.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,1.0,9.0,collection_date,test
+PV563871.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,1.0,9.0,collection_date,test
+PV563872.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,1.0,9.0,collection_date,test
+PV563865.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,2.0,12.0,collection_date,test
+PV563866.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,2.0,17.0,collection_date,test
+PV563867.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,2.0,26.0,collection_date,test
+PV563868.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,3.0,2.0,collection_date,test
+PV454339.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,3.0,12.0,collection_date,test
+PV454340.1,data/raw/expanded/yellow_fever.fasta,Yellow fever virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus flavi,2025.0,3.0,19.0,collection_date,test
+MW143017.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW143018.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW143019.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW143020.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW143021.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW143022.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,1947.0,1.0,1.0,collection_date,train
+MW015936.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2006.0,8.0,11.0,collection_date,train
+OP281680.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2006.0,8.0,11.0,collection_date,train
+MT377504.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2006.0,9.0,6.0,collection_date,train
+MT377502.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2006.0,10.0,28.0,collection_date,train
+PQ849442.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2010.0,1.0,1.0,collection_date,train
+OQ661914.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2011.0,7.0,4.0,collection_date,train
+OQ661915.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2013.0,8.0,19.0,collection_date,train
+PP115590.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2014.0,1.0,1.0,collection_date,train
+OK571913.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2014.0,11.0,25.0,collection_date,train
+MN577543.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2014.0,12.0,11.0,collection_date,train
+NC_035889.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,1.0,1.0,collection_date,train
+PQ129535.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,1.0,1.0,collection_date,train
+OL450364.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,4.0,13.0,collection_date,train
+MT377503.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,8.0,27.0,collection_date,train
+OL450365.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,10.0,8.0,collection_date,train
+OL450366.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,10.0,20.0,collection_date,train
+MK241416.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,11.0,27.0,collection_date,train
+MK241415.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,12.0,3.0,collection_date,train
+MN100039.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,12.0,11.0,collection_date,train
+MN124091.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2015.0,12.0,11.0,collection_date,train
+PP626405.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,1.0,1.0,collection_date,train
+MT377492.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,3.0,20.0,collection_date,train
+MN566104.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,5.0,31.0,collection_date,train
+MN566105.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,5.0,31.0,collection_date,train
+MN566107.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,5.0,31.0,collection_date,train
+MH882548.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,6.0,9.0,collection_date,train
+ON586853.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,7.0,11.0,collection_date,train
+MT377496.2,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,11.0,20.0,collection_date,train
+MT377497.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2016.0,11.0,25.0,collection_date,train
+MT507047.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,1.0,1.0,collection_date,train
+MT507049.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,1.0,1.0,collection_date,train
+PP626399.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,1.0,1.0,collection_date,train
+PP626400.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,1.0,1.0,collection_date,train
+MT377493.2,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,2.0,23.0,collection_date,train
+OQ661913.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,7.0,11.0,collection_date,train
+OQ661912.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,8.0,22.0,collection_date,train
+MN101548.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,11.0,11.0,collection_date,train
+MT377501.2,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2017.0,11.0,22.0,collection_date,train
+OQ661918.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,1.0,1.0,collection_date,train
+MW680970.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,1.0,24.0,collection_date,train
+MW680969.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,2.0,2.0,collection_date,train
+OP898542.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,4.0,1.0,collection_date,train
+OQ661917.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,8.0,25.0,collection_date,train
+MN025403.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,8.0,29.0,collection_date,train
+OP898541.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,10.0,1.0,collection_date,train
+OQ661919.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,11.0,6.0,collection_date,train
+OL414716.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2018.0,12.0,1.0,collection_date,train
+MN611472.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2019.0,7.0,1.0,collection_date,train
+OM964565.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2019.0,10.0,3.0,collection_date,train
+MZ008356.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2019.0,12.0,1.0,collection_date,train
+OM964566.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2019.0,12.0,12.0,collection_date,train
+OM964567.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2019.0,12.0,24.0,collection_date,train
+ON142671.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,1.0,17.0,collection_date,train
+OM964568.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,1.0,26.0,collection_date,train
+MT505349.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,5.0,19.0,collection_date,train
+MT505350.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,5.0,19.0,collection_date,train
+ON142672.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,7.0,1.0,collection_date,train
+ON142673.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2020.0,10.0,9.0,collection_date,train
+ON142674.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,1.0,5.0,collection_date,val
+PP316139.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,5.0,12.0,collection_date,val
+OM666892.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,7.0,22.0,collection_date,val
+OK054351.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,7.0,28.0,collection_date,val
+OM666891.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,8.0,20.0,collection_date,val
+OM522327.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,9.0,16.0,collection_date,val
+PP316140.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2021.0,12.0,2.0,collection_date,val
+PQ433001.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2022.0,1.0,1.0,collection_date,test
+OK569756.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2023.0,1.0,1.0,release_date,test
+PQ433000.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2023.0,1.0,1.0,collection_date,test
+PQ129494.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2023.0,10.0,23.0,collection_date,test
+PQ203661.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2023.0,11.0,14.0,collection_date,test
+PQ129495.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2023.0,12.0,1.0,collection_date,test
+PV549935.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2024.0,1.0,1.0,collection_date,test
+PP326314.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2024.0,1.0,25.0,collection_date,test
+PQ869243.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869245.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869249.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869251.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869252.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869258.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869263.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+PQ869265.1,data/raw/expanded/zika.fasta,Zika virus,Flaviviridae,Orthoflavivirus,Orthoflavivirus zikaense,2025.0,1.0,1.0,release_date,test
+OY624208.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX790182.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT510697.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP142009.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON203211.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OD961899.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY626953.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW965867.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PQ493783.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OP761049.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP266528.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT969783.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY998944.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OD919164.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT810977.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY881064.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON388826.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT325562.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OD936872.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT971756.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT834133.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OM101556.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP456405.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW286698.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP142963.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX859072.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX732088.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OM359765.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON565375.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON634666.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OL844177.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OZ090429.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP772106.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW035440.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OL728880.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OZ085730.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP606021.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP973055.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW277199.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY559890.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OL786006.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MZ083535.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP220520.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OP804070.2,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MZ085809.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY326004.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON251875.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MZ280162.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OP126987.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OA984982.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT641750.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW286558.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OW092605.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY389216.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY567718.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OD913617.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT972319.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OU348446.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OM194736.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW184592.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MZ213450.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY420842.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP788855.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OW459509.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OM811093.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+ON174156.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OD996649.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY393227.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW968539.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX565545.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX674200.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OZ062660.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OW503295.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW185275.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OY591057.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OQ314352.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT971319.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX880438.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PP697228.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+PQ431442.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OM231211.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OZ067907.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OW105182.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MW804804.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MT972029.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+MZ064999.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
+OX548003.1,data/raw/expanded/sars_cov_2.fasta,SARS-CoV-2,Coronaviridae,Betacoronavirus,Betacoronavirus pandemicum,,,,,unused
