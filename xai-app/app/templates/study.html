@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Study findings</h1>
+<p class="muted">Aggregated results across 4 viruses and 32 fully-attributed test sequences.</p>
+
+<section>
+  <h2>1 · Classifier performance</h2>
+  <div class="study-grid">
+    <div class="kpi">
+      <div class="kpi-label">BiLSTM test macro-F1</div>
+      <div class="kpi-value">{{ '%.3f' % train.bilstm.test.macro_f1 }}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">CNN test macro-F1</div>
+      <div class="kpi-value">{{ '%.3f' % train.cnn.test.macro_f1 }}</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Chance</div>
+      <div class="kpi-value">0.250</div>
+    </div>
+  </div>
+  <p>Two architectures trained on identical data with identical hyperparameters differ by <b>{{ '%.1f' % ((train.bilstm.test.macro_f1 - train.cnn.test.macro_f1)*100) }} percentage points</b>. The CNN's failure is one-directional: 91 Norovirus test sequences classified as HCV.</p>
+</section>
+
+<section>
+  <h2>2 · Attribution stability</h2>
+  <div id="stability-chart" class="chart-lg"></div>
+  <p>Median Spearman ρ between CNN and BiLSTM consensus rankings, per virus. Values below 0.7 indicate the architectures identify fundamentally different regions as important.</p>
+</section>
+
+<section>
+  <h2>3 · Fidelity (margin deletion)</h2>
+  <div id="fidelity-chart" class="chart-lg"></div>
+  <p>Deleting top-attributed bins drops the true-class margin. A faithful attribution produces positive drops that grow with deletion fraction. Dengue's CNN is anti-faithful despite 100% accuracy on that class.</p>
+</section>
+
+<section>
+  <h2>4 · Biological plausibility</h2>
+  <table class="table">
+    <thead><tr><th>Virus</th><th>Annotated</th><th>Antigenic O/E (median)</th><th>Conserved O/E (median)</th></tr></thead>
+    <tbody>
+    {% for v, d in plausibility.items() %}
+      <tr>
+        <td><span class="pill pill-{{ v }}">{{ v }}</span></td>
+        <td>{{ d.n_antigenic }} / 8</td>
+        <td>{% if d.median_antigenic is not none %}{{ '%.2f' % d.median_antigenic }}{% else %}—{% endif %}</td>
+        <td>{% if d.median_conserved is not none %}{{ '%.2f' % d.median_conserved }}{% else %}—{% endif %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="muted">Plausibility is constrained by annotation availability: only 6 of 32 test accessions have GenBank records with individual gene annotations. Where measurable, antigenic enrichment is below 1.0.</p>
+</section>
+
+<script>
+const stability = {{ stability | tojson }};
+const fidelity = {{ fidelity | tojson }};
+const colors = {dengue:"#3B82F6",chikungunya:"#A855F7",hcv:"#F97316",norovirus:"#14B8A6"};
+
+// stability
+const stabTrace = Object.entries(stability).map(([v, d]) => ({
+  type: 'bar', name: v,
+  x: [v], y: [d.median],
+  marker: {color: colors[v]},
+  text: [d.median.toFixed(3)], textposition: 'outside', textfont: {color:'#F8FAFC'},
+  error_y: {type:'data', symmetric:false,
+            array:[d.max - d.median], arrayminus:[d.median - d.min],
+            color:'#A855F7', thickness:2}
+}));
+Plotly.newPlot('stability-chart', stabTrace, {
+  height: 340, showlegend: false,
+  plot_bgcolor:'rgba(0,0,0,0)', paper_bgcolor:'rgba(0,0,0,0)',
+  yaxis: {title:'Spearman ρ', range:[0,1], color:'#94A3B8', gridcolor:'rgba(148,163,184,0.15)'},
+  xaxis: {color:'#94A3B8'},
+  font: {family:'Inter', color:'#F8FAFC'},
+  margin: {l:60,r:20,t:30,b:40},
+}, {displayModeBar:false});
+
+// fidelity
+const fracs = ['0.01','0.05','0.1','0.2'];
+const xlabels = ['1%','5%','10%','20%'];
+const fidTraces = [];
+Object.entries(fidelity).forEach(([v, fv]) => {
+  fidTraces.push({
+    type:'scatter', mode:'lines+markers', name: v + ' · CNN',
+    x: xlabels, y: fracs.map(f => fv[f].cnn),
+    line: {color: colors[v], width: 2}, marker: {size: 8},
+  });
+  fidTraces.push({
+    type:'scatter', mode:'lines+markers', name: v + ' · BiLSTM',
+    x: xlabels, y: fracs.map(f => fv[f].bilstm),
+    line: {color: colors[v], width: 2, dash: 'dot'}, marker: {size: 8, symbol: 'diamond'},
+  });
+});
+Plotly.newPlot('fidelity-chart', fidTraces, {
+  height: 400,
+  plot_bgcolor:'rgba(0,0,0,0)', paper_bgcolor:'rgba(0,0,0,0)',
+  xaxis: {title:'deleted fraction', color:'#94A3B8'},
+  yaxis: {title:'margin drop (higher = more faithful)', color:'#94A3B8', gridcolor:'rgba(148,163,184,0.15)'},
+  font: {family:'Inter', color:'#F8FAFC'},
+  legend: {bgcolor:'rgba(30,27,75,0.8)', font:{color:'#F8FAFC', size:10}},
+  margin: {l:60,r:20,t:30,b:50},
+  shapes: [{type:'line', x0:'1%', x1:'20%', y0:0, y1:0, line:{color:'#64748B', dash:'dash'}}],
+}, {displayModeBar:false});
+</script>
+{% endblock %}

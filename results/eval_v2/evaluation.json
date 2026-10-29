@@ -1,0 +1,1524 @@
+{
+  "stability": {
+    "ON799402.1": {
+      "virus": "dengue",
+      "spearman": 0.34175826328885756,
+      "n_bins": 107
+    },
+    "PX480443.1": {
+      "virus": "dengue",
+      "spearman": 0.36025970400121765,
+      "n_bins": 107
+    },
+    "MH450307.1": {
+      "virus": "dengue",
+      "spearman": 0.27270322694410154,
+      "n_bins": 107
+    },
+    "MN018394.1": {
+      "virus": "dengue",
+      "spearman": 0.2721448304237935,
+      "n_bins": 107
+    },
+    "OL314747.1": {
+      "virus": "dengue",
+      "spearman": 0.332794529673387,
+      "n_bins": 107
+    },
+    "MW793460.1": {
+      "virus": "dengue",
+      "spearman": 0.2942161876212308,
+      "n_bins": 107
+    },
+    "OZ484504.1": {
+      "virus": "dengue",
+      "spearman": 0.322911051212938,
+      "n_bins": 106
+    },
+    "KJ596671.1": {
+      "virus": "dengue",
+      "spearman": 0.22083112913654265,
+      "n_bins": 107
+    },
+    "KY680354.1": {
+      "virus": "chikungunya",
+      "spearman": 0.2142270969778269,
+      "n_bins": 115
+    },
+    "MF001517.1": {
+      "virus": "chikungunya",
+      "spearman": 0.0966196992277469,
+      "n_bins": 121
+    },
+    "OQ148657.1": {
+      "virus": "chikungunya",
+      "spearman": 0.2988890471442815,
+      "n_bins": 119
+    },
+    "EF452494.1": {
+      "virus": "chikungunya",
+      "spearman": 0.14430971413087654,
+      "n_bins": 121
+    },
+    "KY703994.1": {
+      "virus": "chikungunya",
+      "spearman": 0.17055326629678708,
+      "n_bins": 122
+    },
+    "KY703978.1": {
+      "virus": "chikungunya",
+      "spearman": 0.3132267754055402,
+      "n_bins": 122
+    },
+    "KY703967.1": {
+      "virus": "chikungunya",
+      "spearman": 0.31919463619510874,
+      "n_bins": 122
+    },
+    "MH329293.1": {
+      "virus": "chikungunya",
+      "spearman": 0.08911835920809003,
+      "n_bins": 119
+    },
+    "DQ480519.1": {
+      "virus": "hcv",
+      "spearman": 0.025755879059350503,
+      "n_bins": 94
+    },
+    "DQ835764.1": {
+      "virus": "hcv",
+      "spearman": 0.34217525195968646,
+      "n_bins": 95
+    },
+    "DQ480523.1": {
+      "virus": "hcv",
+      "spearman": 0.007318570964129609,
+      "n_bins": 94
+    },
+    "EF424628.1": {
+      "virus": "hcv",
+      "spearman": 0.019512877939529674,
+      "n_bins": 95
+    },
+    "EF424626.1": {
+      "virus": "hcv",
+      "spearman": 0.16498517982036848,
+      "n_bins": 95
+    },
+    "EF424625.1": {
+      "virus": "hcv",
+      "spearman": 0.18988728264142946,
+      "n_bins": 95
+    },
+    "DQ835765.1": {
+      "virus": "hcv",
+      "spearman": 0.11672732362821948,
+      "n_bins": 95
+    },
+    "DQ835763.1": {
+      "virus": "hcv",
+      "spearman": 0.09643057110862262,
+      "n_bins": 95
+    },
+    "KF039725.1": {
+      "virus": "norovirus",
+      "spearman": 0.10750512645249487,
+      "n_bins": 76
+    },
+    "MZ220331.1": {
+      "virus": "norovirus",
+      "spearman": 0.3143981965352392,
+      "n_bins": 77
+    },
+    "PX458209.1": {
+      "virus": "norovirus",
+      "spearman": 0.16097060833902938,
+      "n_bins": 77
+    },
+    "KF306212.1": {
+      "virus": "norovirus",
+      "spearman": 0.07740360904917867,
+      "n_bins": 78
+    },
+    "MT357992.1": {
+      "virus": "norovirus",
+      "spearman": 0.2986224302013775,
+      "n_bins": 77
+    },
+    "MN448477.1": {
+      "virus": "norovirus",
+      "spearman": 0.31157450144791915,
+      "n_bins": 78
+    },
+    "MH218729.1": {
+      "virus": "norovirus",
+      "spearman": 0.28590396944827323,
+      "n_bins": 78
+    },
+    "MZ227265.1": {
+      "virus": "norovirus",
+      "spearman": 0.2698946622997256,
+      "n_bins": 78
+    }
+  },
+  "stability_summary": {
+    "dengue": {
+      "n": 8,
+      "median": 0.30856361941708443,
+      "min": 0.22083112913654265,
+      "max": 0.36025970400121765
+    },
+    "chikungunya": {
+      "n": 8,
+      "median": 0.19239018163730698,
+      "min": 0.08911835920809003,
+      "max": 0.31919463619510874
+    },
+    "hcv": {
+      "n": 8,
+      "median": 0.10657894736842105,
+      "min": 0.007318570964129609,
+      "max": 0.34217525195968646
+    },
+    "norovirus": {
+      "n": 8,
+      "median": 0.2778993158739994,
+      "min": 0.07740360904917867,
+      "max": 0.3143981965352392
+    }
+  },
+  "fidelity": {
+    "ON799402.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.011689245700836182,
+          "bilstm": 0.05041959881782532,
+          "random_cnn": -0.007329672574996948,
+          "random_bilstm": -0.0015083849430084229
+        },
+        "0.05": {
+          "cnn": -0.04363846778869629,
+          "bilstm": -0.017891645431518555,
+          "random_cnn": -0.027558833360671997,
+          "random_bilstm": 0.03127428889274597
+        },
+        "0.1": {
+          "cnn": -0.020812422037124634,
+          "bilstm": -0.06274086236953735,
+          "random_cnn": -0.03524196147918701,
+          "random_bilstm": 0.06154397130012512
+        },
+        "0.2": {
+          "cnn": -0.010832637548446655,
+          "bilstm": -0.09307551383972168,
+          "random_cnn": -0.04642149806022644,
+          "random_bilstm": -0.16149726510047913
+        }
+      }
+    },
+    "PX480443.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.017336010932922363,
+          "bilstm": 0.040383875370025635,
+          "random_cnn": -0.00521928071975708,
+          "random_bilstm": -0.002796560525894165
+        },
+        "0.05": {
+          "cnn": -0.043794989585876465,
+          "bilstm": 0.1333947479724884,
+          "random_cnn": -0.019113600254058838,
+          "random_bilstm": -0.03548872470855713
+        },
+        "0.1": {
+          "cnn": -0.05298295617103577,
+          "bilstm": 0.14026588201522827,
+          "random_cnn": -0.026584714651107788,
+          "random_bilstm": -0.03191778063774109
+        },
+        "0.2": {
+          "cnn": -0.026275426149368286,
+          "bilstm": 0.10500067472457886,
+          "random_cnn": -0.030050158500671387,
+          "random_bilstm": -0.10785531997680664
+        }
+      }
+    },
+    "MH450307.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.012395352125167847,
+          "bilstm": 0.05564740300178528,
+          "random_cnn": -0.0044123828411102295,
+          "random_bilstm": -0.0003832876682281494
+        },
+        "0.05": {
+          "cnn": -0.05722165107727051,
+          "bilstm": 0.15615159273147583,
+          "random_cnn": -0.02659502625465393,
+          "random_bilstm": -0.031898558139801025
+        },
+        "0.1": {
+          "cnn": -0.05450570583343506,
+          "bilstm": 0.06768882274627686,
+          "random_cnn": -0.05100634694099426,
+          "random_bilstm": -0.10277894139289856
+        },
+        "0.2": {
+          "cnn": -0.06291335821151733,
+          "bilstm": 0.08846738934516907,
+          "random_cnn": -0.0676664412021637,
+          "random_bilstm": -0.05731099843978882
+        }
+      }
+    },
+    "MN018394.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.010524332523345947,
+          "bilstm": 0.07707667350769043,
+          "random_cnn": -0.005913406610488892,
+          "random_bilstm": -0.005518525838851929
+        },
+        "0.05": {
+          "cnn": -0.03233328461647034,
+          "bilstm": 0.12237212061882019,
+          "random_cnn": -0.03490424156188965,
+          "random_bilstm": 0.008206546306610107
+        },
+        "0.1": {
+          "cnn": -0.03657075762748718,
+          "bilstm": 0.0860414206981659,
+          "random_cnn": -0.05406072735786438,
+          "random_bilstm": -0.07171154022216797
+        },
+        "0.2": {
+          "cnn": -0.026831209659576416,
+          "bilstm": 0.28070807456970215,
+          "random_cnn": -0.02987658977508545,
+          "random_bilstm": 0.21491014957427979
+        }
+      }
+    },
+    "OL314747.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.021664351224899292,
+          "bilstm": 0.023372486233711243,
+          "random_cnn": -0.012617319822311401,
+          "random_bilstm": 0.007570669054985046
+        },
+        "0.05": {
+          "cnn": -0.020006775856018066,
+          "bilstm": 0.04919847846031189,
+          "random_cnn": -0.05257496237754822,
+          "random_bilstm": 0.02703016996383667
+        },
+        "0.1": {
+          "cnn": -0.019743502140045166,
+          "bilstm": 0.08164866268634796,
+          "random_cnn": -0.034551769495010376,
+          "random_bilstm": -0.05645906925201416
+        },
+        "0.2": {
+          "cnn": -0.019663989543914795,
+          "bilstm": 0.08600246906280518,
+          "random_cnn": -0.021361500024795532,
+          "random_bilstm": -0.007085472345352173
+        }
+      }
+    },
+    "MW793460.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.020789802074432373,
+          "bilstm": -0.024249523878097534,
+          "random_cnn": -0.004453897476196289,
+          "random_bilstm": -0.0006289184093475342
+        },
+        "0.05": {
+          "cnn": -0.04452258348464966,
+          "bilstm": -0.10468566417694092,
+          "random_cnn": -0.029760897159576416,
+          "random_bilstm": 0.010628685355186462
+        },
+        "0.1": {
+          "cnn": -0.04802104830741882,
+          "bilstm": -0.09754770994186401,
+          "random_cnn": -0.026634812355041504,
+          "random_bilstm": 0.004022002220153809
+        },
+        "0.2": {
+          "cnn": -0.03903844952583313,
+          "bilstm": -0.010264456272125244,
+          "random_cnn": -0.004534780979156494,
+          "random_bilstm": -0.03429955244064331
+        }
+      }
+    },
+    "OZ484504.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.007810026407241821,
+          "bilstm": -0.024037688970565796,
+          "random_cnn": -0.0024649500846862793,
+          "random_bilstm": -0.011415660381317139
+        },
+        "0.05": {
+          "cnn": 0.007728159427642822,
+          "bilstm": -0.07797351479530334,
+          "random_cnn": -0.004605501890182495,
+          "random_bilstm": 0.014845818281173706
+        },
+        "0.1": {
+          "cnn": 0.034000784158706665,
+          "bilstm": -0.010062366724014282,
+          "random_cnn": 0.00516742467880249,
+          "random_bilstm": -0.07625770568847656
+        },
+        "0.2": {
+          "cnn": 0.03390905261039734,
+          "bilstm": -0.3528335988521576,
+          "random_cnn": -0.018750488758087158,
+          "random_bilstm": -0.15417435765266418
+        }
+      }
+    },
+    "KJ596671.1": {
+      "virus": "dengue",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.02899259328842163,
+          "bilstm": -0.013708889484405518,
+          "random_cnn": -0.009378790855407715,
+          "random_bilstm": 0.00034353137016296387
+        },
+        "0.05": {
+          "cnn": -0.02670690417289734,
+          "bilstm": 0.006053343415260315,
+          "random_cnn": -0.02111583948135376,
+          "random_bilstm": 0.00875738263130188
+        },
+        "0.1": {
+          "cnn": -0.05123564600944519,
+          "bilstm": -0.038108259439468384,
+          "random_cnn": -0.03716769814491272,
+          "random_bilstm": -0.09402203559875488
+        },
+        "0.2": {
+          "cnn": -0.04085409641265869,
+          "bilstm": -0.0630045235157013,
+          "random_cnn": -0.0188886821269989,
+          "random_bilstm": 0.13057264685630798
+        }
+      }
+    },
+    "KY680354.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.0275118350982666,
+          "bilstm": 0.014370501041412354,
+          "random_cnn": 0.0021562576293945312,
+          "random_bilstm": 0.018493831157684326
+        },
+        "0.05": {
+          "cnn": 0.10761350393295288,
+          "bilstm": 0.17542153596878052,
+          "random_cnn": 0.022999286651611328,
+          "random_bilstm": 0.02309507131576538
+        },
+        "0.1": {
+          "cnn": 0.1863858699798584,
+          "bilstm": -0.028371095657348633,
+          "random_cnn": 0.09910577535629272,
+          "random_bilstm": 0.053005993366241455
+        },
+        "0.2": {
+          "cnn": 0.2944903075695038,
+          "bilstm": 0.03996312618255615,
+          "random_cnn": 0.12305250763893127,
+          "random_bilstm": 0.01618903875350952
+        }
+      }
+    },
+    "MF001517.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.028963804244995117,
+          "bilstm": -0.0033339262008666992,
+          "random_cnn": 0.012572407722473145,
+          "random_bilstm": 0.016097605228424072
+        },
+        "0.05": {
+          "cnn": 0.11148777604103088,
+          "bilstm": 0.06479823589324951,
+          "random_cnn": 0.0316617488861084,
+          "random_bilstm": 0.02725118398666382
+        },
+        "0.1": {
+          "cnn": 0.18346208333969116,
+          "bilstm": 0.2245526909828186,
+          "random_cnn": 0.05223637819290161,
+          "random_bilstm": 0.15351051092147827
+        },
+        "0.2": {
+          "cnn": 0.2708066403865814,
+          "bilstm": 0.5232594013214111,
+          "random_cnn": 0.12265628576278687,
+          "random_bilstm": 0.35657674074172974
+        }
+      }
+    },
+    "OQ148657.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.03407180309295654,
+          "bilstm": 0.0182458758354187,
+          "random_cnn": 0.014978766441345215,
+          "random_bilstm": 0.008492887020111084
+        },
+        "0.05": {
+          "cnn": 0.12806934118270874,
+          "bilstm": 0.03846472501754761,
+          "random_cnn": 0.045102834701538086,
+          "random_bilstm": 0.029519379138946533
+        },
+        "0.1": {
+          "cnn": 0.21017992496490479,
+          "bilstm": 0.0754285454750061,
+          "random_cnn": 0.056911587715148926,
+          "random_bilstm": 0.007232964038848877
+        },
+        "0.2": {
+          "cnn": 0.33049729466438293,
+          "bilstm": 0.15345674753189087,
+          "random_cnn": 0.14784938097000122,
+          "random_bilstm": -0.09909898042678833
+        }
+      }
+    },
+    "EF452494.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.02683544158935547,
+          "bilstm": -0.019731760025024414,
+          "random_cnn": 0.0018546581268310547,
+          "random_bilstm": -0.006060123443603516
+        },
+        "0.05": {
+          "cnn": 0.12587550282478333,
+          "bilstm": 0.01736658811569214,
+          "random_cnn": 0.012800097465515137,
+          "random_bilstm": -0.03926044702529907
+        },
+        "0.1": {
+          "cnn": 0.1812174916267395,
+          "bilstm": 0.4262276291847229,
+          "random_cnn": 0.09411227703094482,
+          "random_bilstm": -0.06317585706710815
+        },
+        "0.2": {
+          "cnn": 0.2681196630001068,
+          "bilstm": 0.5590924024581909,
+          "random_cnn": 0.11508297920227051,
+          "random_bilstm": 0.06189471483230591
+        }
+      }
+    },
+    "KY703994.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.01871412992477417,
+          "bilstm": -0.017482876777648926,
+          "random_cnn": 0.005876064300537109,
+          "random_bilstm": -0.003054380416870117
+        },
+        "0.05": {
+          "cnn": 0.10722285509109497,
+          "bilstm": -0.016413331031799316,
+          "random_cnn": 0.051157087087631226,
+          "random_bilstm": 0.010971784591674805
+        },
+        "0.1": {
+          "cnn": 0.15743541717529297,
+          "bilstm": 0.04888138175010681,
+          "random_cnn": 0.061533123254776,
+          "random_bilstm": 0.07245421409606934
+        },
+        "0.2": {
+          "cnn": 0.24610990285873413,
+          "bilstm": 0.3601638972759247,
+          "random_cnn": 0.10453417897224426,
+          "random_bilstm": 0.1541391909122467
+        }
+      }
+    },
+    "KY703978.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.015112102031707764,
+          "bilstm": 0.012747108936309814,
+          "random_cnn": 0.012017130851745605,
+          "random_bilstm": -0.0034236907958984375
+        },
+        "0.05": {
+          "cnn": 0.1081807017326355,
+          "bilstm": -0.0046822428703308105,
+          "random_cnn": 0.04182708263397217,
+          "random_bilstm": 0.03019767999649048
+        },
+        "0.1": {
+          "cnn": 0.14393937587738037,
+          "bilstm": 0.08290529251098633,
+          "random_cnn": 0.08695006370544434,
+          "random_bilstm": -0.03080505132675171
+        },
+        "0.2": {
+          "cnn": 0.2399091124534607,
+          "bilstm": 0.47415441274642944,
+          "random_cnn": 0.12685823440551758,
+          "random_bilstm": -0.03876417875289917
+        }
+      }
+    },
+    "KY703967.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.018604815006256104,
+          "bilstm": -0.017822563648223877,
+          "random_cnn": 0.008976280689239502,
+          "random_bilstm": -0.019277453422546387
+        },
+        "0.05": {
+          "cnn": 0.08193430304527283,
+          "bilstm": 0.06464153528213501,
+          "random_cnn": 0.04391050338745117,
+          "random_bilstm": -0.04387640953063965
+        },
+        "0.1": {
+          "cnn": 0.14197063446044922,
+          "bilstm": 0.09366664290428162,
+          "random_cnn": 0.09887290000915527,
+          "random_bilstm": 0.05895578861236572
+        },
+        "0.2": {
+          "cnn": 0.26209813356399536,
+          "bilstm": 0.2637673020362854,
+          "random_cnn": 0.17319363355636597,
+          "random_bilstm": 0.11019852757453918
+        }
+      }
+    },
+    "MH329293.1": {
+      "virus": "chikungunya",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.023850739002227783,
+          "bilstm": 0.014960259199142456,
+          "random_cnn": 0.006219089031219482,
+          "random_bilstm": -0.01184070110321045
+        },
+        "0.05": {
+          "cnn": 0.08273577690124512,
+          "bilstm": 0.12031462788581848,
+          "random_cnn": 0.03061699867248535,
+          "random_bilstm": 0.04336923360824585
+        },
+        "0.1": {
+          "cnn": 0.17948377132415771,
+          "bilstm": 0.24279388785362244,
+          "random_cnn": 0.03781014680862427,
+          "random_bilstm": -0.05855703353881836
+        },
+        "0.2": {
+          "cnn": 0.268383651971817,
+          "bilstm": 0.15414389967918396,
+          "random_cnn": 0.10285413265228271,
+          "random_bilstm": 0.017574310302734375
+        }
+      }
+    },
+    "DQ480519.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.03588759899139404,
+          "bilstm": 0.06348550319671631,
+          "random_cnn": -0.0009180307388305664,
+          "random_bilstm": 0.009474039077758789
+        },
+        "0.05": {
+          "cnn": 0.06996750831604004,
+          "bilstm": 0.08484935760498047,
+          "random_cnn": 0.049634575843811035,
+          "random_bilstm": 0.2018122673034668
+        },
+        "0.1": {
+          "cnn": 0.10873299837112427,
+          "bilstm": 0.059005141258239746,
+          "random_cnn": 0.003206610679626465,
+          "random_bilstm": -0.08194416761398315
+        },
+        "0.2": {
+          "cnn": 0.1657848358154297,
+          "bilstm": 0.0895046591758728,
+          "random_cnn": 0.02720743417739868,
+          "random_bilstm": -0.11200094223022461
+        }
+      }
+    },
+    "DQ835764.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.01928049325942993,
+          "bilstm": 0.011801481246948242,
+          "random_cnn": -0.0015662312507629395,
+          "random_bilstm": -0.0016698241233825684
+        },
+        "0.05": {
+          "cnn": 0.09007060527801514,
+          "bilstm": 0.09670031070709229,
+          "random_cnn": 0.0065988898277282715,
+          "random_bilstm": 0.01436382532119751
+        },
+        "0.1": {
+          "cnn": 0.14444178342819214,
+          "bilstm": 0.1508827805519104,
+          "random_cnn": 0.037485480308532715,
+          "random_bilstm": -0.03646188974380493
+        },
+        "0.2": {
+          "cnn": 0.17779111862182617,
+          "bilstm": 0.08309513330459595,
+          "random_cnn": 0.028958499431610107,
+          "random_bilstm": -0.08954876661300659
+        }
+      }
+    },
+    "DQ480523.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.0029108524322509766,
+          "bilstm": 0.10562503337860107,
+          "random_cnn": 0.0001176595687866211,
+          "random_bilstm": -0.0005878806114196777
+        },
+        "0.05": {
+          "cnn": 0.06421917676925659,
+          "bilstm": -0.03746908903121948,
+          "random_cnn": 0.013348400592803955,
+          "random_bilstm": 0.009542882442474365
+        },
+        "0.1": {
+          "cnn": 0.08659058809280396,
+          "bilstm": -0.00864267349243164,
+          "random_cnn": 0.044144392013549805,
+          "random_bilstm": -0.054641008377075195
+        },
+        "0.2": {
+          "cnn": 0.16891616582870483,
+          "bilstm": -0.0776870846748352,
+          "random_cnn": 0.06390470266342163,
+          "random_bilstm": -0.0016568303108215332
+        }
+      }
+    },
+    "EF424628.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": -0.0008551478385925293,
+          "bilstm": 0.045989930629730225,
+          "random_cnn": -0.0025289058685302734,
+          "random_bilstm": -3.0994415283203125e-06
+        },
+        "0.05": {
+          "cnn": 0.02433621883392334,
+          "bilstm": 0.08127498626708984,
+          "random_cnn": -0.0069092512130737305,
+          "random_bilstm": -0.01012575626373291
+        },
+        "0.1": {
+          "cnn": 0.07724052667617798,
+          "bilstm": 0.11813730001449585,
+          "random_cnn": 0.01343923807144165,
+          "random_bilstm": -0.009076297283172607
+        },
+        "0.2": {
+          "cnn": 0.16119086742401123,
+          "bilstm": 0.2730545401573181,
+          "random_cnn": 0.04587149620056152,
+          "random_bilstm": 0.039875149726867676
+        }
+      }
+    },
+    "EF424626.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.018725574016571045,
+          "bilstm": -0.010097861289978027,
+          "random_cnn": -0.002278149127960205,
+          "random_bilstm": -0.0073049068450927734
+        },
+        "0.05": {
+          "cnn": 0.09860914945602417,
+          "bilstm": -0.05746817588806152,
+          "random_cnn": 0.006181895732879639,
+          "random_bilstm": -0.029965102672576904
+        },
+        "0.1": {
+          "cnn": 0.1524239182472229,
+          "bilstm": -0.08607715368270874,
+          "random_cnn": 0.01965707540512085,
+          "random_bilstm": -0.146406888961792
+        },
+        "0.2": {
+          "cnn": 0.17565500736236572,
+          "bilstm": -0.07160097360610962,
+          "random_cnn": 0.05257129669189453,
+          "random_bilstm": 0.0021358132362365723
+        }
+      }
+    },
+    "EF424625.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.03274589776992798,
+          "bilstm": -0.00196993350982666,
+          "random_cnn": 0.005026876926422119,
+          "random_bilstm": -0.015561699867248535
+        },
+        "0.05": {
+          "cnn": 0.06877017021179199,
+          "bilstm": 0.08338522911071777,
+          "random_cnn": 0.009688258171081543,
+          "random_bilstm": -0.01027822494506836
+        },
+        "0.1": {
+          "cnn": 0.11644953489303589,
+          "bilstm": 0.10944908857345581,
+          "random_cnn": 0.02118772268295288,
+          "random_bilstm": 0.021553218364715576
+        },
+        "0.2": {
+          "cnn": 0.16633987426757812,
+          "bilstm": 0.07732278108596802,
+          "random_cnn": 0.025630712509155273,
+          "random_bilstm": -0.20938348770141602
+        }
+      }
+    },
+    "DQ835765.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.013673245906829834,
+          "bilstm": 0.06405246257781982,
+          "random_cnn": -0.000735163688659668,
+          "random_bilstm": -0.0039196014404296875
+        },
+        "0.05": {
+          "cnn": 0.047211408615112305,
+          "bilstm": 0.16640985012054443,
+          "random_cnn": 0.015114247798919678,
+          "random_bilstm": 0.03777700662612915
+        },
+        "0.1": {
+          "cnn": 0.08671098947525024,
+          "bilstm": 0.3255213797092438,
+          "random_cnn": 0.0020958781242370605,
+          "random_bilstm": -0.06778442859649658
+        },
+        "0.2": {
+          "cnn": 0.1582760214805603,
+          "bilstm": -0.20101165771484375,
+          "random_cnn": 0.07549053430557251,
+          "random_bilstm": -0.016964852809906006
+        }
+      }
+    },
+    "DQ835763.1": {
+      "virus": "hcv",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.0035173892974853516,
+          "bilstm": -0.12244671583175659,
+          "random_cnn": -0.003608226776123047,
+          "random_bilstm": -0.003308534622192383
+        },
+        "0.05": {
+          "cnn": 0.04269742965698242,
+          "bilstm": -0.20013558864593506,
+          "random_cnn": -0.0057988762855529785,
+          "random_bilstm": -0.07494324445724487
+        },
+        "0.1": {
+          "cnn": 0.08338415622711182,
+          "bilstm": -0.13837695121765137,
+          "random_cnn": 0.022952556610107422,
+          "random_bilstm": -0.17089956998825073
+        },
+        "0.2": {
+          "cnn": 0.1049545407295227,
+          "bilstm": -0.10708606243133545,
+          "random_cnn": 0.020305931568145752,
+          "random_bilstm": -0.054349660873413086
+        }
+      }
+    },
+    "KF039725.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.05634155869483948,
+          "bilstm": 0.016443639993667603,
+          "random_cnn": 0.02728128433227539,
+          "random_bilstm": 0.040149420499801636
+        },
+        "0.05": {
+          "cnn": 0.08249276876449585,
+          "bilstm": 0.15253889560699463,
+          "random_cnn": 0.016236424446105957,
+          "random_bilstm": -0.02883109450340271
+        },
+        "0.1": {
+          "cnn": 0.07435226440429688,
+          "bilstm": 0.19971728324890137,
+          "random_cnn": 0.006873875856399536,
+          "random_bilstm": 0.3684055209159851
+        },
+        "0.2": {
+          "cnn": 0.10415337979793549,
+          "bilstm": 0.34432098269462585,
+          "random_cnn": 0.0749121606349945,
+          "random_bilstm": 0.2512814700603485
+        }
+      }
+    },
+    "MZ220331.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.055631428956985474,
+          "bilstm": 0.08992859721183777,
+          "random_cnn": 0.006330609321594238,
+          "random_bilstm": -0.0017108321189880371
+        },
+        "0.05": {
+          "cnn": 0.11002364754676819,
+          "bilstm": 0.3205353021621704,
+          "random_cnn": 0.0346466600894928,
+          "random_bilstm": 0.08795970678329468
+        },
+        "0.1": {
+          "cnn": 0.13257752358913422,
+          "bilstm": 0.33715710043907166,
+          "random_cnn": 0.05616915225982666,
+          "random_bilstm": 0.05872693657875061
+        },
+        "0.2": {
+          "cnn": 0.17832285165786743,
+          "bilstm": 0.5316284000873566,
+          "random_cnn": 0.045553773641586304,
+          "random_bilstm": 0.16865012049674988
+        }
+      }
+    },
+    "PX458209.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.0600430965423584,
+          "bilstm": 0.14032188057899475,
+          "random_cnn": -0.006415247917175293,
+          "random_bilstm": -0.008331060409545898
+        },
+        "0.05": {
+          "cnn": 0.07921716570854187,
+          "bilstm": 0.42287003993988037,
+          "random_cnn": 0.05627468228340149,
+          "random_bilstm": 0.12591561675071716
+        },
+        "0.1": {
+          "cnn": 0.11398664116859436,
+          "bilstm": 0.3075987696647644,
+          "random_cnn": 0.06074288487434387,
+          "random_bilstm": -0.006562232971191406
+        },
+        "0.2": {
+          "cnn": 0.15385866165161133,
+          "bilstm": 0.4793146848678589,
+          "random_cnn": 0.06137579679489136,
+          "random_bilstm": 0.11966535449028015
+        }
+      }
+    },
+    "KF306212.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.046017467975616455,
+          "bilstm": 0.07589155435562134,
+          "random_cnn": 0.0073316097259521484,
+          "random_bilstm": 0.01298677921295166
+        },
+        "0.05": {
+          "cnn": 0.07758739590644836,
+          "bilstm": 0.42392629384994507,
+          "random_cnn": 0.045167624950408936,
+          "random_bilstm": 0.1482219099998474
+        },
+        "0.1": {
+          "cnn": 0.12030455470085144,
+          "bilstm": 0.4735075831413269,
+          "random_cnn": 0.04538077116012573,
+          "random_bilstm": 0.26390767097473145
+        },
+        "0.2": {
+          "cnn": 0.11829018592834473,
+          "bilstm": 0.5072562396526337,
+          "random_cnn": 0.054218947887420654,
+          "random_bilstm": 0.11635780334472656
+        }
+      }
+    },
+    "MT357992.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.05349522829055786,
+          "bilstm": 0.15762409567832947,
+          "random_cnn": 0.015662699937820435,
+          "random_bilstm": 0.03035593032836914
+        },
+        "0.05": {
+          "cnn": 0.09379413723945618,
+          "bilstm": 0.2904655337333679,
+          "random_cnn": 0.014956653118133545,
+          "random_bilstm": 0.026744723320007324
+        },
+        "0.1": {
+          "cnn": 0.08690282702445984,
+          "bilstm": 0.2989136874675751,
+          "random_cnn": 0.04347670078277588,
+          "random_bilstm": 0.356233149766922
+        },
+        "0.2": {
+          "cnn": 0.13187383115291595,
+          "bilstm": 0.49522215127944946,
+          "random_cnn": 0.07300785183906555,
+          "random_bilstm": 0.2675071954727173
+        }
+      }
+    },
+    "MN448477.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.0179501473903656,
+          "bilstm": -0.11821579933166504,
+          "random_cnn": 0.021344274282455444,
+          "random_bilstm": 0.0006184577941894531
+        },
+        "0.05": {
+          "cnn": 0.09806632995605469,
+          "bilstm": -0.10516351461410522,
+          "random_cnn": 0.028985917568206787,
+          "random_bilstm": 0.043259888887405396
+        },
+        "0.1": {
+          "cnn": 0.14059174060821533,
+          "bilstm": -0.004876613616943359,
+          "random_cnn": 0.050334930419921875,
+          "random_bilstm": 0.11736240983009338
+        },
+        "0.2": {
+          "cnn": 0.22302362322807312,
+          "bilstm": 0.10616672039031982,
+          "random_cnn": 0.13477393984794617,
+          "random_bilstm": 0.006816357374191284
+        }
+      }
+    },
+    "MH218729.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.029525041580200195,
+          "bilstm": 0.11879134178161621,
+          "random_cnn": 0.0041942298412323,
+          "random_bilstm": -0.020255863666534424
+        },
+        "0.05": {
+          "cnn": 0.08741497993469238,
+          "bilstm": 0.1894710659980774,
+          "random_cnn": 0.06123700737953186,
+          "random_bilstm": 0.2053808569908142
+        },
+        "0.1": {
+          "cnn": 0.14335337281227112,
+          "bilstm": 0.3130045533180237,
+          "random_cnn": 0.0483795702457428,
+          "random_bilstm": 0.06297802925109863
+        },
+        "0.2": {
+          "cnn": 0.1899251788854599,
+          "bilstm": 0.45850473642349243,
+          "random_cnn": 0.0592501163482666,
+          "random_bilstm": 0.23723319172859192
+        }
+      }
+    },
+    "MZ227265.1": {
+      "virus": "norovirus",
+      "deletion": {
+        "0.01": {
+          "cnn": 0.06150522828102112,
+          "bilstm": -0.020000338554382324,
+          "random_cnn": 0.019420385360717773,
+          "random_bilstm": 0.14020898938179016
+        },
+        "0.05": {
+          "cnn": 0.0751902163028717,
+          "bilstm": 0.25029227137565613,
+          "random_cnn": 0.08254629373550415,
+          "random_bilstm": 0.10529285669326782
+        },
+        "0.1": {
+          "cnn": 0.13227726519107819,
+          "bilstm": 0.26844775676727295,
+          "random_cnn": 0.059083521366119385,
+          "random_bilstm": 0.140377014875412
+        },
+        "0.2": {
+          "cnn": 0.1625756323337555,
+          "bilstm": 0.7732120454311371,
+          "random_cnn": 0.09425494074821472,
+          "random_bilstm": 0.5494416356086731
+        }
+      }
+    }
+  },
+  "plausibility": {
+    "ON799402.1": {
+      "virus": "dengue",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "PX480443.1": {
+      "virus": "dengue",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MH450307.1": {
+      "virus": "dengue",
+      "k": 11,
+      "antigenic_genes": [
+        "POLYPROTEIN"
+      ],
+      "conserved_genes": [],
+      "antigenic_hits": 11,
+      "antigenic_expected": 10.499013991924123,
+      "antigenic_oe": 1.0477174340810707,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MN018394.1": {
+      "virus": "dengue",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "OL314747.1": {
+      "virus": "dengue",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MW793460.1": {
+      "virus": "dengue",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KJ596671.1": {
+      "virus": "dengue",
+      "k": 11,
+      "antigenic_genes": [
+        "NON-STRUCTURAL PROTEIN 3",
+        "ENVELOPE PROTEIN E",
+        "NON-STRUCTURAL PROTEIN 1",
+        "2K PROTEIN",
+        "POLYPROTEIN",
+        "NON-STRUCTURAL PROTEIN 4A",
+        "MEMBRANE GLYCOPROTEIN PRECURSOR M",
+        "CAPSID PROTEIN C",
+        "NON-STRUCTURAL PROTEIN 2A",
+        "NON-STRUCTURAL PROTEIN 2B",
+        "MEMBRANE GLYCOPROTEIN M",
+        "ANCHORED CAPSID PROTEIN C",
+        "NON-STRUCTURAL PROTEIN 5",
+        "NON-STRUCTURAL PROTEIN 4B"
+      ],
+      "conserved_genes": [],
+      "antigenic_hits": 11,
+      "antigenic_expected": 301.47788524744107,
+      "antigenic_oe": 0.036486921722207376,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KY680354.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MF001517.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "OQ148657.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "EF452494.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KY703994.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KY703978.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KY703967.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MH329293.1": {
+      "virus": "chikungunya",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "DQ480519.1": {
+      "virus": "hcv",
+      "k": 9,
+      "antigenic_genes": [
+        "PUTATIVE SHORT E2 PROTEIN"
+      ],
+      "conserved_genes": [
+        "PUTATIVE NS5B PROTEIN"
+      ],
+      "antigenic_hits": 1,
+      "antigenic_expected": 11.679418679204957,
+      "antigenic_oe": 0.08562069975113454,
+      "conserved_hits": 0,
+      "conserved_expected": 18.756892498397093,
+      "conserved_oe": 0.0
+    },
+    "DQ835764.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "DQ480523.1": {
+      "virus": "hcv",
+      "k": 9,
+      "antigenic_genes": [
+        "PUTATIVE SHORT E2 PROTEIN"
+      ],
+      "conserved_genes": [
+        "PUTATIVE NS5B PROTEIN"
+      ],
+      "antigenic_hits": 1,
+      "antigenic_expected": 11.679418679204957,
+      "antigenic_oe": 0.08562069975113454,
+      "conserved_hits": 0,
+      "conserved_expected": 18.756892498397093,
+      "conserved_oe": 0.0
+    },
+    "EF424628.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "EF424626.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "EF424625.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "DQ835765.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "DQ835763.1": {
+      "virus": "hcv",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KF039725.1": {
+      "virus": "norovirus",
+      "k": 8,
+      "antigenic_genes": [
+        "VP1"
+      ],
+      "conserved_genes": [],
+      "antigenic_hits": 2,
+      "antigenic_expected": 10.061052631578947,
+      "antigenic_oe": 0.19878635697844738,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MZ220331.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "PX458209.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "KF306212.1": {
+      "virus": "norovirus",
+      "k": 8,
+      "antigenic_genes": [
+        "MAJOR CAPSID PROTEIN VP1",
+        "MINOR CAPSID PROTEIN VP2"
+      ],
+      "conserved_genes": [],
+      "antigenic_hits": 3,
+      "antigenic_expected": 7.06046511627907,
+      "antigenic_oe": 0.424901185770751,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MT357992.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MN448477.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MH218729.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    },
+    "MZ227265.1": {
+      "virus": "norovirus",
+      "k": 0,
+      "antigenic_genes": [],
+      "conserved_genes": [],
+      "antigenic_hits": 0,
+      "antigenic_expected": 0.0,
+      "antigenic_oe": null,
+      "conserved_hits": 0,
+      "conserved_expected": 0.0,
+      "conserved_oe": null
+    }
+  }
+}

@@ -1,0 +1,46 @@
+nohup: ignoring input
+/home/weber/miniconda3/envs/virgo/lib/python3.12/site-packages/torch/nn/modules/conv.py:380: UserWarning: Using padding='same' with even kernel lengths and odd dilation may require a zero-padded copy of the input be created (Triggered internally at /__w/pytorch/pytorch/aten/src/ATen/native/Convolution.cpp:1104.)
+  return F.conv1d(
+loading labels...
+train=4862 val=858 test=693
+train viruses: {'dengue': 2356, 'chikungunya': 838, 'hcv': 255, 'norovirus': 1413}
+test viruses:  {'dengue': 146, 'chikungunya': 395, 'hcv': 44, 'norovirus': 108}
+class weights: {'dengue': 0.5159168243408203, 'chikungunya': 1.4504773616790771, 'hcv': 4.766666889190674, 'norovirus': 0.8602264523506165}
+
+CNN windows: train=30377 val=5360 test=4761
+
+=== cnn_virus ===
+  ep  1  loss 0.7508  val_macro_f1 1.0000
+  ep  2  loss 0.6142  val_macro_f1 1.0000
+  ep  3  loss 0.5972  val_macro_f1 1.0000
+  ep  4  loss 0.5907  val_macro_f1 1.0000
+  ep  5  loss 0.5832  val_macro_f1 1.0000
+  ep  6  loss 0.5764  val_macro_f1 1.0000
+  early stop at epoch 6
+  saved models/cnn_virus.pt  (val macro-F1 = 1.0000)
+  CNN test macro-F1 = 0.6909  (n=693)
+  CNN test confusion (rows=true, cols=pred, order=['dengue', 'chikungunya', 'hcv', 'norovirus']):
+    [146, 0, 0, 0]
+    [0, 395, 0, 0]
+    [0, 0, 44, 0]
+    [0, 0, 91, 17]
+
+BiLSTM windows: train=30377 val=5360 test=4761
+
+=== bilstm_virus ===
+  ep  1  loss 0.6635  val_macro_f1 1.0000
+  ep  2  loss 0.5665  val_macro_f1 1.0000
+  ep  3  loss 0.5606  val_macro_f1 1.0000
+  ep  4  loss 0.5592  val_macro_f1 1.0000
+  ep  5  loss 0.5582  val_macro_f1 1.0000
+  ep  6  loss 0.5558  val_macro_f1 1.0000
+  early stop at epoch 6
+  saved models/bilstm_virus.pt  (val macro-F1 = 1.0000)
+  BiLSTM test macro-F1 = 0.9786  (n=693)
+  BiLSTM test confusion (rows=true, cols=pred, order=['dengue', 'chikungunya', 'hcv', 'norovirus']):
+    [145, 0, 0, 1]
+    [0, 395, 0, 0]
+    [0, 0, 44, 0]
+    [0, 0, 5, 103]
+
+wrote results/train_results.json

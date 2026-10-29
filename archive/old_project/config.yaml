@@ -1,0 +1,80 @@
+project:
+  name: xAI Viral Attribution
+  seed: 42
+  cap_per_species: 87
+sampling:
+  summary_limit: 5000
+  stratify_by:
+  - collection_year
+  extra_stratification:
+    dengue: serotype
+    sars_cov_2: lineage
+clustering:
+  tool: cd-hit-est
+  identity: 0.9
+  word_size: 8
+split:
+  strategy: species
+  test_species:
+  - mers
+  - ebola
+  - dengue
+  val_species: []
+  train_species:
+  - sars_cov_2
+  - marburg
+  - zika
+  - yellow_fever
+  - lassa
+  - nipah
+  val_fraction: 0.2
+leakage:
+  threshold: 0.9
+taxa: {}
+models:
+  n_classes: 5
+  families:
+  - Coronaviridae
+  - Filoviridae
+  - Arenaviridae
+  - Paramyxoviridae
+  - Flaviviridae
+  cnn:
+    window: 3000
+    stride: 1500
+    filters:
+    - 128
+    - 256
+    kernel: 8
+    dropout: 0.4
+    lr: 0.001
+    batch_size: 32
+    epochs: 20
+    patience: 5
+  bilstm:
+    window: 3000
+    stride: 1500
+    kmer: 6
+    vocab: 4096
+    embed: 128
+    hidden: 128
+    dropout: 0.4
+    lr: 0.001
+    batch_size: 32
+    epochs: 20
+    patience: 5
+  dnabert2:
+    name: zhihan1996/DNABERT-2-117M
+    max_tokens: 512
+    chunk_bp: 3000
+    stride_bp: 1500
+    lr: 2.0e-05
+    batch_size: 8
+    epochs: 5
+    patience: 2
+training:
+  device: auto
+  checkpoint_dir: models/
+  results_dir: results/
+  label_smoothing: 0.1
+  weight_decay: 0.0001

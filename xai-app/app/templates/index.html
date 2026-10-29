@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <h1>xAI Viral Attribution</h1>
+  <p>Upload a viral nucleotide sequence. Get live predictions from two architectures and a feature attribution track.</p>
+  <div class="hero-tags">
+    <span class="tag">Live inference</span>
+    <span class="tag">Occlusion attribution</span>
+    <span class="tag">Cross-architecture comparison</span>
+    <span class="tag">Gene-aware</span>
+  </div>
+  <div class="hero-actions">
+    <a href="/analyze" class="btn btn-primary">Analyze a sequence →</a>
+    <a href="/study" class="btn btn-ghost">Read the findings</a>
+  </div>
+</section>
+
+<section class="kpi-grid">
+  <div class="kpi">
+    <div class="kpi-label">BiLSTM · test macro-F1</div>
+    <div class="kpi-value">{{ '%.3f' % kpis.bilstm_f1 }}</div>
+    <div class="kpi-sub">4-way, lineage held out</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">CNN · test macro-F1</div>
+    <div class="kpi-value">{{ '%.3f' % kpis.cnn_f1 }}</div>
+    <div class="kpi-sub">4-way, lineage held out</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Chance baseline</div>
+    <div class="kpi-value">{{ '%.3f' % kpis.chance }}</div>
+    <div class="kpi-sub">uniform over 4 viruses</div>
+  </div>
+  <div class="kpi">
+    <div class="kpi-label">Cross-architecture stability</div>
+    <div class="kpi-value">{{ '%.2f' % kpis.stability }}</div>
+    <div class="kpi-sub">median Spearman ρ</div>
+  </div>
+</section>
+
+<section class="cards">
+  <div class="card">
+    <h3>Virus set</h3>
+    <p>4 positive-sense RNA viruses: Dengue, Chikungunya, HCV, Norovirus. Each with its own lineage holdout — DENV-4, Asian, GT6, GI.</p>
+  </div>
+  <div class="card">
+    <h3>Evaluation</h3>
+    <p>{{ n_test }} test sequences pre-computed. Stability, fidelity and plausibility evaluated per virus and per sequence.</p>
+  </div>
+  <div class="card">
+    <h3>API</h3>
+    <p>Machine-readable endpoints at <a href="/docs">/docs</a>. POST a sequence, get predictions and attributions as JSON.</p>
+  </div>
+</section>
+{% endblock %}

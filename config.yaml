@@ -1,80 +1,60 @@
 project:
-  name: xAI Viral Attribution
+  name: Multi-Family Viral Lineage Classifier
   seed: 42
-  cap_per_species: 87
-sampling:
-  summary_limit: 5000
-  stratify_by:
-  - collection_year
-  extra_stratification:
-    dengue: serotype
-    sars_cov_2: lineage
+  version: 1.0.0
+
+viruses:
+  dengue:
+    family: Flaviviridae
+    genome: +ssRNA_single_ORF
+    antigenic_gene: E
+    conserved_gene: NS5
+    test_lineages: ["DENV-4"]
+    train_lineages: ["DENV-1", "DENV-2", "DENV-3"]
+
+  chikungunya:
+    family: Togaviridae
+    genome: +ssRNA_alphavirus
+    antigenic_gene: E1
+    conserved_gene: nsP1
+    test_lineages: ["Asian"]
+    train_lineages: ["ECSA"]
+
+  hcv:
+    family: Flaviviridae
+    genome: +ssRNA_single_ORF
+    antigenic_gene: E2
+    conserved_gene: NS5B
+    test_lineages: ["GT6"]
+    train_lineages: ["GT1", "GT2", "GT4"]
+
+  norovirus:
+    family: Caliciviridae
+    genome: +ssRNA_single_ORF
+    antigenic_gene: VP1
+    conserved_gene: RdRp
+    test_lineages: ["GI"]
+    train_lineages: ["GII", "GV", "GIX"]
+
 clustering:
-  tool: cd-hit-est
-  identity: 0.9
-  word_size: 8
-split:
-  strategy: species
-  test_species:
-  - mers
-  - ebola
-  - dengue
-  val_species: []
-  train_species:
-  - sars_cov_2
-  - marburg
-  - zika
-  - yellow_fever
-  - lassa
-  - nipah
-  val_fraction: 0.2
-leakage:
-  threshold: 0.9
-taxa: {}
-models:
-  n_classes: 5
-  families:
-  - Coronaviridae
-  - Filoviridae
-  - Arenaviridae
-  - Paramyxoviridae
-  - Flaviviridae
-  cnn:
-    window: 3000
-    stride: 1500
-    filters:
-    - 128
-    - 256
-    kernel: 8
-    dropout: 0.4
-    lr: 0.001
-    batch_size: 32
-    epochs: 20
-    patience: 5
-  bilstm:
-    window: 3000
-    stride: 1500
-    kmer: 6
-    vocab: 4096
-    embed: 128
-    hidden: 128
-    dropout: 0.4
-    lr: 0.001
-    batch_size: 32
-    epochs: 20
-    patience: 5
-  dnabert2:
-    name: zhihan1996/DNABERT-2-117M
-    max_tokens: 512
-    chunk_bp: 3000
-    stride_bp: 1500
-    lr: 2.0e-05
-    batch_size: 8
-    epochs: 5
-    patience: 2
+  tool: mmseqs2
+  thresholds: [0.90, 0.95]
+
 training:
-  device: auto
-  checkpoint_dir: models/
-  results_dir: results/
+  architectures: [cnn, bilstm]
   label_smoothing: 0.1
   weight_decay: 0.0001
+  patience: 5
+  device: cpu
+
+attribution:
+  methods: [occlusion, permutation, ig, kernelshap]
+  resolution_bp: 100
+  ig_steps: 16
+  kernelshap_coalitions: 100
+  sequences_per_lineage: 15
+
+evaluation:
+  bootstrap: 500
+  deletion_levels: [0.01, 0.05, 0.10, 0.20]
+  plausibility_top_frac: 0.10

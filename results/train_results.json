@@ -1,0 +1,98 @@
+{
+  "viruses": [
+    "dengue",
+    "chikungunya",
+    "hcv",
+    "norovirus"
+  ],
+  "train_counts": {
+    "dengue": 2356,
+    "chikungunya": 838,
+    "hcv": 255,
+    "norovirus": 1413
+  },
+  "val_counts": {
+    "dengue": 416,
+    "chikungunya": 148,
+    "hcv": 45,
+    "norovirus": 249
+  },
+  "test_counts": {
+    "dengue": 146,
+    "chikungunya": 395,
+    "hcv": 44,
+    "norovirus": 108
+  },
+  "cnn": {
+    "val_macro_f1": 1.0,
+    "test": {
+      "macro_f1": 0.6909050279329609,
+      "cm": [
+        [
+          146,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          395,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          44,
+          0
+        ],
+        [
+          0,
+          0,
+          91,
+          17
+        ]
+      ],
+      "n": 693
+    }
+  },
+  "bilstm": {
+    "val_macro_f1": 1.0,
+    "test": {
+      "macro_f1": 0.9786245615576235,
+      "cm": [
+        [
+          145,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          395,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          44,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          103
+        ]
+      ],
+      "n": 693
+    }
+  },
+  "class_weights": {
+    "dengue": 0.5159168243408203,
+    "chikungunya": 1.4504773616790771,
+    "hcv": 4.766666889190674,
+    "norovirus": 0.8602264523506165
+  }
+}
