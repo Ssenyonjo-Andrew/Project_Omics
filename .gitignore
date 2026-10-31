@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+venv/
+env/
+
+# Large Data Files (Do not upload to GitHub)
+data/
+*.fasta
+*.fna
+*.gb
+*.zip
+
+# Model Weights (if you don't want them on GitHub)
+# models/*.pt 
+# models/*.pth
+
+# Results & Prototype Cache
+results/
+*.csv
+*.log
+
+# OS / IDE files
+.DS_Store
+.vscode/
+.idea/
