@@ -1,55 +1,167 @@
-{% extends "base.html" %}
-{% block content %}
-<section class="hero">
-  <h1>xAI Viral Attribution</h1>
-  <p>Upload a viral nucleotide sequence. Get live predictions from two architectures and a feature attribution track.</p>
-  <div class="hero-tags">
-    <span class="tag">Live inference</span>
-    <span class="tag">Occlusion attribution</span>
-    <span class="tag">Cross-architecture comparison</span>
-    <span class="tag">Gene-aware</span>
-  </div>
-  <div class="hero-actions">
-    <a href="/analyze" class="btn btn-primary">Analyze a sequence →</a>
-    <a href="/study" class="btn btn-ghost">Read the findings</a>
-  </div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Clinical XAI Diagnostic Dashboard</title>
+<link rel="stylesheet" href="/static/style.css">
+<!-- Load 3Dmol and our dedicated viewer.js -->
+<script src="https://3Dmol.org/build/3Dmol-min.js"></script>
+<script src="/static/viewer.js"></script>
+<style>
+  .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+  .panel { background: var(--surface); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
+  .metric-box { display: flex; justify-content: space-between; align-items: center; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; background: var(--bg-2); }
+  .metric-val { font-size: 1.5rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
+  .badge-good { background: rgba(16,185,129,0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+  .badge-bad { background: rgba(239,68,68,0.2); color: #EF4444; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+  
+  /* STRICT 3D CONTAINER FIXES */
+  #protein-viewer { 
+    position: relative !important; 
+    width: 100% !important; 
+    height: 400px !important; 
+    background: #0F172A; 
+    border-radius: 8px; 
+    overflow: hidden !important; 
+    border: 1px solid var(--border);
+  }
+  .viewer_3Dmoljs { position: absolute !important; top: 0; left: 0; }
 
-<section class="kpi-grid">
-  <div class="kpi">
-    <div class="kpi-label">BiLSTM · test macro-F1</div>
-    <div class="kpi-value">{{ '%.3f' % kpis.bilstm_f1 }}</div>
-    <div class="kpi-sub">4-way, lineage held out</div>
-  </div>
-  <div class="kpi">
-    <div class="kpi-label">CNN · test macro-F1</div>
-    <div class="kpi-value">{{ '%.3f' % kpis.cnn_f1 }}</div>
-    <div class="kpi-sub">4-way, lineage held out</div>
-  </div>
-  <div class="kpi">
-    <div class="kpi-label">Chance baseline</div>
-    <div class="kpi-value">{{ '%.3f' % kpis.chance }}</div>
-    <div class="kpi-sub">uniform over 4 viruses</div>
-  </div>
-  <div class="kpi">
-    <div class="kpi-label">Cross-architecture stability</div>
-    <div class="kpi-value">{{ '%.2f' % kpis.stability }}</div>
-    <div class="kpi-sub">median Spearman ρ</div>
-  </div>
-</section>
+  .spinner { border: 4px solid rgba(255,255,255,0.1); border-left-color: #3B82F6; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-right: 10px;}
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .prob-row { display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.85rem; }
+  .prob-label { width: 90px; color: var(--text-muted); text-transform: capitalize; }
+  .prob-bg { flex: 1; background: var(--bg-2); height: 12px; border-radius: 6px; margin: 0 10px; overflow: hidden; }
+  .prob-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease-in-out; }
+  .prob-val { width: 45px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="nav"><div class="brand">🧬 Clinical Viral Surveillance</div></div>
 
-<section class="cards">
-  <div class="card">
-    <h3>Virus set</h3>
-    <p>4 positive-sense RNA viruses: Dengue, Chikungunya, HCV, Norovirus. Each with its own lineage holdout — DENV-4, Asian, GT6, GI.</p>
+<div class="container">
+  <h1>Explainable AI Diagnostic Dashboard</h1>
+  <p class="muted">Upload a genomic sequence to generate predictions, stability diagnostics, and 3D structural attributions.</p>
+
+  <div class="form-panel">
+    <textarea id="seq-input" class="textarea" rows="3" placeholder=">paste sequence here..."></textarea>
+    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
+      <label class="btn" style="background: #334155; color: white; cursor: pointer;">📁 Upload FASTA <input type="file" id="file-input" accept=".fa,.fasta,.fna,.txt" style="display: none;"></label>
+      <button id="run-btn" class="btn btn-primary" style="flex: 1;">Run Full XAI Analysis</button>
+    </div>
   </div>
-  <div class="card">
-    <h3>Evaluation</h3>
-    <p>{{ n_test }} test sequences pre-computed. Stability, fidelity and plausibility evaluated per virus and per sequence.</p>
+
+  <div id="loading" style="display:none; padding: 2rem; text-align: center; font-weight: 600; color: #FBBF24;">
+    <div class="spinner"></div> Running Consensus Attribution & 3D Mapping...
   </div>
-  <div class="card">
-    <h3>API</h3>
-    <p>Machine-readable endpoints at <a href="/docs">/docs</a>. POST a sequence, get predictions and attributions as JSON.</p>
+
+  <div id="results" style="display:none;">
+    <div class="dashboard-grid">
+      <!-- LEFT COLUMN: Predictions (Untouched, exactly as you like it) -->
+      <div>
+        <div class="panel" style="margin-bottom: 1.5rem;">
+          <h3>Model Predictions</h3>
+          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Probability distribution across the 6 known viruses.</p>
+          <div style="margin-bottom: 1.5rem;"><h4 style="color:#6366F1; margin-bottom: 0.5rem; font-size: 0.9rem;">CNN</h4><div id="probs-cnn"></div></div>
+          <div style="margin-bottom: 1.5rem;"><h4 style="color:#EC4899; margin-bottom: 0.5rem; font-size: 0.9rem;">BiLSTM</h4><div id="probs-bilstm"></div></div>
+          <div><h4 style="color:#14B8A6; margin-bottom: 0.5rem; font-size: 0.9rem;">Transformer</h4><div id="probs-transformer"></div></div>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: 3 Pillars + 3D -->
+      <div>
+        <div class="panel" style="margin-bottom: 1.5rem;">
+          <h3>XAI Diagnostics (The 3 Pillars)</h3>
+          <div class="metric-box">
+            <div><div style="font-weight:700;">1. Stability</div><div style="font-size:0.8rem; color:var(--text-muted);">Do architectures agree on features?</div></div>
+            <div style="text-align: right;"><div id="val-stability" class="metric-val">-</div><div id="badge-stability"></div></div>
+          </div>
+          <div class="metric-box">
+            <div><div style="font-weight:700;">2. Fidelity</div><div style="font-size:0.8rem; color:var(--text-muted);">Does deleting top regions break the model?</div></div>
+            <div style="text-align: right;"><div id="val-fidelity" class="metric-val">-</div><div id="badge-fidelity"></div></div>
+          </div>
+          <div class="metric-box">
+            <div><div style="font-weight:700;">3. Plausibility</div><div style="font-size:0.8rem; color:var(--text-muted);">Are important regions inside actual genes?</div></div>
+            <div style="text-align: right;"><div id="val-plausibility" class="metric-val">-</div><div id="badge-plausibility"></div></div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <h3>3D Protein Structure Attribution</h3>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Red regions indicate the exact protein folds the AI relied on.</p>
+          <div id="protein-viewer"></div>
+        </div>
+      </div>
+    </div>
   </div>
-</section>
-{% endblock %}
+</div>
+
+<script>
+const VIRUSES = ["adeno_c", "chikungunya", "dengue", "measles", "mpox", "norovirus"];
+const COLORS = {"cnn": "#6366F1", "bilstm": "#EC4899", "transformer": "#14B8A6"};
+
+document.getElementById('file-input').addEventListener('change', (e) => {
+  const reader = new FileReader();
+  reader.onload = (ev) => { document.getElementById('seq-input').value = ev.target.result; };
+  reader.readAsText(e.target.files[0]);
+});
+
+document.getElementById('run-btn').onclick = async () => {
+  const seq = document.getElementById('seq-input').value.trim();
+  if (!seq) return alert("Please provide a sequence.");
+  
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('loading').style.display = 'block';
+  
+  const r = await fetch('/api/attribute', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({sequence: seq}) });
+  const {job_id} = await r.json();
+  
+  const poll = setInterval(async () => {
+    const res = await (await fetch('/api/attribute/' + job_id)).json();
+    if (res.status === 'done') {
+      clearInterval(poll);
+      document.getElementById('loading').style.display = 'none';
+      renderDashboard(res.result);
+    }
+  }, 1000);
+};
+
+function renderDashboard(d) {
+  document.getElementById('results').style.display = 'block';
+  
+  // --- Render Prediction Bars (Unchanged) ---
+  ['cnn', 'bilstm', 'transformer'].forEach(m => {
+    const container = document.getElementById('probs-' + m);
+    container.innerHTML = '';
+    const probs = d.predictions[m].probs;
+    const sorted = VIRUSES.map((v, i) => ({ name: v, prob: probs[i] })).sort((a, b) => b.prob - a.prob);
+    
+    sorted.forEach(item => {
+      if (item.prob < 0.01) return;
+      const pct = (item.prob * 100).toFixed(1);
+      container.innerHTML += `
+        <div class="prob-row">
+          <div class="prob-label">${item.name.replace('_c', '')}</div>
+          <div class="prob-bg"><div class="prob-fill" style="width: ${pct}%; background: ${COLORS[m]}"></div></div>
+          <div class="prob-val">${pct}%</div>
+        </div>
+      `;
+    });
+  });
+
+  // --- Render Metrics ---
+  document.getElementById('val-stability').textContent = d.stability.toFixed(3);
+  document.getElementById('badge-stability').innerHTML = d.stability > 0.7 ? '<span class="badge-good">High Agreement</span>' : '<span class="badge-bad">Low Agreement</span>';
+
+  document.getElementById('val-fidelity').textContent = (d.fidelity * 100).toFixed(1) + "%";
+  document.getElementById('badge-fidelity').innerHTML = d.fidelity > 0.05 ? '<span class="badge-good">Faithful</span>' : '<span class="badge-bad">Low Fidelity</span>';
+
+  document.getElementById('val-plausibility').textContent = d.plausibility.toFixed(2);
+  document.getElementById('badge-plausibility').innerHTML = d.plausibility > 1.0 ? '<span class="badge-good">Plausible</span>' : '<span class="badge-bad">Artifact Focused</span>';
+
+  // --- Call the isolated 3D viewer function ---
+  render3DProtein(d.pdb_id, d.residue_indices);
+}
+</script>
+</body>
+</html>
