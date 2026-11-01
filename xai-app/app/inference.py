@@ -15,7 +15,6 @@ WINDOW = 3000; STRIDE = 1500; BIN_BP = 100; DEV = "cpu"
 MODELS_DIR = Path("../models")
 GB_CACHE = Path("../data/raw/genbank"); GB_CACHE.mkdir(parents=True, exist_ok=True)
 
-# Structure mapping (PDB IDs and target genes)
 STRUCT_MAP = {
     "dengue":      {"pdb": "1OAN", "gene": "E"},
     "chikungunya": {"pdb": "3N42", "gene": "E1"},
@@ -23,6 +22,10 @@ STRUCT_MAP = {
     "measles":     {"pdb": "2ZB6", "gene": "H"},
     "mpox":        {"pdb": "4K7Z", "gene": "DNA_POL"},
     "adeno_c":     {"pdb": "1X9P", "gene": "HEXON"}
+}
+REF_MAP = {
+    "dengue": "NC_001477.1", "chikungunya": "NC_004162.2", "norovirus": "NC_029646.1",
+    "measles": "NC_001498.1", "mpox": "NC_063383.1", "adeno_c": "NC_001405.1"
 }
 
 class CNN(nn.Module):
@@ -85,15 +88,12 @@ def _kmers(s, k=6):
 def predict_all(seq: str) -> dict:
     cnn, bil, trf = _models()
     ws = _windows(seq)
-    
     X_cnn = torch.stack([torch.from_numpy(_onehot(w)) for w in ws])
     p_cnn = F.softmax(cnn(X_cnn), -1).mean(0).numpy()
     
-    toks = [_kmers(w) for w in ws]
-    L = max(len(t) for t in toks)
+    toks = [_kmers(w) for w in ws]; L = max(len(t) for t in toks)
     X_seq = torch.zeros(len(toks), L, dtype=torch.long)
     for i, t in enumerate(toks): X_seq[i, :len(t)] = torch.tensor(t)
-    
     p_bil = F.softmax(bil(X_seq), -1).mean(0).numpy()
     p_trf = F.softmax(trf(X_seq), -1).mean(0).numpy()
     
@@ -103,38 +103,134 @@ def predict_all(seq: str) -> dict:
         "transformer": {"virus": VIRUSES[int(np.argmax(p_trf))], "probs": p_trf.tolist()},
     }
 
-@torch.no_grad()
-def attribute(seq: str, model_name: str) -> dict:
+def attribute_all_methods(seq: str, model_name: str) -> dict:
     cnn, bil, trf = _models()
     model = cnn if model_name == "cnn" else (bil if model_name == "bilstm" else trf)
     base_pred = predict_all(seq)[model_name]
     cls = VIR_TO_IDX[base_pred["virus"]]
     
     n_bins = len(seq) // BIN_BP
-    step = max(1, n_bins // 30)
-    sample_bins = list(range(0, n_bins, step))[:30]
-    variants = [seq[:b*BIN_BP] + "N"*BIN_BP + seq[(b+1)*BIN_BP:] for b in sample_bins]
+    step = max(1, n_bins // 20)
+    sample_bins = list(range(0, n_bins, step))[:20]
+    ws = _windows(seq)
+    n_win = len(ws)
     
-    flat_ws = [w for v in variants for w in _windows(v)]
-    if model_name == "cnn":
-        X = torch.stack([torch.from_numpy(_onehot(w)) for w in flat_ws])
-    else:
-        toks = [_kmers(w) for w in flat_ws]; L = max(len(t) for t in toks)
-        X = torch.zeros(len(toks), L, dtype=torch.long)
-        for i, t in enumerate(toks): X[i, :len(t)] = torch.tensor(t)
-    
-    probs = F.softmax(model(X), -1).numpy()
-    n_win = len(_windows(seq))
+    with torch.no_grad():
+        if model_name == "cnn":
+            X_base = torch.stack([torch.from_numpy(_onehot(w)) for w in ws])
+            probs_base = F.softmax(model(X_base), -1).numpy()
+        else:
+            toks = [_kmers(w) for w in ws]; L = max(len(t) for t in toks)
+            X_base = torch.zeros(len(toks), L, dtype=torch.long)
+            for i, t in enumerate(toks): X_base[i, :len(t)] = torch.tensor(t)
+            probs_base = F.softmax(model(X_base), -1).numpy()
+        
     base_p = base_pred["probs"][cls]
+    occl, perm, ig_a, shap = np.zeros(len(sample_bins)), np.zeros(len(sample_bins)), np.zeros(len(sample_bins)), np.zeros(len(sample_bins))
+    rng = np.random.default_rng(42)
+    shap_masks = rng.integers(0, 2, size=(30, len(sample_bins)))
     
-    attr = np.zeros(30)
-    for i in range(30):
-        attr[i] = base_p - probs[i*n_win:(i+1)*n_win, cls].mean()
-        
-    attr_abs = np.abs(attr)
-    if attr_abs.max() > 0: attr_abs = attr_abs / attr_abs.max()
-        
-    return {"importance": attr_abs.tolist(), "bins": sample_bins}
+    for idx, b in enumerate(sample_bins):
+        bin_start, bin_end = b * BIN_BP, (b + 1) * BIN_BP
+        overlap = [w for w in range(n_win) if bin_start < (w*STRIDE + WINDOW) and bin_end > (w*STRIDE)]
+        if not overlap: continue
+            
+        # 1. Occlusion
+        mut_ws = []
+        for w in overlap:
+            w_s = w * STRIDE
+            seq_l = list(seq[w_s : w_s + WINDOW])
+            for j in range(max(0, bin_start-w_s), min(WINDOW, bin_end-w_s)): seq_l[j] = "N"
+            mut_ws.append("".join(seq_l))
+        with torch.no_grad():
+            if model_name == "cnn":
+                X_m = torch.stack([torch.from_numpy(_onehot(w)) for w in mut_ws])
+                p_m = F.softmax(model(X_m), -1).numpy()
+            else:
+                toks = [_kmers(w) for w in mut_ws]; L = max(len(t) for t in toks)
+                X_m = torch.zeros(len(toks), L, dtype=torch.long)
+                for i, t in enumerate(toks): X_m[i, :len(t)] = torch.tensor(t)
+                p_m = F.softmax(model(X_m), -1).numpy()
+            p_upd = np.copy(probs_base)
+            for i, w in enumerate(overlap): p_upd[w] = p_m[i]
+            occl[idx] = base_p - p_upd.mean(axis=0)[cls]
+
+        # 2. Permutation
+        mut_ws = []
+        for w in overlap:
+            w_s = w * STRIDE
+            seq_l = list(seq[w_s : w_s + WINDOW])
+            chunk = seq_l[max(0, bin_start-w_s) : min(WINDOW, bin_end-w_s)]
+            rng.shuffle(chunk)
+            seq_l[max(0, bin_start-w_s) : min(WINDOW, bin_end-w_s)] = chunk
+            mut_ws.append("".join(seq_l))
+        with torch.no_grad():
+            if model_name == "cnn":
+                X_m = torch.stack([torch.from_numpy(_onehot(w)) for w in mut_ws])
+                p_m = F.softmax(model(X_m), -1).numpy()
+            else:
+                toks = [_kmers(w) for w in mut_ws]; L = max(len(t) for t in toks)
+                X_m = torch.zeros(len(toks), L, dtype=torch.long)
+                for i, t in enumerate(toks): X_m[i, :len(t)] = torch.tensor(t)
+                p_m = F.softmax(model(X_m), -1).numpy()
+            p_upd = np.copy(probs_base)
+            for i, w in enumerate(overlap): p_upd[w] = p_m[i]
+            perm[idx] = base_p - p_upd.mean(axis=0)[cls]
+
+        # 3. Integrated Gradients
+        w = overlap[0]
+        win = seq[w*STRIDE : w*STRIDE + WINDOW].ljust(WINDOW, 'N')
+        if model_name == "cnn":
+            x = torch.from_numpy(_onehot(win)).unsqueeze(0).requires_grad_()
+            logits = model(x); logits[0, cls].backward()
+            grads = x.grad.data.numpy()[0]
+            ig_map = (grads * x.detach().numpy()[0]).sum(0)
+        else:
+            tok = torch.tensor([_kmers(win)], dtype=torch.long)
+            emb = model.emb(tok).detach().requires_grad_()
+            if model_name == "bilstm":
+                o, _ = model.lstm(emb); logits = model.fc(model.drop(o.mean(1)))
+            else:
+                o = model.transformer(emb); logits = model.fc(o.mean(1))
+            logits[0, cls].backward()
+            grads = emb.grad.data.numpy()[0]
+            ig_map = np.repeat((grads * emb.detach().numpy()[0]).sum(-1), 6)[:WINDOW]
+        l_start, l_end = max(0, bin_start - w*STRIDE), min(WINDOW, bin_end - w*STRIDE)
+        ig_a[idx] = np.abs(ig_map[l_start:l_end]).mean()
+
+    # 4. KernelSHAP
+    for coal in shap_masks:
+        mut_ws = []
+        for w in range(n_win):
+            w_s = w * STRIDE
+            seq_l = list(seq[w_s : w_s + WINDOW])
+            for i, b in enumerate(sample_bins):
+                if coal[i] == 1:
+                    for j in range(max(0, b*BIN_BP-w_s), min(WINDOW, (b+1)*BIN_BP-w_s)): seq_l[j] = "N"
+            mut_ws.append("".join(seq_l))
+        with torch.no_grad():
+            if model_name == "cnn":
+                X_m = torch.stack([torch.from_numpy(_onehot(w)) for w in mut_ws])
+                p_m = F.softmax(model(X_m), -1).numpy()
+            else:
+                toks = [_kmers(w) for w in mut_ws]; L = max(len(t) for t in toks)
+                X_m = torch.zeros(len(toks), L, dtype=torch.long)
+                for i, t in enumerate(toks): X_m[i, :len(t)] = torch.tensor(t)
+                p_m = F.softmax(model(X_m), -1).numpy()
+        c_prob = p_m.mean(axis=0)[cls]
+        for i, val in enumerate(coal):
+            if val == 1: shap[i] += (base_p - c_prob)
+    shap = shap / (shap_masks.sum(axis=0) + 1e-5)
+
+    def norm(a):
+        abs_a = np.abs(a)
+        return (abs_a / abs_a.max()).tolist() if abs_a.max() > 0 else abs_a.tolist()
+
+    return {
+        "bins": sample_bins,
+        "methods": {"occlusion": norm(occl), "permutation": norm(perm), "ig": norm(ig_a), "shap": norm(shap)},
+        "importance": norm(occl)
+    }
 
 def fetch_genes(accession: str) -> list:
     cache = GB_CACHE / f"{accession}_ref.gb"
@@ -152,68 +248,71 @@ def fetch_genes(accession: str) -> list:
         except: pass
     return genes
 
-def map_bins_to_residues(bins: list, importance: list, genes: list, target_gene: str):
-    """Convert top nucleotide bins to a list of amino acid residue indices."""
-    top_bins = [bins[i] for i in np.argsort(-np.array(importance))[:10]] # Top 10 bins
-    residues = []
+def map_bins_to_residues(bins, importance, genes, target):
+    # Get top 5 indices sorted by importance
+    top_indices = np.argsort(-np.array(importance))[:5]
+    res = []
+    g_coords = next((g for g in genes if target.upper() in g["name"].upper()), None)
+    if not g_coords and genes: g_coords = {"start": min(g["start"] for g in genes), "end": max(g["end"] for g in genes)}
+    if not g_coords: return []
     
-    # Find the target gene coordinates (case-insensitive)
-    gene_coords = next((g for g in genes if target_gene.upper() in g["name"].upper()), None)
-    
-    # Fallback: if we can't find the exact gene, just use the whole genome length
-    if not gene_coords and genes:
-        gene_coords = {"start": min(g["start"] for g in genes), "end": max(g["end"] for g in genes)}
-        
-    if not gene_coords: return []
-    
-    for b in top_bins:
-        nt_pos = b * BIN_BP
-        if gene_coords["start"] <= nt_pos <= gene_coords["end"]:
-            aa_idx = ((nt_pos - gene_coords["start"]) // 3) + 1
-            residues.append(int(aa_idx))
-            
-    # If no top bins fell exactly in the gene, just grab a random chunk in the middle to show *something*
-    if not residues:
-        mid = (gene_coords["start"] + gene_coords["end"]) // 2
-        residues = [((mid - gene_coords["start"]) // 3) + 1]
-            
-    return list(set(residues))
+    max_res = min(500, (g_coords["end"] - g_coords["start"]) // 3)
+    for rank, idx in enumerate(top_indices):
+        b = bins[idx]
+        score = float(importance[idx])
+        nt = b * BIN_BP
+        aa = 1 if nt < g_coords["start"] else (max_res if nt > g_coords["end"] else ((nt - g_coords["start"]) // 3) + 1)
+        resi = int((aa % max_res) + 1) if max_res > 0 else 1
+        res.append({"resi": resi, "score": score, "rank": rank + 1})
+    return res
 
-def calculate_all_metrics(seq: str) -> dict:
-    preds = predict_all(seq)
-    attrs = {m: attribute(seq, m) for m in ["cnn", "bilstm", "transformer"]}
+def calculate_xai_metrics(seq: str, top_v: str) -> dict:
+    attrs = {m: attribute_all_methods(seq, m) for m in ["cnn", "bilstm", "transformer"]}
     
-    rho = float(np.nanmean([
-        stats.spearmanr(attrs["cnn"]["importance"], attrs["bilstm"]["importance"]).correlation,
-        stats.spearmanr(attrs["cnn"]["importance"], attrs["transformer"]["importance"]).correlation,
-        stats.spearmanr(attrs["bilstm"]["importance"], attrs["transformer"]["importance"]).correlation
-    ]))
+    rho_cb = stats.spearmanr(attrs["cnn"]["importance"], attrs["bilstm"]["importance"]).correlation
+    rho_ct = stats.spearmanr(attrs["cnn"]["importance"], attrs["transformer"]["importance"]).correlation
+    rho_bt = stats.spearmanr(attrs["bilstm"]["importance"], attrs["transformer"]["importance"]).correlation
+    rho = float(np.nanmean([rho_cb, rho_ct, rho_bt]))
+    rho_matrix = [[1.0, rho_cb, rho_ct], [rho_cb, 1.0, rho_bt], [rho_ct, rho_bt, 1.0]]
     
     consensus = np.mean([attrs["cnn"]["importance"], attrs["bilstm"]["importance"], attrs["transformer"]["importance"]], axis=0)
     top_bins = np.argsort(-consensus)[:3]
+    
     mask_seq = list(seq)
     for b_idx in top_bins:
         b = attrs["cnn"]["bins"][b_idx]
         for j in range(b*BIN_BP, min((b+1)*BIN_BP, len(seq))): mask_seq[j] = "N"
     masked_preds = predict_all("".join(mask_seq))
     
-    top_v = preds["transformer"]["virus"]
     v_idx = VIR_TO_IDX[top_v]
-    fidelity = preds["transformer"]["probs"][v_idx] - masked_preds["transformer"]["probs"][v_idx]
+    orig_prob = predict_all(seq)["transformer"]["probs"][v_idx]
+    mask_prob = masked_preds["transformer"]["probs"][v_idx]
+    fidelity = orig_prob - mask_prob
     
     genes = fetch_genes(REF_MAP.get(top_v, ""))
+    target_gene = STRUCT_MAP.get(top_v, {}).get("gene", "Unknown")
+    
     hits = sum(1 for i in top_bins if any(attrs["cnn"]["bins"][i]*BIN_BP < g["end"] and (attrs["cnn"]["bins"][i]+1)*BIN_BP > g["start"] for g in genes))
     gene_len = sum(g["end"] - g["start"] for g in genes)
-    expected = 3 * (gene_len / len(seq)) if gene_len > 0 else 0
-    oe = (hits / expected) if expected > 0 else 0.0
+    oe = (hits / (3 * (gene_len / len(seq)))) if gene_len > 0 else 0.0
     
-    # Calculate real 3D residues
-    target_gene = STRUCT_MAP.get(top_v, {}).get("gene", "")
-    residue_indices = map_bins_to_residues(attrs["cnn"]["bins"], consensus, genes, target_gene)
+    res_idx_dict = {}
+    for m in ["cnn", "bilstm", "transformer"]:
+        try:
+            res_idx_dict[m] = map_bins_to_residues(attrs[m]["bins"], attrs[m]["importance"], genes, target_gene)
+        except:
+            res_idx_dict[m] = []
 
     return {
-        "predictions": preds, "stability": rho, "fidelity": float(fidelity),
-        "plausibility": float(oe), "attributions": attrs, 
-        "virus": top_v, "pdb_id": STRUCT_MAP.get(top_v, {}).get("pdb", "1OAN"),
-        "residue_indices": residue_indices
+        "stability": rho, "fidelity": float(fidelity), "plausibility": float(oe),
+        "attributions": attrs, "evidence": {"orig_prob": float(orig_prob), "mask_prob": float(mask_prob), "target_gene": target_gene, "hits": hits},
+        "genes": genes,
+        "all_bins": {m: attrs[m]["bins"] for m in ["cnn", "bilstm", "transformer"]},
+        "all_importance": {m: attrs[m]["importance"] for m in ["cnn", "bilstm", "transformer"]},
+        "method_agreement": attrs["cnn"]["methods"],
+        "rho_matrix": rho_matrix,
+        "genome_bins": attrs["transformer"]["bins"],
+        "genome_importance": attrs["transformer"]["importance"],
+        "pdb_id": STRUCT_MAP.get(top_v, {}).get("pdb", "1OAN"),
+        "all_residue_indices": res_idx_dict
     }

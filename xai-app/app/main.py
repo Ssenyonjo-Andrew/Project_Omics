@@ -25,14 +25,26 @@ def index(request: Request):
 @app.post("/api/attribute")
 def attr(payload: SeqInput, bg: BackgroundTasks):
     job_id = str(uuid.uuid4())
-    JOBS[job_id] = {"status": "queued", "result": None}
+    JOBS[job_id] = {"status": "queued", "step": "starting", "predictions": None, "metrics": None, "error": None}
     
     def run():
-        JOBS[job_id]["status"] = "running"
-        seq = "".join(payload.sequence.split()).upper()
-        res = inference.calculate_all_metrics(seq)
-        JOBS[job_id]["result"] = res
-        JOBS[job_id]["status"] = "done"
+        try:
+            seq = "".join(payload.sequence.split()).upper()
+            JOBS[job_id]["step"] = "predicting"
+            preds = inference.predict_all(seq)
+            JOBS[job_id]["predictions"] = preds
+            
+            JOBS[job_id]["step"] = "metrics"
+            top_v = preds["transformer"]["virus"]
+            metrics = inference.calculate_xai_metrics(seq, top_v)
+            JOBS[job_id]["metrics"] = metrics
+            
+            JOBS[job_id]["status"] = "done"
+            JOBS[job_id]["step"] = "done"
+        except Exception as e:
+            logging.error(f"Job {job_id} failed: {str(e)}")
+            JOBS[job_id]["status"] = "error"
+            JOBS[job_id]["error"] = str(e)
         
     bg.add_task(run)
     return {"job_id": job_id}

@@ -2,96 +2,219 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Clinical XAI Diagnostic Dashboard</title>
+<title>Viral XAI</title>
 <link rel="stylesheet" href="/static/style.css">
-<!-- Load 3Dmol and our dedicated viewer.js -->
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
 <script src="https://3Dmol.org/build/3Dmol-min.js"></script>
 <script src="/static/viewer.js"></script>
 <style>
-  .dashboard-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
-  .panel { background: var(--surface); border-radius: 12px; padding: 1.5rem; border: 1px solid var(--border); }
-  .metric-box { display: flex; justify-content: space-between; align-items: center; padding: 1rem; border-radius: 8px; margin-bottom: 1rem; background: var(--bg-2); }
-  .metric-val { font-size: 1.5rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; }
-  .badge-good { background: rgba(16,185,129,0.2); color: #10B981; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
-  .badge-bad { background: rgba(239,68,68,0.2); color: #EF4444; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
-  
-  /* STRICT 3D CONTAINER FIXES */
-  #protein-viewer { 
-    position: relative !important; 
-    width: 100% !important; 
-    height: 400px !important; 
-    background: #0F172A; 
-    border-radius: 8px; 
-    overflow: hidden !important; 
-    border: 1px solid var(--border);
+  :root {
+    --bg-color: #F8FAFC; --text-color: #1E293B; --text-muted: #64748B;
+    --panel-bg: #FFFFFF; --border-color: #E2E8F0; --primary-blue: #3B82F6;
   }
+  body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+  
+  .app-header { text-align: center; padding: 3rem 1rem 2rem 1rem; }
+  .app-header h1 { margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; color: #0F172A; display: flex; justify-content: center; align-items: center; gap: 0.5rem; }
+  .version { font-size: 1rem; color: var(--text-muted); font-weight: 400; margin-left: 0.5rem; }
+  .app-header p { margin: 0.5rem 0 0 0; color: var(--text-muted); font-size: 1.1rem; }
+  .about-link { position: absolute; top: 1.5rem; right: 2rem; color: var(--primary-blue); text-decoration: none; font-weight: 600; cursor: pointer; }
+
+  .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
+  
+  .start-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 1100px; margin-left: auto; margin-right: auto; }
+  .panel { background: var(--panel-bg); border: 1px solid var(--border-color); border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); display: flex; flex-direction: column; }
+  .panel-header { background: #F1F5F9; color: var(--text-color); padding: 0.8rem 1.2rem; font-weight: 600; font-size: 1.1rem; border-bottom: 1px solid var(--border-color); border-radius: 8px 8px 0 0; }
+  .panel-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; }
+
+  .tabs { display: flex; border-bottom: 1px solid var(--border-color); margin-bottom: 1.5rem; }
+  .tabs span { padding: 0.5rem 1rem; color: var(--text-muted); font-weight: 500; cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; }
+  .tabs span.active { color: var(--primary-blue); border-bottom-color: var(--primary-blue); }
+
+  .dropzone { border: 2px dashed #CBD5E1; border-radius: 8px; padding: 3rem 1.5rem; text-align: center; background: #F8FAFC; transition: 0.2s; cursor: pointer; display: flex; flex-direction: column; align-items: center; justify-content: center; flex: 1; }
+  .dropzone:hover { border-color: var(--primary-blue); background: #EFF6FF; }
+  .fasta-icon { width: 50px; height: 64px; position: relative; margin-bottom: 1rem; }
+  .fasta-icon svg { width: 100%; height: 100%; }
+  .btn-select { background: var(--primary-blue); color: white; border: none; padding: 0.7rem 2rem; border-radius: 6px; font-weight: 600; font-size: 1rem; cursor: pointer; margin-top: 1rem; }
+  
+  .seq-preview { background: #F8FAFC; border: 1px solid var(--border-color); border-radius: 6px; padding: 1rem; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; color: #334155; height: 200px; overflow-y: auto; white-space: pre-wrap; word-break: break-all; margin-bottom: 1.5rem; }
+  .btn-run { background: #E2E8F0; color: #94A3B8; border: none; padding: 0.8rem; border-radius: 6px; font-weight: 700; font-size: 1rem; cursor: not-allowed; width: 100%; }
+  .btn-run.enabled { background: var(--primary-blue); color: white; cursor: pointer; }
+
+  #view-results { display: none; }
+  .results-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; margin-top: 2rem; }
+  .clinical-summary { background: #EFF6FF; border-left: 4px solid var(--primary-blue); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; line-height: 1.6; color: #1E293B; }
+  
+  .middle-grid { display: grid; grid-template-columns: 350px 1fr; gap: 1.5rem; margin-bottom: 1.5rem; }
+  .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+  .span-full { grid-column: span 2; }
+  
+  .metric-box { display: flex; flex-direction: column; padding: 1.5rem; border-radius: 8px; background: #FFFFFF; border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .kpi-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
+  .kpi-title { font-size: 1rem; font-weight: 700; color: var(--text-color); }
+  .kpi-subtitle { font-size: 0.75rem; color: var(--text-muted); }
+  .kpi-value { font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; text-align: right; }
+  .badge-good { background: #D1FAE5; color: #065F46; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.3rem; }
+  .badge-bad { background: #FEE2E2; color: #991B1B; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.3rem; }
+  
+  #protein-viewer { position: relative !important; width: 100% !important; height: 450px !important; background: white; border-radius: 8px; overflow: hidden !important; border: 1px solid var(--border-color); }
   .viewer_3Dmoljs { position: absolute !important; top: 0; left: 0; }
 
-  .spinner { border: 4px solid rgba(255,255,255,0.1); border-left-color: #3B82F6; border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; display: inline-block; vertical-align: middle; margin-right: 10px;}
-  @keyframes spin { to { transform: rotate(360deg); } }
-  .prob-row { display: flex; align-items: center; margin-bottom: 0.5rem; font-size: 0.85rem; }
+  .prob-row { display: flex; align-items: center; margin-bottom: 0.6rem; font-size: 0.85rem; }
   .prob-label { width: 90px; color: var(--text-muted); text-transform: capitalize; }
-  .prob-bg { flex: 1; background: var(--bg-2); height: 12px; border-radius: 6px; margin: 0 10px; overflow: hidden; }
+  .prob-bg { flex: 1; background: #E2E8F0; height: 12px; border-radius: 6px; margin: 0 10px; overflow: hidden; }
   .prob-fill { height: 100%; border-radius: 6px; transition: width 0.5s ease-in-out; }
-  .prob-val { width: 45px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  .prob-val { width: 40px; text-align: right; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.8rem; color: var(--text-color); }
+
+  #view-about { display: none; max-width: 800px; margin: 0 auto; line-height: 1.6; color: #334155; }
+  #view-about h2 { color: #0F172A; margin-top: 2rem; font-size: 1.5rem; border-bottom: 1px solid var(--border-color); padding-bottom: 0.5rem; }
 </style>
 </head>
 <body>
-<div class="nav"><div class="brand">🧬 Clinical Viral Surveillance</div></div>
 
-<div class="container">
-  <h1>Explainable AI Diagnostic Dashboard</h1>
-  <p class="muted">Upload a genomic sequence to generate predictions, stability diagnostics, and 3D structural attributions.</p>
+<a href="#" class="about-link" id="link-about" onclick="showAbout()">About</a>
 
-  <div class="form-panel">
-    <textarea id="seq-input" class="textarea" rows="3" placeholder=">paste sequence here..."></textarea>
-    <div style="display: flex; gap: 1rem; align-items: center; margin-top: 1rem;">
-      <label class="btn" style="background: #334155; color: white; cursor: pointer;">📁 Upload FASTA <input type="file" id="file-input" accept=".fa,.fasta,.fna,.txt" style="display: none;"></label>
-      <button id="run-btn" class="btn btn-primary" style="flex: 1;">Run Full XAI Analysis</button>
+<header class="app-header">
+  <h1>🧬 Viral XAI <span class="version">v1.0.0</span></h1>
+  <p>Explainable AI diagnostics, feature attribution, and stability checks</p>
+</header>
+
+<!-- PAGE 1: START -->
+<div class="container" id="view-start">
+  <div class="start-grid">
+    <div class="panel">
+      <div class="panel-header">Provide sequence data</div>
+      <div class="panel-body">
+        <div class="tabs"><span class="active">File</span><span>Text</span></div>
+        <div class="dropzone" id="dropzone">
+          <div class="fasta-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <div style="position:absolute; bottom:-5px; left:-5px; background:#10B981; color:white; font-size:8px; font-weight:bold; padding:2px 4px; border-radius:4px;">FASTA</div>
+          </div>
+          <div style="font-weight: 600; margin-bottom: 0.2rem;">Drag & drop file</div>
+          <label class="btn-select">Select file <input type="file" id="file-input" accept=".fa,.fasta,.fna,.txt" style="display: none;"></label>
+        </div>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-header">Sequence Preview</div>
+      <div class="panel-body">
+        <div class="seq-preview" id="seq-preview">Waiting for sequence upload...</div>
+        <button id="run-btn" class="btn-run" disabled>Run XAI Analysis</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE 2: ABOUT -->
+<div class="container" id="view-about">
+  <h1 style="color: #0F172A; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem;">About Viral XAI</h1>
+  <p><b>Viral XAI</b> is a clinical-grade explainable AI (XAI) diagnostic dashboard designed for viral genomic surveillance. It goes beyond simple classification by evaluating <i>how</i> deep learning models make their decisions, ensuring they are biologically grounded and trustworthy.</p>
+  <h2>The Three Pillars of XAI</h2>
+  <ul>
+    <li><b>Stability:</b> Do different neural network architectures (CNN, BiLSTM, Transformer) focus on the same genomic regions? We measure this using Spearman correlation.</li>
+    <li><b>Fidelity:</b> If we delete the regions the AI says are important, does the prediction break? We run live occlusion tests to find out.</li>
+    <li><b>Biological Plausibility:</b> Does the AI focus on actual biological genes (e.g., the Spike protein, Polymerase), or is it looking at random genomic artifacts? We map attribution peaks to annotated GenBank genes.</li>
+  </ul>
+  <h2>Supported Viruses</h2>
+  <p>Dengue, Chikungunya, Norovirus, Measles, Mpox, and Adenovirus C.</p>
+  <h2>Contributor</h2>
+  <p>Developed by <b>Ssenyonjo Andrew Kwangala</b> for the BSc Data Science and Analytics at <b>Uganda Christian University</b>.</p>
+  <p><a href="#" onclick="goBack()" style="color: #3B82F6; font-weight: 600; text-decoration: none;">← Back to Application</a></p>
+</div>
+
+<!-- PAGE 3: RESULTS -->
+<div class="container" id="view-results">
+  <div class="results-header">
+    <div>
+      <h1 style="margin: 0; color: #0F172A;">XAI Diagnostic Dashboard</h1>
+      <p style="margin: 0; color: var(--text-muted);">Analysis complete for uploaded sequence.</p>
+    </div>
+    <button class="btn-select" onclick="goBack()" style="background: #64748B; margin-top: 0;">← New Analysis</button>
+  </div>
+
+  <div class="clinical-summary"><strong>Diagnostic Summary:</strong> <span id="summary-text">Running analysis...</span></div>
+
+  <div class="middle-grid">
+    <div class="panel">
+      <div class="panel-header">Model Predictions</div>
+      <div class="panel-body">
+        <div style="margin-bottom: 1.5rem;"><h4 style="color:#6366F1; margin-top:0;">CNN</h4><div id="probs-cnn"></div></div>
+        <div style="margin-bottom: 1.5rem;"><h4 style="color:#EC4899;">BiLSTM</h4><div id="probs-bilstm"></div></div>
+        <div><h4 style="color:#14B8A6;">Transformer</h4><div id="probs-transformer"></div></div>
+      </div>
+    </div>
+
+    <div class="pillars-grid">
+      <!-- STABILITY -->
+      <div class="metric-box">
+        <div class="kpi-header">
+          <div><div class="kpi-title">1. Stability</div><div class="kpi-subtitle">Do models agree on top regions?</div></div>
+          <div style="text-align: right;"><div id="val-stability" class="kpi-value">-</div><div id="badge-stability"></div></div>
+        </div>
+        <div id="chart-stability" style="flex: 1; min-height: 200px;"></div>
+      </div>
+
+      <!-- FIDELITY -->
+      <div class="metric-box">
+        <div class="kpi-header">
+          <div><div class="kpi-title">2. Fidelity</div><div class="kpi-subtitle">Does masking break the model?</div></div>
+          <div style="text-align: right;"><div id="val-fidelity" class="kpi-value">-</div><div id="badge-fidelity"></div></div>
+        </div>
+        <div id="chart-fidelity" style="flex: 1; min-height: 200px;"></div>
+      </div>
+
+      <!-- PLAUSIBILITY -->
+      <div class="metric-box span-full">
+        <div class="kpi-header">
+          <div><div class="kpi-title">3. Plausibility</div><div class="kpi-subtitle">Does AI focus on annotated biological genes?</div></div>
+          <div style="text-align: right;"><div id="val-plausibility" class="kpi-value">-</div><div id="badge-plausibility"></div></div>
+        </div>
+        <div id="chart-plausibility" style="flex: 1; min-height: 180px;"></div>
+      </div>
     </div>
   </div>
 
-  <div id="loading" style="display:none; padding: 2rem; text-align: center; font-weight: 600; color: #FBBF24;">
-    <div class="spinner"></div> Running Consensus Attribution & 3D Mapping...
+  <div class="panel" style="margin-bottom: 1.5rem;">
+    <div class="panel-header">Method Agreement (Consensus Heatmap)</div>
+    <div class="panel-body">
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:0; margin-bottom: 0.5rem;">Do all XAI methods agree on which genomic regions are important?</p>
+      <div id="chart-methods" style="height: 200px;"></div>
+    </div>
   </div>
 
-  <div id="results" style="display:none;">
-    <div class="dashboard-grid">
-      <!-- LEFT COLUMN: Predictions (Untouched, exactly as you like it) -->
-      <div>
-        <div class="panel" style="margin-bottom: 1.5rem;">
-          <h3>Model Predictions</h3>
-          <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Probability distribution across the 6 known viruses.</p>
-          <div style="margin-bottom: 1.5rem;"><h4 style="color:#6366F1; margin-bottom: 0.5rem; font-size: 0.9rem;">CNN</h4><div id="probs-cnn"></div></div>
-          <div style="margin-bottom: 1.5rem;"><h4 style="color:#EC4899; margin-bottom: 0.5rem; font-size: 0.9rem;">BiLSTM</h4><div id="probs-bilstm"></div></div>
-          <div><h4 style="color:#14B8A6; margin-bottom: 0.5rem; font-size: 0.9rem;">Transformer</h4><div id="probs-transformer"></div></div>
-        </div>
+  <div class="panel">
+    <div class="panel-header">3D Protein Structure Attribution</div>
+    <div class="panel-body">
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0; margin-bottom: 1rem;">
+        Residues overlapping the highest-attribution nucleotide windows for each model, mapped from genome coordinates to protein residues.
+      </p>
+      
+      <!-- Controls -->
+      <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1rem; background: #F1F5F9; padding: 0.8rem; border-radius: 6px; flex-wrap: wrap;">
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #3B82F6; cursor: pointer;">
+          <input type="checkbox" id="toggle-cnn" checked onchange="drawHighlights()"> CNN
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #EC4899; cursor: pointer;">
+          <input type="checkbox" id="toggle-bilstm" checked onchange="drawHighlights()"> BiLSTM
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #14B8A6; cursor: pointer;">
+          <input type="checkbox" id="toggle-transformer" checked onchange="drawHighlights()"> Transformer
+        </label>
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #D97706; cursor: pointer;">
+          <input type="checkbox" id="toggle-consensus" checked onchange="drawHighlights()"> Show Consensus (Gold)
+        </label>
+        <div style="flex: 1;"></div>
+        <button onclick="resetView()" style="background: white; border: 1px solid #CBD5E1; padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Reset View</button>
+        <button onclick="exportPng()" style="background: white; border: 1px solid #CBD5E1; padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Export PNG</button>
       </div>
-
-      <!-- RIGHT COLUMN: 3 Pillars + 3D -->
-      <div>
-        <div class="panel" style="margin-bottom: 1.5rem;">
-          <h3>XAI Diagnostics (The 3 Pillars)</h3>
-          <div class="metric-box">
-            <div><div style="font-weight:700;">1. Stability</div><div style="font-size:0.8rem; color:var(--text-muted);">Do architectures agree on features?</div></div>
-            <div style="text-align: right;"><div id="val-stability" class="metric-val">-</div><div id="badge-stability"></div></div>
-          </div>
-          <div class="metric-box">
-            <div><div style="font-weight:700;">2. Fidelity</div><div style="font-size:0.8rem; color:var(--text-muted);">Does deleting top regions break the model?</div></div>
-            <div style="text-align: right;"><div id="val-fidelity" class="metric-val">-</div><div id="badge-fidelity"></div></div>
-          </div>
-          <div class="metric-box">
-            <div><div style="font-weight:700;">3. Plausibility</div><div style="font-size:0.8rem; color:var(--text-muted);">Are important regions inside actual genes?</div></div>
-            <div style="text-align: right;"><div id="val-plausibility" class="metric-val">-</div><div id="badge-plausibility"></div></div>
-          </div>
-        </div>
-
-        <div class="panel">
-          <h3>3D Protein Structure Attribution</h3>
-          <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.5rem;">Red regions indicate the exact protein folds the AI relied on.</p>
-          <div id="protein-viewer"></div>
-        </div>
-      </div>
+      
+      <div id="protein-viewer" style="border: 1px solid #E2E8F0;"></div>
     </div>
   </div>
 </div>
@@ -99,43 +222,89 @@
 <script>
 const VIRUSES = ["adeno_c", "chikungunya", "dengue", "measles", "mpox", "norovirus"];
 const COLORS = {"cnn": "#6366F1", "bilstm": "#EC4899", "transformer": "#14B8A6"};
+let fileData = null;
 
-document.getElementById('file-input').addEventListener('change', (e) => {
-  const reader = new FileReader();
-  reader.onload = (ev) => { document.getElementById('seq-input').value = ev.target.result; };
-  reader.readAsText(e.target.files[0]);
+function showResults() {
+  document.getElementById('view-start').style.display = 'none';
+  document.getElementById('view-about').style.display = 'none';
+  document.getElementById('view-results').style.display = 'block';
+  document.getElementById('link-about').style.display = 'none';
+}
+function showAbout() {
+  document.getElementById('view-start').style.display = 'none';
+  document.getElementById('view-results').style.display = 'none';
+  document.getElementById('view-about').style.display = 'block';
+  document.getElementById('link-about').style.display = 'none';
+}
+function goBack() {
+  document.getElementById('view-start').style.display = 'block';
+  document.getElementById('view-results').style.display = 'none';
+  document.getElementById('view-about').style.display = 'none';
+  document.getElementById('link-about').style.display = 'block';
+}
+
+const dropzone = document.getElementById('dropzone');
+const fileInput = document.getElementById('file-input');
+const seqPreview = document.getElementById('seq-preview');
+const runBtn = document.getElementById('run-btn');
+
+dropzone.addEventListener('dragover', (e) => { e.preventDefault(); dropzone.style.borderColor = '#3B82F6'; });
+dropzone.addEventListener('dragleave', () => { dropzone.style.borderColor = '#CBD5E1'; });
+dropzone.addEventListener('drop', (e) => {
+  e.preventDefault(); dropzone.style.borderColor = '#CBD5E1';
+  if (e.dataTransfer.files.length) { handleFile(e.dataTransfer.files[0]); }
 });
+fileInput.addEventListener('change', (e) => { if (e.target.files.length) { handleFile(e.target.files[0]); } });
 
-document.getElementById('run-btn').onclick = async () => {
-  const seq = document.getElementById('seq-input').value.trim();
-  if (!seq) return alert("Please provide a sequence.");
+function handleFile(file) {
+  const reader = new FileReader();
+  reader.onload = (ev) => { 
+    fileData = ev.target.result;
+    seqPreview.textContent = fileData;
+    seqPreview.style.color = '#10B981';
+    runBtn.disabled = false;
+    runBtn.classList.add('enabled');
+  };
+  reader.readAsText(file);
+}
+
+runBtn.onclick = async () => {
+  if (!fileData) return;
+  showResults();
+  document.getElementById('summary-text').innerHTML = "<span style='color:#FBBF24;'>Running XAI Consensus...</span>";
   
-  document.getElementById('results').style.display = 'none';
-  document.getElementById('loading').style.display = 'block';
-  
-  const r = await fetch('/api/attribute', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({sequence: seq}) });
+  const r = await fetch('/api/attribute', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({sequence: fileData}) });
   const {job_id} = await r.json();
   
   const poll = setInterval(async () => {
-    const res = await (await fetch('/api/attribute/' + job_id)).json();
-    if (res.status === 'done') {
-      clearInterval(poll);
-      document.getElementById('loading').style.display = 'none';
-      renderDashboard(res.result);
+    try {
+      const response = await fetch('/api/attribute/' + job_id);
+      if (!response.ok) { clearInterval(poll); alert("Server restarted."); return; }
+      const res = await response.json();
+      
+      // Guards to prevent crash if data is missing
+      if (res.predictions) renderPredictions(res.predictions);
+      if (res.metrics) renderMetrics(res.predictions, res.metrics);
+      if (res.metrics && !document.getElementById('protein-viewer').hasChildNodes()) {
+        render3DProtein(res.metrics.pdb_id, res.metrics.all_residue_indices);
+      }
+      
+      if (res.status === 'done') { clearInterval(poll); }
+      if (res.status === 'error') { clearInterval(poll); alert("Backend Error: " + res.error); }
+    } catch (e) { 
+      clearInterval(poll); 
+      console.error("Render Error:", e);
+      alert("Network error: " + e.message); 
     }
   }, 1000);
 };
 
-function renderDashboard(d) {
-  document.getElementById('results').style.display = 'block';
-  
-  // --- Render Prediction Bars (Unchanged) ---
+function renderPredictions(preds) {
+  if (!preds) return;
   ['cnn', 'bilstm', 'transformer'].forEach(m => {
     const container = document.getElementById('probs-' + m);
     container.innerHTML = '';
-    const probs = d.predictions[m].probs;
-    const sorted = VIRUSES.map((v, i) => ({ name: v, prob: probs[i] })).sort((a, b) => b.prob - a.prob);
-    
+    const sorted = VIRUSES.map((v, i) => ({ name: v, prob: preds[m].probs[i] })).sort((a, b) => b.prob - a.prob);
     sorted.forEach(item => {
       if (item.prob < 0.01) return;
       const pct = (item.prob * 100).toFixed(1);
@@ -148,19 +317,114 @@ function renderDashboard(d) {
       `;
     });
   });
+}
 
-  // --- Render Metrics ---
-  document.getElementById('val-stability').textContent = d.stability.toFixed(3);
-  document.getElementById('badge-stability').innerHTML = d.stability > 0.7 ? '<span class="badge-good">High Agreement</span>' : '<span class="badge-bad">Low Agreement</span>';
+function renderMetrics(preds, d) {
+  if (!d || !d.attributions) return;
 
+  const sAgree = d.stability > 0.7;
+  const isFaithful = d.fidelity > 0.05;
+  const isPlausible = d.plausibility > 1.0;
+
+  // --- 1. STABILITY (3D Genome Landscape) ---
+  document.getElementById('val-stability').textContent = isNaN(d.stability) ? "NaN" : d.stability.toFixed(3);
+  document.getElementById('badge-stability').innerHTML = sAgree ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
+  
+  function get3DTrace(modelName, yPos, color) {
+    const bins = d.attributions[modelName].bins;
+    const imp = d.attributions[modelName].importance;
+    return {
+      x: bins.map(b => b / 10),
+      y: Array(bins.length).fill(yPos),
+      z: imp,
+      mode: 'lines+markers',
+      type: 'scatter3d',
+      name: modelName.toUpperCase(),
+      line: { width: 6, color: color },
+      marker: { size: 4, color: color }
+    };
+  }
+
+  const t_cnn = get3DTrace('cnn', 'CNN', '#6366F1');
+  const t_bil = get3DTrace('bilstm', 'BiLSTM', '#EC4899');
+  const t_trf = get3DTrace('transformer', 'TRF', '#14B8A6');
+
+  Plotly.newPlot('chart-stability', [t_cnn, t_bil, t_trf], {
+    margin: {l: 0, r: 0, t: 0, b: 0},
+    scene: {
+      xaxis: {title: 'Genome (kb)', showgrid: true, gridcolor: '#E2E8F0', titlefont: {size: 10}, tickfont: {size: 8}},
+      yaxis: {title: '', showgrid: true, gridcolor: '#E2E8F0', tickfont: {size: 10}},
+      zaxis: {title: 'Importance', showgrid: true, gridcolor: '#E2E8F0', titlefont: {size: 10}, tickfont: {size: 8}},
+      camera: { eye: {x: 1.5, y: -1.5, z: 1.2} }
+    },
+    showlegend: false
+  }, {responsive: true});
+
+  // --- 2. FIDELITY (KPI + Waterfall Chart) ---
   document.getElementById('val-fidelity').textContent = (d.fidelity * 100).toFixed(1) + "%";
-  document.getElementById('badge-fidelity').innerHTML = d.fidelity > 0.05 ? '<span class="badge-good">Faithful</span>' : '<span class="badge-bad">Low Fidelity</span>';
+  document.getElementById('badge-fidelity').innerHTML = isFaithful ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
+  
+  const fidData = [{
+    type: 'waterfall', orientation: 'v',
+    measure: ['absolute', 'relative', 'total'],
+    x: ['Original', 'Drop', 'Masked'],
+    y: [d.evidence.orig_prob * 100, -(d.evidence.orig_prob - d.evidence.mask_prob) * 100, d.evidence.mask_prob * 100],
+    text: [(d.evidence.orig_prob*100).toFixed(1)+'%', '-'+((d.evidence.orig_prob-d.evidence.mask_prob)*100).toFixed(1)+'%', (d.evidence.mask_prob*100).toFixed(1)+'%'],
+    textposition: 'outside',
+    decreasing: {marker: {color: '#EF4444'}},
+    increasing: {marker: {color: '#10B981'}},
+    totals: {marker: {color: '#3B82F6'}}
+  }];
+  Plotly.newPlot('chart-fidelity', fidData, {
+    margin: {l: 30, r: 10, t: 20, b: 30}, showlegend: false,
+    xaxis: {tickfont:{size:10, color:'#64748B'}},
+    yaxis: {showticklabels: false, showgrid: false, range: [0, 110]},
+    plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
+  });
 
+  // --- 3. PLAUSIBILITY (KPI + 1D Gene Track) ---
   document.getElementById('val-plausibility').textContent = d.plausibility.toFixed(2);
-  document.getElementById('badge-plausibility').innerHTML = d.plausibility > 1.0 ? '<span class="badge-good">Plausible</span>' : '<span class="badge-bad">Artifact Focused</span>';
+  document.getElementById('badge-plausibility').innerHTML = isPlausible ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
+  
+  let shapes = [];
+  let annotations = [];
+  
+  if (d.genes) {
+    d.genes.forEach(g => { 
+      shapes.push({ type: 'rect', x0: g.start/1000, x1: g.end/1000, y0: 0.1, y1: 0.4, fillcolor: 'rgba(16,185,129,0.8)', line: {width: 0} }); 
+      annotations.push({ x: (g.start+g.end)/2000, y: 0.25, text: g.name, showarrow: false, font: {size: 9, color: 'white'} });
+    });
+  }
+  
+  const trf_bins = d.attributions.transformer.bins.map(b => b/10);
+  const trace_ai = { 
+    x: trf_bins, y: Array(trf_bins.length).fill(0.8), 
+    mode: 'markers', type: 'scatter', name: 'AI Attention',
+    marker: {color: '#EF4444', size: 14, symbol: 'triangle-down'}
+  };
 
-  // --- Call the isolated 3D viewer function ---
-  render3DProtein(d.pdb_id, d.residue_indices);
+  Plotly.newPlot('chart-plausibility', [trace_ai], {
+    margin: {l: 10, r: 10, t: 10, b: 30}, showlegend: false,
+    xaxis: {title: 'Genome Position (kb)', showgrid: false, zeroline: false, tickfont:{size:10, color:'#64748B'}, titlefont:{size:10}},
+    yaxis: {showticklabels: false, range: [0, 1]},
+    shapes: shapes, annotations: annotations,
+    plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
+  });
+
+  // --- 4. METHOD AGREEMENT HEATMAP ---
+  if (d.method_agreement) {
+    const ma = d.method_agreement;
+    const heatmapData = [{ z: [ma.occlusion, ma.permutation, ma.ig, ma.shap], x: ['Reg 1', 'Reg 2', 'Reg 3', 'Reg 4', 'Reg 5'], y: ['Occlusion', 'Permutation', 'Int. Gradients', 'SHAP'], type: 'heatmap', colorscale: 'Viridis', showscale: false }];
+    Plotly.newPlot('chart-methods', heatmapData, {margin: {l: 130, r: 10, t: 10, b: 30}, xaxis: {tickfont:{size:10, color:'#64748B'}}, yaxis: {tickfont:{size:11, color:'#64748B'}}, plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'});
+  }
+
+  // --- 5. CLINICAL NARRATIVE ---
+  const top_v = preds.transformer.virus.toUpperCase();
+  let narrative = `The models predicted <b>${top_v}</b>. `;
+  if (!sAgree && !isPlausible) narrative += `However, the prediction is <b>unreliable</b>. The stability chart shows models looking at different regions. The plausibility map shows AI attention (red triangles) falling outside biological genes (green blocks).`;
+  else if (sAgree && isPlausible) narrative += `This prediction is highly <b>trustworthy</b>. The stability chart shows models looking at the same regions, and the plausibility map shows AI attention aligning perfectly with biological genes.`;
+  else narrative += `The models show partial reliability. While they found some biological features, the architectures still disagree on which specific regions are most important.`;
+  document.getElementById('summary-text').innerHTML = narrative;
 }
 </script>
 </body>
