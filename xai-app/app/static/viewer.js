@@ -54,7 +54,7 @@ function drawHighlights() {
   globalViewer.removeAllShapes();
   globalViewer.removeAllLabels();
   
-  // Reset to darker grey cartoon for contrast
+  // Darker grey cartoon for contrast
   globalViewer.setStyle({}, {cartoon: {color: '#c8ccd0', opacity: 0.9}});
 
   const showCnn = document.getElementById('toggle-cnn').checked;
@@ -87,12 +87,12 @@ function drawHighlights() {
     const isConsensus = models.length >= 2;
 
     if (isConsensus && showConsensus) {
-      // 1. HUGE, BRIGHT GOLD HALO (Radius 7.0, Alpha 0.5)
+      // 1. Halo with opacity 0.12 as requested
       globalViewer.addSphere({
-        center: center, radius: 7.0, color: '#FBBF24', alpha: 0.5
+        center: center, radius: 7.0, color: '#FBBF24', alpha: 0.12
       });
 
-      // 2. Colored spheres inside the halo
+      // 2. Model spheres
       models.forEach((model, i) => {
         const angle = (2 * Math.PI * i) / models.length;
         globalViewer.addSphere({
@@ -107,7 +107,7 @@ function drawHighlights() {
         });
       });
 
-      // 3. Hover label (transparent background so it doesn't block the halo)
+      // 3. Hover-only label
       globalViewer.addLabel(`Res ${resi}: ${models.join(', ')}`, {
         position: {x: center.x, y: center.y, z: center.z + 5},
         backgroundColor: 'rgba(255, 255, 255, 0.9)', 

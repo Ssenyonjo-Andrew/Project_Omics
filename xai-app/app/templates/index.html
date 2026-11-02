@@ -11,14 +11,18 @@
   :root {
     --bg-color: #F8FAFC; --text-color: #1E293B; --text-muted: #64748B;
     --panel-bg: #FFFFFF; --border-color: #E2E8F0; --primary-blue: #3B82F6;
+    --cnn-blue: #3b82f6; --bilstm-pink: #ec4899; --trf-teal: #14b8a6;
   }
   body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-color); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
   
-  .app-header { text-align: center; padding: 3rem 1rem 2rem 1rem; }
+  /* Banner */
+  .banner { background: #FEF3C7; color: #92400E; text-align: center; padding: 0.5rem; font-weight: 600; font-size: 0.85rem; border-bottom: 1px solid #FDE68A; }
+
+  .app-header { text-align: center; padding: 2rem 1rem 1rem 1rem; }
   .app-header h1 { margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.02em; color: #0F172A; display: flex; justify-content: center; align-items: center; gap: 0.5rem; }
   .version { font-size: 1rem; color: var(--text-muted); font-weight: 400; margin-left: 0.5rem; }
   .app-header p { margin: 0.5rem 0 0 0; color: var(--text-muted); font-size: 1.1rem; }
-  .about-link { position: absolute; top: 1.5rem; right: 2rem; color: var(--primary-blue); text-decoration: none; font-weight: 600; cursor: pointer; }
+  .about-link { position: absolute; top: 3.5rem; right: 2rem; color: var(--primary-blue); text-decoration: none; font-weight: 600; cursor: pointer; }
 
   .container { max-width: 1400px; margin: 0 auto; padding: 0 2rem 4rem 2rem; }
   
@@ -51,7 +55,7 @@
   
   .metric-box { display: flex; flex-direction: column; padding: 1.5rem; border-radius: 8px; background: #FFFFFF; border: 1px solid var(--border-color); box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
   .kpi-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1rem; }
-  .kpi-title { font-size: 1rem; font-weight: 700; color: var(--text-color); }
+  .kpi-title { font-size: 1rem; font-weight: 700; color: var(--text-color); cursor: help; border-bottom: 1px dashed #94A3B8; }
   .kpi-subtitle { font-size: 0.75rem; color: var(--text-muted); }
   .kpi-value { font-size: 2rem; font-weight: 800; font-family: 'JetBrains Mono', monospace; line-height: 1; text-align: right; }
   .badge-good { background: #D1FAE5; color: #065F46; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; display: inline-block; margin-top: 0.3rem; }
@@ -72,10 +76,12 @@
 </head>
 <body>
 
+<!-- <div class="banner">Research prototype. Not for clinical or diagnostic use.</div> -->
+
 <a href="#" class="about-link" id="link-about" onclick="showAbout()">About</a>
 
 <header class="app-header">
-  <h1>🧬 Viral XAI <span class="version">v1.0.0</span></h1>
+  <h1> Viral XAI <span class="version">v1.0.0</span></h1>
   <p>Explainable AI diagnostics, feature attribution, and stability checks</p>
 </header>
 
@@ -114,12 +120,12 @@
 <!-- PAGE 2: ABOUT -->
 <div class="container" id="view-about">
   <h1 style="color: #0F172A; border-bottom: 2px solid #E2E8F0; padding-bottom: 0.5rem;">About Viral XAI</h1>
-  <p><b>Viral XAI</b> is a clinical-grade explainable AI (XAI) diagnostic dashboard designed for viral genomic surveillance. It goes beyond simple classification by evaluating <i>how</i> deep learning models make their decisions, ensuring they are biologically grounded and trustworthy.</p>
+  <p><b>Viral XAI</b> is an interactive explanation dashboard designed for viral genomic surveillance. It goes beyond simple classification by evaluating <i>how</i> deep learning models make their decisions.</p>
   <h2>The Three Pillars of XAI</h2>
   <ul>
-    <li><b>Stability:</b> Do different neural network architectures (CNN, BiLSTM, Transformer) focus on the same genomic regions? We measure this using Spearman correlation.</li>
-    <li><b>Fidelity:</b> If we delete the regions the AI says are important, does the prediction break? We run live occlusion tests to find out.</li>
-    <li><b>Biological Plausibility:</b> Does the AI focus on actual biological genes (e.g., the Spike protein, Polymerase), or is it looking at random genomic artifacts? We map attribution peaks to annotated GenBank genes.</li>
+    <li><b>Stability:</b> Spearman correlation between models' attribution rankings.</li>
+    <li><b>Fidelity:</b> Drop in predicted probability when top windows are masked.</li>
+    <li><b>Plausibility:</b> Fraction of top windows overlapping annotated genes.</li>
   </ul>
   <h2>Supported Viruses</h2>
   <p>Dengue, Chikungunya, Norovirus, Measles, Mpox, and Adenovirus C.</p>
@@ -132,21 +138,21 @@
 <div class="container" id="view-results">
   <div class="results-header">
     <div>
-      <h1 style="margin: 0; color: #0F172A;">XAI Diagnostic Dashboard</h1>
-      <p style="margin: 0; color: var(--text-muted);">Analysis complete for uploaded sequence.</p>
+      <h1 style="margin: 0; color: #0F172A;">XAI Explanation Dashboard</h1>
+      <p style="margin: 0; color: var(--text-muted);">Analysis complete for single uploaded sequence.</p>
     </div>
     <button class="btn-select" onclick="goBack()" style="background: #64748B; margin-top: 0;">← New Analysis</button>
   </div>
 
-  <div class="clinical-summary"><strong>Diagnostic Summary:</strong> <span id="summary-text">Running analysis...</span></div>
+  <div class="clinical-summary"><strong>Reliability summary:</strong> <span id="summary-text">Running analysis...</span></div>
 
   <div class="middle-grid">
     <div class="panel">
       <div class="panel-header">Model Predictions</div>
       <div class="panel-body">
-        <div style="margin-bottom: 1.5rem;"><h4 style="color:#6366F1; margin-top:0;">CNN</h4><div id="probs-cnn"></div></div>
-        <div style="margin-bottom: 1.5rem;"><h4 style="color:#EC4899;">BiLSTM</h4><div id="probs-bilstm"></div></div>
-        <div><h4 style="color:#14B8A6;">Transformer</h4><div id="probs-transformer"></div></div>
+        <div style="margin-bottom: 1.5rem;"><h4 style="color:#3b82f6; margin-top:0;">CNN</h4><div id="probs-cnn"></div></div>
+        <div style="margin-bottom: 1.5rem;"><h4 style="color:#ec4899;">BiLSTM</h4><div id="probs-bilstm"></div></div>
+        <div><h4 style="color:#14b8a6;">Transformer</h4><div id="probs-transformer"></div></div>
       </div>
     </div>
 
@@ -154,7 +160,10 @@
       <!-- STABILITY -->
       <div class="metric-box">
         <div class="kpi-header">
-          <div><div class="kpi-title">1. Stability</div><div class="kpi-subtitle">Do models agree on top regions?</div></div>
+          <div>
+            <div class="kpi-title" title="Spearman correlation between models' attribution rankings">1. Stability (ℹ️)</div>
+            <div class="kpi-subtitle">Do models agree on top regions?</div>
+          </div>
           <div style="text-align: right;"><div id="val-stability" class="kpi-value">-</div><div id="badge-stability"></div></div>
         </div>
         <div id="chart-stability" style="flex: 1; min-height: 200px;"></div>
@@ -163,7 +172,10 @@
       <!-- FIDELITY -->
       <div class="metric-box">
         <div class="kpi-header">
-          <div><div class="kpi-title">2. Fidelity</div><div class="kpi-subtitle">Does masking break the model?</div></div>
+          <div>
+            <div class="kpi-title" title="Drop in predicted probability when top windows are masked">2. Fidelity (ℹ️)</div>
+            <div class="kpi-subtitle">Does masking break the model?</div>
+          </div>
           <div style="text-align: right;"><div id="val-fidelity" class="kpi-value">-</div><div id="badge-fidelity"></div></div>
         </div>
         <div id="chart-fidelity" style="flex: 1; min-height: 200px;"></div>
@@ -172,7 +184,10 @@
       <!-- PLAUSIBILITY -->
       <div class="metric-box span-full">
         <div class="kpi-header">
-          <div><div class="kpi-title">3. Plausibility</div><div class="kpi-subtitle">Does AI focus on annotated biological genes?</div></div>
+          <div>
+            <div class="kpi-title" title="Fraction of top windows overlapping annotated genes">3. Plausibility (ℹ️)</div>
+            <div class="kpi-subtitle">Does AI focus on annotated biological genes?</div>
+          </div>
           <div style="text-align: right;"><div id="val-plausibility" class="kpi-value">-</div><div id="badge-plausibility"></div></div>
         </div>
         <div id="chart-plausibility" style="flex: 1; min-height: 180px;"></div>
@@ -183,27 +198,26 @@
   <div class="panel" style="margin-bottom: 1.5rem;">
     <div class="panel-header">Method Agreement (Consensus Heatmap)</div>
     <div class="panel-body">
-      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:0; margin-bottom: 0.5rem;">Do all XAI methods agree on which genomic regions are important?</p>
-      <div id="chart-methods" style="height: 200px;"></div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top:0; margin-bottom: 0.5rem;">Do all XAI methods agree on which genomic regions are important? (Rank-normalised)</p>
+      <div id="chart-methods" style="height: 220px;"></div>
     </div>
   </div>
 
   <div class="panel">
     <div class="panel-header">3D Protein Structure Attribution</div>
     <div class="panel-body">
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0; margin-bottom: 1rem;">
+      <p id="viewer-caption" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0; margin-bottom: 1rem;">
         Residues overlapping the highest-attribution nucleotide windows for each model, mapped from genome coordinates to protein residues.
       </p>
       
-      <!-- Controls -->
       <div style="display: flex; gap: 1.5rem; align-items: center; margin-bottom: 1rem; background: #F1F5F9; padding: 0.8rem; border-radius: 6px; flex-wrap: wrap;">
-        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #3B82F6; cursor: pointer;">
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #3b82f6; cursor: pointer;">
           <input type="checkbox" id="toggle-cnn" checked onchange="drawHighlights()"> CNN
         </label>
-        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #EC4899; cursor: pointer;">
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #ec4899; cursor: pointer;">
           <input type="checkbox" id="toggle-bilstm" checked onchange="drawHighlights()"> BiLSTM
         </label>
-        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #14B8A6; cursor: pointer;">
+        <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #14b8a6; cursor: pointer;">
           <input type="checkbox" id="toggle-transformer" checked onchange="drawHighlights()"> Transformer
         </label>
         <label style="display: flex; align-items: center; gap: 0.4rem; font-weight: 600; font-size: 0.85rem; color: #D97706; cursor: pointer;">
@@ -213,7 +227,9 @@
         <button onclick="resetView()" style="background: white; border: 1px solid #CBD5E1; padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Reset View</button>
         <button onclick="exportPng()" style="background: white; border: 1px solid #CBD5E1; padding: 0.3rem 0.8rem; border-radius: 4px; cursor: pointer; font-weight: 600; font-size: 0.85rem;">Export PNG</button>
       </div>
-      
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0; margin-bottom: 0.5rem;">
+        Gold halo = flagged by ≥2 models; spheres inside show which.
+      </p>
       <div id="protein-viewer" style="border: 1px solid #E2E8F0;"></div>
     </div>
   </div>
@@ -221,7 +237,8 @@
 
 <script>
 const VIRUSES = ["adeno_c", "chikungunya", "dengue", "measles", "mpox", "norovirus"];
-const COLORS = {"cnn": "#6366F1", "bilstm": "#EC4899", "transformer": "#14B8A6"};
+const VIRUS_NAMES = {"adeno_c": "Adeno", "chikungunya": "Chikungunya", "dengue": "Dengue", "measles": "Measles", "mpox": "Mpox", "norovirus": "Norovirus"};
+const COLORS = {"cnn": "#3b82f6", "bilstm": "#ec4899", "transformer": "#14b8a6"};
 let fileData = null;
 
 function showResults() {
@@ -282,7 +299,6 @@ runBtn.onclick = async () => {
       if (!response.ok) { clearInterval(poll); alert("Server restarted."); return; }
       const res = await response.json();
       
-      // Guards to prevent crash if data is missing
       if (res.predictions) renderPredictions(res.predictions);
       if (res.metrics) renderMetrics(res.predictions, res.metrics);
       if (res.metrics && !document.getElementById('protein-viewer').hasChildNodes()) {
@@ -293,8 +309,7 @@ runBtn.onclick = async () => {
       if (res.status === 'error') { clearInterval(poll); alert("Backend Error: " + res.error); }
     } catch (e) { 
       clearInterval(poll); 
-      console.error("Render Error:", e);
-      alert("Network error: " + e.message); 
+      console.error(e);
     }
   }, 1000);
 };
@@ -304,19 +319,24 @@ function renderPredictions(preds) {
   ['cnn', 'bilstm', 'transformer'].forEach(m => {
     const container = document.getElementById('probs-' + m);
     container.innerHTML = '';
-    const sorted = VIRUSES.map((v, i) => ({ name: v, prob: preds[m].probs[i] })).sort((a, b) => b.prob - a.prob);
+    const sorted = VIRUSES.map((v, i) => ({ name: VIRUS_NAMES[v], prob: preds[m].probs[i] })).sort((a, b) => b.prob - a.prob);
     sorted.forEach(item => {
       if (item.prob < 0.01) return;
       const pct = (item.prob * 100).toFixed(1);
       container.innerHTML += `
         <div class="prob-row">
-          <div class="prob-label">${item.name.replace('_c', '')}</div>
+          <div class="prob-label">${item.name}</div>
           <div class="prob-bg"><div class="prob-fill" style="width: ${pct}%; background: ${COLORS[m]}"></div></div>
           <div class="prob-val">${pct}%</div>
         </div>
       `;
     });
   });
+}
+
+function minMax(arr) {
+  const min = Math.min(...arr), max = Math.max(...arr);
+  return arr.map(v => (max - min === 0) ? 0 : (v - min) / (max - min));
 }
 
 function renderMetrics(preds, d) {
@@ -326,50 +346,32 @@ function renderMetrics(preds, d) {
   const isFaithful = d.fidelity > 0.05;
   const isPlausible = d.plausibility > 1.0;
 
-  // --- 1. STABILITY (3D Genome Landscape) ---
+  // --- 1. STABILITY (2D Line Plot) ---
   document.getElementById('val-stability').textContent = isNaN(d.stability) ? "NaN" : d.stability.toFixed(3);
   document.getElementById('badge-stability').innerHTML = sAgree ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
   
-  function get3DTrace(modelName, yPos, color) {
-    const bins = d.attributions[modelName].bins;
-    const imp = d.attributions[modelName].importance;
-    return {
-      x: bins.map(b => b / 10),
-      y: Array(bins.length).fill(yPos),
-      z: imp,
-      mode: 'lines+markers',
-      type: 'scatter3d',
-      name: modelName.toUpperCase(),
-      line: { width: 6, color: color },
-      marker: { size: 4, color: color }
-    };
-  }
+  const trace_cnn = { x: d.attributions.cnn.bins.map(b => b / 10), y: d.attributions.cnn.importance, mode: 'lines', name: 'CNN', line: {color: '#3b82f6'} };
+  const trace_bil = { x: d.attributions.bilstm.bins.map(b => b / 10), y: d.attributions.bilstm.importance, mode: 'lines', name: 'BiLSTM', line: {color: '#ec4899'} };
+  const trace_trf = { x: d.attributions.transformer.bins.map(b => b / 10), y: d.attributions.transformer.importance, mode: 'lines', name: 'TRF', line: {color: '#14b8a6'} };
 
-  const t_cnn = get3DTrace('cnn', 'CNN', '#6366F1');
-  const t_bil = get3DTrace('bilstm', 'BiLSTM', '#EC4899');
-  const t_trf = get3DTrace('transformer', 'TRF', '#14B8A6');
+  Plotly.newPlot('chart-stability', [trace_cnn, trace_bil, trace_trf], {
+    margin: {l: 40, r: 10, t: 10, b: 30}, showlegend: false, hovermode: 'x unified',
+    xaxis: {title: 'Genome Position (kb)', showgrid: true, gridcolor: '#F1F5F9', zeroline: false, tickfont:{size:10, color:'#64748B'}, titlefont:{size:10}},
+    yaxis: {showgrid: true, gridcolor: '#F1F5F9', tickfont:{size:10, color:'#64748B'}},
+    plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
+  });
 
-  Plotly.newPlot('chart-stability', [t_cnn, t_bil, t_trf], {
-    margin: {l: 0, r: 0, t: 0, b: 0},
-    scene: {
-      xaxis: {title: 'Genome (kb)', showgrid: true, gridcolor: '#E2E8F0', titlefont: {size: 10}, tickfont: {size: 8}},
-      yaxis: {title: '', showgrid: true, gridcolor: '#E2E8F0', tickfont: {size: 10}},
-      zaxis: {title: 'Importance', showgrid: true, gridcolor: '#E2E8F0', titlefont: {size: 10}, tickfont: {size: 8}},
-      camera: { eye: {x: 1.5, y: -1.5, z: 1.2} }
-    },
-    showlegend: false
-  }, {responsive: true});
-
-  // --- 2. FIDELITY (KPI + Waterfall Chart) ---
-  document.getElementById('val-fidelity').textContent = (d.fidelity * 100).toFixed(1) + "%";
+  // --- 2. FIDELITY (Waterfall) ---
+  const dropPct = (d.evidence.orig_prob - d.evidence.mask_prob) * 100;
+  document.getElementById('val-fidelity').textContent = dropPct.toFixed(1) + "%";
   document.getElementById('badge-fidelity').innerHTML = isFaithful ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
   
   const fidData = [{
     type: 'waterfall', orientation: 'v',
     measure: ['absolute', 'relative', 'total'],
     x: ['Original', 'Drop', 'Masked'],
-    y: [d.evidence.orig_prob * 100, -(d.evidence.orig_prob - d.evidence.mask_prob) * 100, d.evidence.mask_prob * 100],
-    text: [(d.evidence.orig_prob*100).toFixed(1)+'%', '-'+((d.evidence.orig_prob-d.evidence.mask_prob)*100).toFixed(1)+'%', (d.evidence.mask_prob*100).toFixed(1)+'%'],
+    y: [d.evidence.orig_prob * 100, -dropPct, d.evidence.mask_prob * 100],
+    text: [(d.evidence.orig_prob*100).toFixed(1)+'%', '-'+dropPct.toFixed(1)+'%', (d.evidence.mask_prob*100).toFixed(1)+'%'],
     textposition: 'outside',
     decreasing: {marker: {color: '#EF4444'}},
     increasing: {marker: {color: '#10B981'}},
@@ -382,7 +384,7 @@ function renderMetrics(preds, d) {
     plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
   });
 
-  // --- 3. PLAUSIBILITY (KPI + 1D Gene Track) ---
+  // --- 3. PLAUSIBILITY (1D Gene Track) ---
   document.getElementById('val-plausibility').textContent = d.plausibility.toFixed(2);
   document.getElementById('badge-plausibility').innerHTML = isPlausible ? '<span class="badge-good">High</span>' : '<span class="badge-bad">Low</span>';
   
@@ -411,20 +413,46 @@ function renderMetrics(preds, d) {
     plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
   });
 
-  // --- 4. METHOD AGREEMENT HEATMAP ---
+  // --- 4. METHOD AGREEMENT HEATMAP (Scaled) ---
   if (d.method_agreement) {
     const ma = d.method_agreement;
-    const heatmapData = [{ z: [ma.occlusion, ma.permutation, ma.ig, ma.shap], x: ['Reg 1', 'Reg 2', 'Reg 3', 'Reg 4', 'Reg 5'], y: ['Occlusion', 'Permutation', 'Int. Gradients', 'SHAP'], type: 'heatmap', colorscale: 'Viridis', showscale: false }];
-    Plotly.newPlot('chart-methods', heatmapData, {margin: {l: 130, r: 10, t: 10, b: 30}, xaxis: {tickfont:{size:10, color:'#64748B'}}, yaxis: {tickfont:{size:11, color:'#64748B'}}, plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'});
+    const z_data = [
+        minMax(ma.occlusion), 
+        minMax(ma.permutation), 
+        minMax(ma.ig), 
+        minMax(ma.shap)
+    ];
+    const x_axis = d.attributions.transformer.bins.map(b => (b/10) + ' kb');
+    
+    const heatmapData = [{ 
+        z: z_data, 
+        x: x_axis, 
+        y: ['Occlusion', 'Permutation', 'Int. Gradients', 'SHAP'], 
+        type: 'heatmap', 
+        colorscale: 'Viridis', 
+        showscale: true,
+        colorbar: {thickness: 10, len: 0.8}
+    }];
+    Plotly.newPlot('chart-methods', heatmapData, {
+        margin: {l: 130, r: 10, t: 10, b: 40}, 
+        xaxis: {tickfont:{size:10, color:'#64748B'}, title: 'Genome Position'}, 
+        yaxis: {tickfont:{size:11, color:'#64748B'}}, 
+        plot_bgcolor: 'rgba(0,0,0,0)', paper_bgcolor: 'rgba(0,0,0,0)'
+    });
   }
 
-  // --- 5. CLINICAL NARRATIVE ---
-  const top_v = preds.transformer.virus.toUpperCase();
-  let narrative = `The models predicted <b>${top_v}</b>. `;
-  if (!sAgree && !isPlausible) narrative += `However, the prediction is <b>unreliable</b>. The stability chart shows models looking at different regions. The plausibility map shows AI attention (red triangles) falling outside biological genes (green blocks).`;
-  else if (sAgree && isPlausible) narrative += `This prediction is highly <b>trustworthy</b>. The stability chart shows models looking at the same regions, and the plausibility map shows AI attention aligning perfectly with biological genes.`;
-  else narrative += `The models show partial reliability. While they found some biological features, the architectures still disagree on which specific regions are most important.`;
-  document.getElementById('summary-text').innerHTML = narrative;
+  // --- 5. RELIABILITY SUMMARY (Rule-based) ---
+  let summary = "";
+  if (sAgree) summary += "Models show high agreement on genomic features. ";
+  else summary += "Models show low agreement (unstable explanations). ";
+
+  if (isPlausible) summary += "The AI focuses on biologically plausible genes. ";
+  else summary += "The AI focuses outside annotated genes (artefact-driven). ";
+
+  if (isFaithful) summary += "Masking top regions significantly breaks the prediction.";
+  else summary += "Masking top regions has a minimal effect on confidence.";
+
+  document.getElementById('summary-text').innerHTML = summary;
 }
 </script>
 </body>
