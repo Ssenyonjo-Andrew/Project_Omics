@@ -249,22 +249,34 @@ def fetch_genes(accession: str) -> list:
     return genes
 
 def map_bins_to_residues(bins, importance, genes, target):
-    # Get top 5 indices sorted by importance
-    top_indices = np.argsort(-np.array(importance))[:5]
-    res = []
+    top_indices = np.argsort(-np.array(importance))[:50] # Look at top 50
+    res_dict = {} 
     g_coords = next((g for g in genes if target.upper() in g["name"].upper()), None)
     if not g_coords and genes: g_coords = {"start": min(g["start"] for g in genes), "end": max(g["end"] for g in genes)}
     if not g_coords: return []
     
-    max_res = min(500, (g_coords["end"] - g_coords["start"]) // 3)
+    max_res = (g_coords["end"] - g_coords["start"]) // 3
+    if max_res <= 0: return []
+
     for rank, idx in enumerate(top_indices):
         b = bins[idx]
-        score = float(importance[idx])
         nt = b * BIN_BP
-        aa = 1 if nt < g_coords["start"] else (max_res if nt > g_coords["end"] else ((nt - g_coords["start"]) // 3) + 1)
-        resi = int((aa % max_res) + 1) if max_res > 0 else 1
-        res.append({"resi": resi, "score": score, "rank": rank + 1})
-    return res
+        
+        # Only map if it falls inside the target gene, otherwise skip it
+        if g_coords["start"] <= nt <= g_coords["end"]:
+            score = float(importance[idx])
+            aa = ((nt - g_coords["start"]) // 3) + 1
+            resi = max(1, min(aa, max_res))
+            
+            # Only add if we haven't found this residue yet, AND ensure they are somewhat spaced out
+            if resi not in res_dict:
+                res_dict[resi] = {"resi": resi, "score": score, "rank": rank + 1}
+                
+        # Stop once we have 10 nicely spread out residues
+        if len(res_dict) >= 10:
+            break
+            
+    return list(res_dict.values())
 
 def calculate_xai_metrics(seq: str, top_v: str) -> dict:
     attrs = {m: attribute_all_methods(seq, m) for m in ["cnn", "bilstm", "transformer"]}

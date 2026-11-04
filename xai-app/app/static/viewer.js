@@ -79,20 +79,23 @@ function drawHighlights() {
 
   Object.entries(resiMap).forEach(([resiStr, models]) => {
     const resi = parseInt(resiStr);
-    const atoms = globalViewer.selectedAtoms({resi: resi, atom: 'CA'}); 
     
-    if (atoms.length === 0) return; 
+    // FIX: Try to find the CA atom first. If missing, try any atom in the residue.
+    let atoms = globalViewer.selectedAtoms({resi: resi, atom: 'CA'}); 
+    if (atoms.length === 0) {
+        atoms = globalViewer.selectedAtoms({resi: resi});
+    }
+    
+    if (atoms.length === 0) return; // Skip if the PDB entirely lacks this residue
     const center = atoms[0]; 
 
     const isConsensus = models.length >= 2;
 
     if (isConsensus && showConsensus) {
-      // 1. Halo with opacity 0.12 as requested
       globalViewer.addSphere({
         center: center, radius: 7.0, color: '#FBBF24', alpha: 0.12
       });
 
-      // 2. Model spheres
       models.forEach((model, i) => {
         const angle = (2 * Math.PI * i) / models.length;
         globalViewer.addSphere({
@@ -107,7 +110,6 @@ function drawHighlights() {
         });
       });
 
-      // 3. Hover-only label
       globalViewer.addLabel(`Res ${resi}: ${models.join(', ')}`, {
         position: {x: center.x, y: center.y, z: center.z + 5},
         backgroundColor: 'rgba(255, 255, 255, 0.9)', 
@@ -119,7 +121,6 @@ function drawHighlights() {
       }, null, true); 
       
     } else {
-      // Non-consensus
       models.forEach((model, i) => {
         let offset = {x: 0, y: 0, z: 0};
         if (models.length > 1) {

@@ -6,6 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pydantic import BaseModel, Field
 from app import inference
+from app.schemas import SequenceInput  # <--- FIX: Import the strict schema
 
 logging.basicConfig(level=logging.INFO)
 APP_DIR = Path(__file__).parent
@@ -15,21 +16,18 @@ templates = Jinja2Templates(directory=APP_DIR / "templates")
 
 JOBS = {}
 
-class SeqInput(BaseModel):
-    sequence: str = Field(..., min_length=50)
-
 @app.get("/", response_class=HTMLResponse)
 def index(request: Request):
     return templates.TemplateResponse(request, "index.html", {})
 
 @app.post("/api/attribute")
-def attr(payload: SeqInput, bg: BackgroundTasks):
+def attr(payload: SequenceInput, bg: BackgroundTasks): # <--- FIX: Use strict schema
     job_id = str(uuid.uuid4())
     JOBS[job_id] = {"status": "queued", "step": "starting", "predictions": None, "metrics": None, "error": None}
     
     def run():
         try:
-            seq = "".join(payload.sequence.split()).upper()
+            seq = payload.sequence # Already cleaned by the schema (no > headers, no U)
             JOBS[job_id]["step"] = "predicting"
             preds = inference.predict_all(seq)
             JOBS[job_id]["predictions"] = preds
