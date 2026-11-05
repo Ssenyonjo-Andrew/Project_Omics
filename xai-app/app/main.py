@@ -20,6 +20,11 @@ JOBS = {}
 def index(request: Request):
     return templates.TemplateResponse(request, "index.html", {})
 
+
+@app.get("/benchmark", response_class=HTMLResponse)
+def benchmark(request: Request):
+    return templates.TemplateResponse(request, "benchmark.html", {})
+
 @app.post("/api/attribute")
 def attr(payload: SequenceInput, bg: BackgroundTasks): # <--- FIX: Use strict schema
     job_id = str(uuid.uuid4())

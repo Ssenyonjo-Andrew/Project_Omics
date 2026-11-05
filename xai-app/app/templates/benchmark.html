@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Viral XAI Benchmark</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .bench-table { width: 100%; border-collapse: collapse; margin-top: 2rem; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .bench-table th, .bench-table td { padding: 1rem; text-align: center; border-bottom: 1px solid #eee; }
+        .bench-table th { background: #F8FAFC; font-weight: 600; color: #111827; }
+        .bench-table td { font-family: 'JetBrains Mono', monospace; }
+        .bench-highlight { color: #EF4444; font-weight: bold; } /* Red for bad scores */
+        .bench-good { color: #10B981; font-weight: bold; } /* Green for good scores */
+    </style>
+</head>
+<body>
+    <div class="container" style="max-width: 1000px; margin-top: 3rem;">
+        <h1 style="margin-bottom: 0.5rem;">Aggregate Benchmark Results</h1>
+        <p style="color: #64748B; margin-bottom: 2rem;">Mean ± Standard Deviation across 20 held-out test sequences per virus (N=120).</p>
+        
+        <div style="background: #F5F3FF; border-left: 4px solid #7C3AED; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+            <strong>Reviewer Context:</strong> Random baseline for stability is ~0.00. Random baseline for fidelity is ~0.00. Expected Plausibility (O/E) for random placement is 1.00.
+        </div>
+
+        <table class="bench-table">
+            <thead>
+                <tr>
+                    <th>Virus</th>
+                    <th>Stability (ρ)</th>
+                    <th>Fidelity (Δ%)</th>
+                    <th>Plausibility (O/E)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Adeno C</td>
+                    <td class="bench-highlight">0.032 ± 0.064</td>
+                    <td class="bench-highlight">-0.006 ± 0.012</td>
+                    <td class="bench-highlight">0.763 ± 0.002</td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Chikungunya</td>
+                    <td class="bench-highlight">-0.016 ± 0.087</td>
+                    <td class="bench-highlight">-0.002 ± 0.044</td>
+                    <td class="bench-good">1.074 ± 0.012</td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Dengue</td>
+                    <td class="bench-highlight">0.134 ± 0.053</td>
+                    <td class="bench-good">0.056 ± 0.118</td>
+                    <td class="bench-highlight">0.201 ± 0.253</td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Measles</td>
+                    <td class="bench-highlight">-0.065 ± 0.037</td>
+                    <td class="bench-highlight">-0.030 ± 0.009</td>
+                    <td class="bench-good">1.012 ± 0.000</td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Mpox</td>
+                    <td class="bench-highlight">0.115 ± 0.035</td>
+                    <td class="bench-highlight">-0.004 ± 0.001</td>
+                    <td class="bench-highlight">0.792 ± 0.130</td>
+                </tr>
+
+                <tr>
+                    <td style="font-weight: bold; color: #111827;">Norovirus</td>
+                    <td class="bench-highlight">0.208 ± 0.130</td>
+                    <td class="bench-good">0.076 ± 0.060</td>
+                    <td class="bench-highlight">0.008 ± 0.037</td>
+                </tr>
+
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 3rem; text-align: center;">
+            <a href="/" style="background: #7C3AED; color: white; padding: 1rem 2rem; border-radius: 999px; text-decoration: none; font-weight: bold;">← Back to Live Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

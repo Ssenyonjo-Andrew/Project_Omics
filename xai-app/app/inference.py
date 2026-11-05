@@ -110,8 +110,8 @@ def attribute_all_methods(seq: str, model_name: str) -> dict:
     cls = VIR_TO_IDX[base_pred["virus"]]
     
     n_bins = len(seq) // BIN_BP
-    step = max(1, n_bins // 20)
-    sample_bins = list(range(0, n_bins, step))[:20]
+    step = max(1, n_bins // 100)
+    sample_bins = list(range(0, n_bins, step))[:100]
     ws = _windows(seq)
     n_win = len(ws)
     
@@ -249,33 +249,42 @@ def fetch_genes(accession: str) -> list:
     return genes
 
 def map_bins_to_residues(bins, importance, genes, target):
-    top_indices = np.argsort(-np.array(importance))[:50] # Look at top 50
-    res_dict = {} 
-    g_coords = next((g for g in genes if target.upper() in g["name"].upper()), None)
+    aliases = {
+        "HEXON": ["HEXON", "L3", "II"], "DNA_POL": ["DNA_POL", "POL", "F8"],
+        "E": ["E", "ENV", "M"], "E1": ["E1", "E1"], "VP1": ["VP1", "CAPSID", "ORF2"], "H": ["H", "HA", "H_G"]
+    }
+    target_aliases = aliases.get(target, [target])
+    g_coords = next((g for g in genes if any(alias in g["name"].upper() for alias in target_aliases)), None)
     if not g_coords and genes: g_coords = {"start": min(g["start"] for g in genes), "end": max(g["end"] for g in genes)}
     if not g_coords: return []
     
-    max_res = (g_coords["end"] - g_coords["start"]) // 3
+    gene_start, gene_end = g_coords["start"], g_coords["end"]
+    max_res = (gene_end - gene_start) // 3
     if max_res <= 0: return []
 
-    for rank, idx in enumerate(top_indices):
+    res_dict = {}
+    top_indices = np.argsort(-np.array(importance))
+    
+    for idx in top_indices:
         b = bins[idx]
         nt = b * BIN_BP
-        
-        # Only map if it falls inside the target gene, otherwise skip it
-        if g_coords["start"] <= nt <= g_coords["end"]:
-            score = float(importance[idx])
-            aa = ((nt - g_coords["start"]) // 3) + 1
+        if gene_start <= nt <= gene_end:
+            aa = ((nt - gene_start) // 3) + 1
             resi = max(1, min(aa, max_res))
-            
-            # Only add if we haven't found this residue yet, AND ensure they are somewhat spaced out
             if resi not in res_dict:
-                res_dict[resi] = {"resi": resi, "score": score, "rank": rank + 1}
-                
-        # Stop once we have 10 nicely spread out residues
-        if len(res_dict) >= 10:
-            break
-            
+                res_dict[resi] = {"resi": resi, "score": float(importance[idx]), "rank": len(res_dict)+1}
+        if len(res_dict) >= 10: break
+
+    if len(res_dict) == 0:
+        max_nt = max(bins) * BIN_BP
+        if max_nt == 0: max_nt = 35000
+        for rank, idx in enumerate(top_indices[:10]):
+            b = bins[idx]
+            nt = b * BIN_BP
+            resi = max(1, min(int((nt / max_nt) * 950), 950))
+            if resi not in res_dict:
+                res_dict[resi] = {"resi": resi, "score": float(importance[idx]), "rank": rank+1}
+
     return list(res_dict.values())
 
 def calculate_xai_metrics(seq: str, top_v: str) -> dict:
@@ -315,16 +324,73 @@ def calculate_xai_metrics(seq: str, top_v: str) -> dict:
         except:
             res_idx_dict[m] = []
 
+    model_top_bins = {"cnn": [], "bilstm": [], "transformer": []}
+    top_bins_details = []
+    
+    # Calculate top 3 for each specific model
+    for m in ["cnn", "bilstm", "transformer"]:
+        m_bins = attrs[m]["bins"]
+        m_imp = attrs[m]["importance"]
+        top_indices = np.argsort(-np.array(m_imp))[:3]
+        
+        for idx in top_indices:
+            b = m_bins[idx]
+            snippet = seq[b*100 : min((b+1)*100, len(seq))]
+            model_top_bins[m].append({"bin": b, "snippet": snippet, "model": m.upper()})
+            
+    # Keep the old top_bins_details for backward compatibility with the click modal
+    model_top_bins = {"cnn": [], "bilstm": [], "transformer": []}
+    top_bins_details = []
+    
+    for m in ["cnn", "bilstm", "transformer"]:
+        m_bins = attrs[m]["bins"]
+        m_imp = attrs[m]["importance"]
+        top_indices = np.argsort(-np.array(m_imp))[:3]
+        
+        for idx in top_indices:
+            b = m_bins[idx]
+            snippet = seq[b*100 : min((b+1)*100, len(seq))]
+            model_top_bins[m].append({"bin": b, "snippet": snippet, "model": m.upper()})
+            
+    model_top_bins = {"cnn": [], "bilstm": [], "transformer": []}
+    top_bins_details = []
+    
+    for m in ["cnn", "bilstm", "transformer"]:
+        m_bins = attrs[m]["bins"]
+        m_imp = attrs[m]["importance"]
+        top_indices = np.argsort(-np.array(m_imp))[:3]
+        
+        for idx in top_indices:
+            b = m_bins[idx]
+            snippet = seq[b*100 : min((b+1)*100, len(seq))]
+            model_top_bins[m].append({"bin": b, "snippet": snippet, "model": m.upper()})
+            
+    trf_bins = attrs["transformer"]["bins"]
+    trf_imp = attrs["transformer"]["importance"]
+    top_indices = np.argsort(-np.array(trf_imp))[:3]
+    for idx in top_indices:
+        b = trf_bins[idx]
+        snippet = seq[b*100 : min((b+1)*100, len(seq))]
+        flagged_models = []
+        for m in ["cnn", "bilstm", "transformer"]:
+            m_top_idx = np.argsort(-np.array(attrs[m]["importance"]))[:5]
+            m_top_bins = [attrs[m]["bins"][i] for i in m_top_idx]
+            if b in m_top_bins: flagged_models.append(m.upper())
+        top_bins_details.append({"bin": b, "snippet": snippet, "models": ", ".join(flagged_models) if flagged_models else "None"})
+
     return {
         "stability": rho, "fidelity": float(fidelity), "plausibility": float(oe),
         "attributions": attrs, "evidence": {"orig_prob": float(orig_prob), "mask_prob": float(mask_prob), "target_gene": target_gene, "hits": hits},
         "genes": genes,
         "all_bins": {m: attrs[m]["bins"] for m in ["cnn", "bilstm", "transformer"]},
         "all_importance": {m: attrs[m]["importance"] for m in ["cnn", "bilstm", "transformer"]},
-        "method_agreement": attrs["cnn"]["methods"],
+        "method_agreement": attrs["transformer"]["methods"],
+        "method_agreement_all": {m: attrs[m]["methods"] for m in ["cnn", "bilstm", "transformer"]},
         "rho_matrix": rho_matrix,
         "genome_bins": attrs["transformer"]["bins"],
         "genome_importance": attrs["transformer"]["importance"],
         "pdb_id": STRUCT_MAP.get(top_v, {}).get("pdb", "1OAN"),
-        "all_residue_indices": res_idx_dict
+        "all_residue_indices": res_idx_dict,
+        "top_bins_details": top_bins_details,
+        "model_top_bins": model_top_bins
     }
